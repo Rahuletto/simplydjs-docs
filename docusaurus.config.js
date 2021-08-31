@@ -42,6 +42,7 @@ module.exports = {
       items: [
         {
           to: '/',
+          activeBaseRegex: '^/$',
           position: 'left',
           label: 'Simply-DJS',
         },
