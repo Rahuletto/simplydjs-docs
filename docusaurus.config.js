@@ -34,10 +34,10 @@ module.exports = {
         property: 'og:site_name', content: 'Simply DJS'
       },
       {
-        property: 'og:image', content: 'https://media.discordapp.net/attachments/867344518911492136/880835767725883422/sketch-1630078002886.png?width=427&height=427'
+        property: 'og:image', content: 'https://media.discordapp.net/attachments/867344516600037396/882294045408391248/sketch-1630078002886.png'
       },
       {
-        name: 'theme-color', content: '#5865F2'
+        name: 'theme-color', content: '#0d52d1'
       }
     ],
     navbar: {
