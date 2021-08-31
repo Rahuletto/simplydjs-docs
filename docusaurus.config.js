@@ -25,16 +25,16 @@ module.exports = {
     throwIfNamespace: false,
     metadatas: [
       {
-        name: 'og:title', content: 'Simply DJS'
+        property: 'og:title', content: 'Simply DJS'
       },
       {
-        name: 'og:description', content: 'Package that simplifies Discord.js v13'
+        property: 'og:description', content: 'Package that simplifies Discord.js v13'
       },
       {
-        name: 'og:site_name', content: 'Simply DJS'
+        property: 'og:site_name', content: 'Simply DJS'
       },
       {
-        name: 'og:color', content: '#5865F2'
+        property: 'og:color', content: '#5865F2'
       }
     ],
     navbar: {
