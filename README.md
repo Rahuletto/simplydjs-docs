@@ -1,6 +1,12 @@
 <div style="text-align: center;">
 
-## import simplydjs from 'Simply-DJS'
+```ts
+import simplydjs from 'simply-djs'
+```
+
+```js
+let simplydjs = require('simply-djs')
+```
 <br></br>
 
 ### Hosted using netlify
