@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Simply-DJS',
   tagline: 'A Simple, Easy and Beginner friendly Discord.js Package for everyone.',
-  url: 'https://simplyd.netlify.app',
+  url: 'https://simplyd.js.org',
   baseUrl: '/',
   favicon: 'https://media.discordapp.net/attachments/867344518911492136/880835767725883422/sketch-1630078002886.png?width=427&height=427',
   onBrokenLinks: 'throw',
@@ -28,7 +28,7 @@ module.exports = {
         property: 'og:title', content: 'Simply DJS'
       },
       {
-        property: 'og:description', content: 'Package that simplifies Discord.js v13'
+        property: 'og:description', content: '🎉 Package that simplifies things in Discord.js v13 🎉'
       },
       {
         property: 'og:site_name', content: 'Simply DJS'
