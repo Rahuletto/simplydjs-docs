@@ -12,7 +12,7 @@ module.exports = {
   organizationName: 'Rahuletto#0243',
   projectName: 'simply-djs',
   themeConfig: {
-    image: 'https://media.discordapp.net/attachments/867344518911492136/880835767725883422/sketch-1630078002886.png?width=427&height=427',
+    favicon: 'https://media.discordapp.net/attachments/867344518911492136/880835767725883422/sketch-1630078002886.png?width=427&height=427',
     hideableSidebar: true,
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
