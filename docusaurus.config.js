@@ -34,7 +34,7 @@ module.exports = {
         property: 'og:site_name', content: 'Simply DJS'
       },
       {
-        property: 'og:image', content: 'https://media.discordapp.net/attachments/867344516600037396/882294045408391248/sketch-1630078002886.png'
+        property: 'og:image', content: 'https://media.discordapp.net/attachments/867344516600037396/882293213262663690/sketch-1630396260642.png'
       },
       {
         name: 'theme-color', content: '#0d52d1'
