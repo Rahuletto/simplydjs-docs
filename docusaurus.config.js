@@ -40,7 +40,7 @@ module.exports = {
       title: '',
       items: [
         {
-          href: '/',
+          to: '/',
           position: 'left',
           label: 'Simply-DJS',
         },
@@ -75,12 +75,12 @@ module.exports = {
         },
         {
           title: ' ',
-          items: [
+         /* items: [
             {
               label: ' ',
-              to: ' ',
+              to: '/',
             },
-          ],
+          ], **/
         },
         {
           title: 'Contact Me',
