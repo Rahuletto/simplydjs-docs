@@ -88,7 +88,7 @@ simplydjs.menuPages(message, {
 ## Output
 ![image](https://user-images.githubusercontent.com/71836991/129902270-328bb8c3-f3f0-4d97-a4bc-28e309f565b8.png)
 
-## Options for menuPages/dropdownPages function
+## Options for menuPages function
 
 import Link from '@docusaurus/Link';
 
@@ -98,7 +98,7 @@ import Link from '@docusaurus/Link';
 | `data` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</Link> | ✓ | *none* | Data to make it pages |
 | `slash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Slash Support for the menuPages (need to be in a slash command) |
 
-### Options for data in menuPages
+### Options for data
 
 | Options     | Type    | Required | Default | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

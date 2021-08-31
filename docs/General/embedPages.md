@@ -94,7 +94,7 @@ import Link from '@docusaurus/Link';
 
 </div>
 
-#### Button Emojis
+### Button Emojis
 
 <div style={{textAlign: 'center'}}>
 
@@ -108,7 +108,7 @@ import Link from '@docusaurus/Link';
 
 </div>
 
-#### Button colors
+### Button colors
 
 | Options     | Type    | Required | Default | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -116,7 +116,7 @@ import Link from '@docusaurus/Link';
 | `delcolor`|<Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *DANGER* | Color of Delete Page Button |
 | `skipcolor`|<Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *PRIMARY* | Color of First/Last Page Buttons |
 
-#### Button Options
+### Button Options
 
 | Options     | Type    | Required | Default | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

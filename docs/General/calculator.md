@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # calculator
@@ -49,7 +49,7 @@ import Link from '@docusaurus/Link';
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | `slash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Slash Support for the Calculator (need to be in a slash command) |
 
-#### Embed
+### Embed
 
 <div style={{textAlign: 'center'}}>
 

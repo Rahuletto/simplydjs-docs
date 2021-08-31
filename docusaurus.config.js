@@ -43,6 +43,7 @@ module.exports = {
         {
           to: '/',
           position: 'left',
+          activeBaseRegex: '^/$',
           label: 'Simply-DJS',
         },
         {

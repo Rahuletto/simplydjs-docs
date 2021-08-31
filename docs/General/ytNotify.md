@@ -6,23 +6,13 @@ sidebar_position: 6
 This is an example of ytNotify <br></br><br></br>
 *You will expect a delay between video posted and Discord message sent. (2-15 minutes)*
 
-## Setup
-#### You really need quick.db to check if the video is already posted.
-```
-npm install quick.db
-```
-#### Didn't work ? Giving errors when downloading quick.db ? Try this !
-```
-npm install python
-```
-#### Then try to install quick.db
-
-
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
- 
-const db = require('quick-db') // REQUIRED
+const { Database } = require("quickmongo");
+
+const db = new Database(mongoURL); // Your MongoDB String
+
 const startAt = Date.now() // REQUIRED
 
 // ready event
@@ -44,8 +34,9 @@ msg: 'Hello someone posted',
 
 ```js
 const simplydjs = require('simply-djs')
- 
-const db = require('quick-db') // REQUIRED
+const { Database } = require("quickmongo");
+
+const db = new Database(mongoURL); // Your MongoDB String
 const startAt = Date.now() // REQUIRED
 
 // ready event
