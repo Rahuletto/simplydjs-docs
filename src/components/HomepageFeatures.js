@@ -8,10 +8,11 @@ const FeatureList = [
     description: (
       <>
         <li>Simplifies things in discord.js</li>
-        <li>20+ Functions</li>
+        <li>20 Functions</li>
         <li>Customizability at Peak</li>
         <li>Beginner Friendly</li>
         <li>Easier than other packages</li>
+        <li>Slash Support</li>
       </>
     ),
   },

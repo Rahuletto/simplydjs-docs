@@ -7,12 +7,12 @@ module.exports = {
   tagline: 'A Simple, Easy and Beginner friendly Discord.js Package for everyone.',
   url: 'https://simplyd.netlify.app',
   baseUrl: '/',
+  favicon: 'https://media.discordapp.net/attachments/867344518911492136/880835767725883422/sketch-1630078002886.png?width=427&height=427',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   organizationName: 'Rahuletto#0243',
   projectName: 'simply-djs',
   themeConfig: {
-    favicon: 'https://media.discordapp.net/attachments/867344518911492136/880835767725883422/sketch-1630078002886.png?width=427&height=427',
     hideableSidebar: true,
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
