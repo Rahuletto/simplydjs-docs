@@ -94,11 +94,11 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter/rahuletto',
+              href: 'https://twitter.com/rahuletto',
             },
             {
               label: 'Instagram',
-              href: 'https://instagram/rahuletto',
+              href: 'https://instagram.com/rahuletto',
             },
           ],
         },
