@@ -47,7 +47,7 @@ simplydjs.rankCard(client, interaction, {
     name: 'member',
     type: 'USER',
     description: 'User to check the rank',
-    required: false,
+    required: true,
   }],
 
     },
