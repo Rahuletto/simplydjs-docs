@@ -19,7 +19,9 @@ simplydjs.embedCreate(message)
 
 #### Note. You really need experience in making slash commands.
 ```js
-simplydjs.embedCreate(message, {
+// interactionCreate event
+interaction.deferReply()
+simplydjs.embedCreate(interaction, {
    slash: true,
    // other options
 })

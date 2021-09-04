@@ -63,7 +63,9 @@ simplydjs.embedPages(client, message, pages)
 
 #### Note. You really need experience in making slash commands.
 ```js
-simplydjs.embedPages(client, message, pages, {
+// interactionCreate event
+interaction.deferUpdate()
+simplydjs.embedPages(client, interaction, pages, {
   // your options.
   slash: true
 })

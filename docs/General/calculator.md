@@ -23,6 +23,8 @@ simplydjs.calculator(message, {
 ```js
 // interactionCreate event
 // calculator slash command
+interaction.deferReply()
+
 simplydjs.calculator(interaction, {
     // your options
     slash: true,

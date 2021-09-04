@@ -31,6 +31,8 @@ simplydjs.rankCard(client, message, {
 // rank slash command
 
 let user = interaction.options.getUser('member')
+interaction.deferReply()
+
 simplydjs.rankCard(client, interaction, {
     member: user,
     slash: true,

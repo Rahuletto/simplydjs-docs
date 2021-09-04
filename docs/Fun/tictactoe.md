@@ -37,7 +37,9 @@ simplydjs.tictactoe(message)
 ```js
 // interactionCreate event
 // tictactoe slash command
-simplydjs.tictactoe(message, {
+interaction.deferReply()
+
+simplydjs.tictactoe(interaction, {
     slash: true,
     // other options
 })

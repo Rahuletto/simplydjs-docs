@@ -56,6 +56,7 @@ simplydjs.suggestBtn(interaction, users)
 // suggest slash command
 const suggestion = interaction.options.getString('suggestion');
 
+interaction.deferReply()
 simplydjs.suggestSystem(client, message, suggestion, {
    slash: true,
    // other options

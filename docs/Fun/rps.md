@@ -28,6 +28,7 @@ simplydjs.rps(message, {
 ```js
 // messageCreate Event
 // rps command
+
 simplydjs.rps(message)
 ```
 :::
@@ -39,7 +40,9 @@ simplydjs.rps(message)
 ```js
 // interactionCreate event
 // rps slash command
-simplydjs.rps(message, {
+interaction.deferReply()
+
+simplydjs.rps(interaction, {
     slash: true,
     // other options
 })

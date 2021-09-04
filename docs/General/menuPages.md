@@ -69,6 +69,8 @@ simplydjs.dropdownPages(message, {
 let embed = // embed
 let emb2 = // embed
 
+interaction.deferReply()
+
 simplydjs.menuPages(message, {
   slash: true,
   // remaining options

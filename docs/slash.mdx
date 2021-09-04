@@ -25,6 +25,12 @@ You need to have experience with making slash commands
 - suggestSystem
 - embedCreate
 
+:::danger WARNING
+
+You need to deferReply before the function
+
+:::
+
 :::tip TIP
 ### The functions above shown has option called slash
 
@@ -32,7 +38,10 @@ Need to pass a [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ### Example
 ```js
-simplydjs.rps(message, {
+// interactionCreate 
+
+// interaction.deferReply()
+simplydjs.rps(interaction, {
   slash: true,
   // other options
 })
