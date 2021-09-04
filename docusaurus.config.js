@@ -25,7 +25,7 @@ module.exports = {
     throwIfNamespace: false,
     metadatas: [
       {
-        name: 'google-site-verification',  content="pb2-QCQjmdU-4KOGjcrazLLDeY9XDxG25NONdsbbt4I"
+        name: 'google-site-verification',  content: "pb2-QCQjmdU-4KOGjcrazLLDeY9XDxG25NONdsbbt4I"
       },
       {
         property: 'og:title', content: 'Simply DJS'
