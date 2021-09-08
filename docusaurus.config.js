@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'A Simple, Easy and Beginner friendly Discord.js Package for everyone.',
   url: 'https://simplyd.js.org',
   baseUrl: '/',
-  favicon: 'https://cdn.discordapp.com/avatars/723793738291478569/10fada164d7f6e1121032d043c9ef652.webp',
+  favicon: 'https://cdn.discordapp.com/avatars/770551872309166090/12cf08a644ac45ef24e2c440b192ec4b.webp',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   organizationName: 'Rahuletto#0243',
@@ -37,7 +37,10 @@ module.exports = {
         property: 'og:site_name', content: 'Simply DJS'
       },
       {
-        property: 'og:image', content: 'https://cdn.discordapp.com/avatars/723793738291478569/10fada164d7f6e1121032d043c9ef652.webp'
+        property: 'og:image', content: 'https://cdn.discordapp.com/avatars/770551872309166090/12cf08a644ac45ef24e2c440b192ec4b.webp'
+      },
+      {
+        property: 'og:image:url', content: 'https://cdn.discordapp.com/avatars/770551872309166090/12cf08a644ac45ef24e2c440b192ec4b.webp'
       },
       {
         name: 'theme-color', content: '#0d52d1'
