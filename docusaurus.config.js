@@ -13,6 +13,19 @@ module.exports = {
   organizationName: 'Rahuletto#0243',
   projectName: 'simply-djs',
   themeConfig: {
+
+    algolia: {
+      apiKey: '8843ca3b55fd51dbe6123173f85368d8',
+      indexName: 'simplyd',
+      inputSelector: 'h1',
+      searchParameters: {
+        hitsPerPage: 4,
+        facetFilters: ["type:lvl2"]
+      },
+
+      debug: false
+    },
+
     hideableSidebar: true,
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",

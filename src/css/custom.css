@@ -1,4 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html[data-theme='light'] .DocSearch {
+  border-radius: 10px;
+  font-family: 'Poppins';
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-color-primary-darker);
+  --docsearch-searchbox-focus-background: var(--ifm-color-primary-darkest);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-color-white);
+}
+
+html[data-theme='light'] .DocSearch-Button-Placeholder {
+  font-size: 1rem;
+  padding: 0 12px 0 12px;
+  color: white;
+}
+
+html[data-theme='dark'] .DocSearch-Button-Placeholder {
+  font-size: 1rem;
+  padding: 0 12px 0 12px;
+  color: white;
+}
+
+html[data-theme='dark'] .DocSearch {
+  border-radius: 10px;
+
+  font-family: 'Poppins';
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-background-color);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-color-primary-darker);
+  --docsearch-searchbox-focus-background: var(--ifm-color-primary-darkest);
+  /* Hit */
+  --docsearch-hit-color: white;
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    rgba(47, 55, 69, 0.7) 0%,
+    rgba(38, 42, 49, 0.7) 100%
+  );
+}
+
+html[data-theme='dark'] .DocSearch-Footer{
+  display: none;
+}
+
+html[data-theme='light'] .DocSearch-Footer{
+  display: none;
+}
+
+html[data-theme='light'] .DocSearch-Input{
+  color: white;
+}
+
+html[data-theme='dark'] .DocSearch-Input{
+  color: white;
+}
+html[data-theme='light'] .DocSearch-Search-Icon{
+  color: white;
+}
+
+html[data-theme='dark'] .DocSearch-Search-Icon{
+  color: white;
+}
+
+html[data-theme='light'] .DocSearch-Button-Keys{
+  display: none
+}
+
+html[data-theme='dark'] .DocSearch-Button-Keys{
+  display: none
+}
+
+html[data-theme='light'] .DocSearch-Button{
+  height: 45px;
+}
+
+html[data-theme='dark'] .DocSearch-Button{
+  height: 45px;
+}
+
+html .DocSearch-Button:hover{
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
+}
 
 :root {
   --ifm-font-family-base: 'Poppins';
@@ -21,6 +119,10 @@
   -webkit-appearance: none;
   overflow: auto;
   background: transparent;
+}
+
+.row .col.col--4 {
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -83,7 +185,9 @@ table{
   text-align: center;
   
 }
-
+.DocSearch-Button{
+  width: 320px;
+}
 
 .navbar__brand{
   font-weight: 200;
@@ -98,6 +202,10 @@ table{
   border-radius: 10px;
 }
 @media(max-width: 997px){
+  html .DocSearch-Button{
+    width: 285px;
+  }
+
   .navbar__item{
     display: none;
   }
