@@ -34,7 +34,7 @@ simplydjs.rps(message)
 :::
 
 :::tip TIP
-### You can make tictactoe for slash commands
+### You can make rps for slash commands
 
 #### Note. You really need experience in making slash commands.
 ```js
