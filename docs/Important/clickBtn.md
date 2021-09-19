@@ -106,6 +106,6 @@ import Link from '@docusaurus/Link';
 
 | Options     | Type    | Required | Default | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| `db` | <Link to="https://quickmongo.js.org/#/docs/main/main/general/welcome">Database</Link> | ✓ | *none* | Database for that sus function |
+| `db` | <Link to="https://quickmongo.js.org/#/docs/main/main/general/welcome">Database</Link> | ✓ | *none* | Database for that sus function which uses clickBtn |
 
 </div>
