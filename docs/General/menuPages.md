@@ -108,3 +108,15 @@ import Link from '@docusaurus/Link';
 | `desc` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✓ | *none* | Description for the option to send embed |
 | `emoji`| <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Emoji ID</Link> | ✘ | *none* | Emoji for the option to send embed |
 | `embed` | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link> | ✓ | *none* | Embed sent when the option is selected |
+
+### Delete Button
+
+<div style={{textAlign: 'center'}}>
+
+| Options     | Type    | Required | Default | Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| `delLabel` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘ | *Delete* | Label of the delete option in menu |
+| `delDesc`| <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *Delete the Select Menu Embed* | Description of delete option in menu |
+| `delEmoji`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Emoji ID</Link>| ✘ | *❌* | Emoji of Delete Message Button |
+
+</div>
