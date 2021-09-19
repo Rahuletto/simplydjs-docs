@@ -8,7 +8,9 @@ This is an example of suggestSystem
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
-let users = require('quickmongo')
+
+let { Database } = require('quickmongo')
+let users = new Database('mongo String')
 
 // interactionCreate event
 simplydjs.suggestBtn(interaction, users, {
