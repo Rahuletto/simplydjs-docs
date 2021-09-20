@@ -121,9 +121,6 @@ html .DocSearch-Button:hover{
   background: transparent;
 }
 
-.row .col.col--4 {
-  display: none;
-}
 
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(rgb(35, 101, 224) ,#0d52d1);
@@ -131,6 +128,15 @@ html .DocSearch-Button:hover{
   border-radius: 10px;
   overflow: auto;
 
+}
+.features {
+  align-items: center;
+  display: flex;
+  padding: 2rem 0;
+  width: 100%;
+}
+.text--center {
+  width: 100%;
 }
 ::-webkit-scrollbar:horizontal {
     height: 10px;
