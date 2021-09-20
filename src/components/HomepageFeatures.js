@@ -49,33 +49,32 @@ function Feature({title, description}) {
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
         <h3>Why ?</h3>
-        <p><>
+        <p>
         <li>Simplifies things in discord.js</li>
         <li>Fastest Support</li>
         <li>Customizability at Peak</li>
         <li>Beginner Friendly</li>
         <li>Easier than other packages</li>
         <li>Slash Support</li>
-      </></p>
+      </p>
       </div>
     </div>
       
       <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
         <h3> </h3>
-        <p><>
-      </></p>
+        <p> </p>
       </div>
     </div>
 
 <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
         <h3>Stats</h3>
-        <p><>
+        <p>
         <li>10k+ Downloads</li>
         <li>20+ github Stars</li>
         <li>20 Functions</li>
-      </></p>
+      </p>
       </div>
     </div>
   );
