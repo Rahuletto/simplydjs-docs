@@ -4,19 +4,6 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Why ?',
-    description: (
-      <>
-        <li>Simplifies things in discord.js</li>
-        <li>20 Functions</li>
-        <li>Customizability at Peak</li>
-        <li>Beginner Friendly</li>
-        <li>Easier than other packages</li>
-        <li>Slash Support</li>
-      </>
-    ),
-  },
-  {
     title: '',
     description: (
       <>
@@ -61,8 +48,34 @@ function Feature({title, description}) {
     
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3>Why ?</h3>
+        <p><>
+        <li>Simplifies things in discord.js</li>
+        <li>Fastest Support</li>
+        <li>Customizability at Peak</li>
+        <li>Beginner Friendly</li>
+        <li>Easier than other packages</li>
+        <li>Slash Support</li>
+      </></p>
+      </div>
+    </div>
+      
+      <div className={clsx('col col--4')}>
+      <div className="text--center padding-horiz--md">
+        <h3> </h3>
+        <p><>
+      </></p>
+      </div>
+    </div>
+
+<div className={clsx('col col--4')}>
+      <div className="text--center padding-horiz--md">
+        <h3>Stats</h3>
+        <p><>
+        <li>10k+ Downloads</li>
+        <li>20+ github Stars</li>
+        <li>20 Functions</li>
+      </></p>
       </div>
     </div>
   );
@@ -76,9 +89,7 @@ export default function HomepageFeatures() {
 
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+            <Feature></Feature>
         </div>
       </div>
     </section>
