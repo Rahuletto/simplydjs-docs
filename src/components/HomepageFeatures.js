@@ -27,8 +27,8 @@ const FeatureList = [
     title: 'Stats',
     description: (
       <>
-        <li>6k+ Downloads</li>
-        <li>15+ github Stars</li>
+        <li>10k+ Downloads</li>
+        <li>20+ github Stars</li>
       </>
     ),
   },
