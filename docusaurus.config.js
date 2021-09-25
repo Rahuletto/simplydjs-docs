@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'A Simple, Easy and Beginner friendly Discord.js Package for everyone.',
   url: 'https://simplyd.js.org',
   baseUrl: '/',
-  favicon: 'https://cdn.discordapp.com/avatars/723793738291478569/10fada164d7f6e1121032d043c9ef652.webp',
+  favicon: 'https://i.imgur.com/kGAUCNo_d.webp?maxwidth=128&fidelity=grand',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   organizationName: 'Rahuletto#0243',

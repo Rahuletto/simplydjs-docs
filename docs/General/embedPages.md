@@ -123,3 +123,4 @@ import Link from '@docusaurus/Link';
 | Options     | Type    | Required | Default | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | `skipBtn` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘ | *true* | Enables/Disables First/Last Page Buttons |
+| `delBtn` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘ | *true* | Enables/Disables Delete Button |

@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # clickBtn
-This is clickBtn.. a function used for [ticketSystem](https://simplyd.js.org/docs/Systems/ticketSystem), [btnrole](https://simplyd.js.org/docs/Systems/btnrole), *[(coming soon)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)*
+This is clickBtn.. a function used for [ticketSystem](https://simplyd.js.org/docs/Systems/ticketSystem), [btnrole](https://simplyd.js.org/docs/Systems/btnrole), [giveawaySystem](https://simplyd.js.org/docs/Systems/giveawaySystem), [betterBtnRole](https://simplyd.js.org/docs/Systems/betterBtnRole)
 
 **Note:** This is not a function that does things.. This is completely for backend purpose which is useful for other button related functions
 
@@ -17,7 +17,7 @@ let db = new Database('mongo String')
 // interactionCreate Event
 
 simplydjs.clickBtn(interaction, {
-    // for ticket System
+    // for ticketSystem function
     embedDesc: 'embed description',
     embedColor: 'hex code', // default: #075FFF
     closeColor: 'color from buttons', 
@@ -30,7 +30,7 @@ simplydjs.clickBtn(interaction, {
     cooldownMsg: 'message',
     categoryID: 'category id',
     role: 'role id'
-    // for coming soon function
+    // for giveawaySystem function
     db: db
     })
 ```
@@ -100,7 +100,7 @@ import Link from '@docusaurus/Link';
 
 </div>
 
-## For coming soon function
+## For giveawaySystem function
 
 <div style={{textAlign: 'center'}}>
 

@@ -10,10 +10,10 @@ This is an example of suggestSystem
 const simplydjs = require('simply-djs')
 
 let { Database } = require('quickmongo')
-let users = new Database('mongo String')
+let db = new Database('mongo String')
 
 // interactionCreate event
-simplydjs.suggestBtn(interaction, users, {
+simplydjs.suggestBtn(interaction, db, {
    yesEmoji: 'emoji id', // default: ☑️
    yesColor: 'buttonColor', // default: green 
    noEmoji: 'emoji id', // default: X
@@ -38,7 +38,7 @@ simplydjs.suggestSystem(client, message, args, {
 
 ```js
 // interactionCreate event
-   simplydjs.suggestBtn(interaction, users)
+   simplydjs.suggestBtn(interaction, db)
 
 // messageCreate event
 simplydjs.suggestSystem(client, message, args, {
@@ -53,7 +53,7 @@ simplydjs.suggestSystem(client, message, args, {
 #### Note. You really need experience in making slash commands.
 ```js
 // interactionCreate event
-simplydjs.suggestBtn(interaction, users)
+simplydjs.suggestBtn(interaction, db)
 
 // suggest slash command
 const suggestion = interaction.options.getString('suggestion');

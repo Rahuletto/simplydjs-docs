@@ -45,7 +45,7 @@ function AboutMe(){
    <a href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/v/simply-djs.svg?style=flat-square" /></a>
  <a href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/dt/simply-djs?style=flat-square" /></a><br></br>
    <a href="https://www.npmjs.com/package/simply-djs"><img src="https://nodei.co/npm/simply-djs.png?downloadRank=true&downloads=true&downloadRank=true&stars=true" /></a><br></br>
-   <a href="https://discord.gg/3JzDV9T5Fn"><img src="https://invidget.switchblade.xyz/3JzDV9T5Fn" /></a>
+   <a href="https://discord.gg/3JzDV9T5Fn"><img src="https://media.discordapp.net/attachments/867344514943156254/891314222837936168/9sG4YFfuxxvPzCfcJO6XXnuAAAAAElFTkSuQmCC.png" /></a>
 </p>
 <br></br>
 <span className={styles.divider}></span>
