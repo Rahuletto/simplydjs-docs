@@ -11,7 +11,7 @@ const simplydjs = require('simply-djs')
 
 // messageCreate event
 // tictactoe command
-simplydjs.tictactoe(message, {
+simplydjs.tictactoe(client, message, {
     xEmoji: 'emoji id', //default: ❌
     oEmoji: 'emoji id', //default: ⭕
     idleEmoji: 'emoji id', //default: ➖
@@ -26,7 +26,7 @@ simplydjs.tictactoe(message, {
 ```js
 // messageCreate event
 // tictactoe command
-simplydjs.tictactoe(message)
+simplydjs.tictactoe(client, message)
 ```
 :::
 
@@ -39,7 +39,7 @@ simplydjs.tictactoe(message)
 // tictactoe slash command
 interaction.deferReply()
 
-simplydjs.tictactoe(interaction, {
+simplydjs.tictactoe(client, interaction, {
     slash: true,
     // other options
 })
