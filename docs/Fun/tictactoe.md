@@ -34,8 +34,13 @@ _`messageCreate` Event (tictactoe command)_
 
 ```js
 // messageCreate event
+<<<<<<< HEAD
 
 simplydjs.tictactoe(message);
+=======
+// tictactoe command
+simplydjs.tictactoe(client, message)
+>>>>>>> 040843a37c58ecc677d5e57ba2a0847c5e51ae2b
 ```
 
 :::
@@ -53,12 +58,19 @@ _`interactionCreate` Event (tictactoe command)_
 
 await interaction.deferReply();
 
+<<<<<<< HEAD
 simplydjs.tictactoe(interaction, {
   slash: true,
 
   // Slash Options
   userSlash: "option name" // User Slash Option Name
 });
+=======
+simplydjs.tictactoe(client, interaction, {
+    slash: true,
+    // other options
+})
+>>>>>>> 040843a37c58ecc677d5e57ba2a0847c5e51ae2b
 ```
 
 #### Slash command format
