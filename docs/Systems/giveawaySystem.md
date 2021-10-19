@@ -18,14 +18,19 @@ const simplydjs = require("simply-djs");
 
 let { Database } = require('quickmongo')
 let db = new Database('mongo String')
-
+```
+_`interactionCreate` Event_
+```js
 //interactionCreate event
 simplydjs.clickBtn(interaction, {
   db: db
 })
+```
 
+_`messageCreate` Event_ (gstart command)
+```js
 // messageCreate event
-// g-start command
+
 simplydjs.giveawaySystem(client, db, interaction, {
   args: args, // only when using in messageCreate
 
@@ -36,15 +41,19 @@ simplydjs.giveawaySystem(client, db, interaction, {
 ```
 
 
-:::tip TIP
-### You can make it without Customization
+:::info INFO
+### Without Customization
 
+_`interactionCreate` Event_
 ```js
 //interactionCreate event
 simplydjs.clickBtn(interaction, {
   db: db
 })
+```
 
+_`messageCreate` Event_ (gstart command)
+```js
 // messageCreate event
 // g-start command
 simplydjs.giveawaySystem(client, db, interaction, {
@@ -54,17 +63,20 @@ simplydjs.giveawaySystem(client, db, interaction, {
 :::
 
 :::tip TIP
-### You can make giveawaySystem for slash commands
+### Slash Support.
+You can make giveawaySystem for slash commands
 
-#### Note. You really need experience in making slash commands.
+_`interactionCreate` Event_
 ```js
 //interactionCreate event
 simplydjs.clickBtn(interaction, {
   db: db
 })
+```
 
-// interactionCreate event
-// g-start command
+_`interactionCreate` Event_ (gstart command)
+```js
+// interactionCreate Event
 simplydjs.giveawaySystem(client, db, interaction, {
   slash: true,
   // other options

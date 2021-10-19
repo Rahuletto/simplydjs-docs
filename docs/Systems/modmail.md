@@ -13,9 +13,12 @@ Intents.FLAGS.DIRECT_MESSAGES
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
+```
 
+_`messageCreate` Event_ (modmail command)
+
+```js
 // messageCreate event
-// modmail command
 simplydjs.modmail(client, message, {
   content: 'Hi' // default: ***Support Team***
   role: 'role id', // support role
@@ -30,12 +33,13 @@ simplydjs.modmail(client, message, {
 })
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info
+### Without Customization
+
+_`messageCreate` Event_ (modmail command)
 
 ```js
 // messageCreate event
-// modmail command
 simplydjs.modmail(client, message)
 ```
 :::

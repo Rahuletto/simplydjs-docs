@@ -11,7 +11,10 @@ const simplydjs = require('simply-djs')
 
 let { Database } = require('quickmongo')
 let db = new Database('mongo String')
+```
 
+_`interactionCreate` Event_
+```js
 // interactionCreate event
 simplydjs.suggestBtn(interaction, db, {
    yesEmoji: 'emoji id', // default: ☑️
@@ -21,7 +24,9 @@ simplydjs.suggestBtn(interaction, db, {
    denyEmbColor: 'hex color', // default: RED
    agreeEmbColor: 'hex color', // default: GREEN
    })
-   
+   ```
+_`messageCreate` Event_ (suggest command)
+   ```js
 // messageCreate event
 simplydjs.suggestSystem(client, message, args, {
    chid: 'channel id',
@@ -33,13 +38,17 @@ simplydjs.suggestSystem(client, message, args, {
 })
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info
+### Without Customization
 
+_`interactionCreate` Event_
 ```js
 // interactionCreate event
    simplydjs.suggestBtn(interaction, db)
+```
 
+_`messageCreate` Event_ (suggest command)
+```js
 // messageCreate event
 simplydjs.suggestSystem(client, message, args, {
    chid: 'channel id'
@@ -48,17 +57,21 @@ simplydjs.suggestSystem(client, message, args, {
 :::
 
 :::tip TIP
-### You can make suggestSystem for slash commands
+### Slash Support.
+You can make suggestSystem for slash commands
 
-#### Note. You really need experience in making slash commands.
+_`interactionCreate` Event_
 ```js
 // interactionCreate event
 simplydjs.suggestBtn(interaction, db)
+```
 
-// suggest slash command
+_`interactionCreate` Event_ (suggest command)
+```js
+// interactionCreate event
 const suggestion = interaction.options.getString('suggestion');
 
-interaction.deferReply()
+await interaction.deferReply()
 simplydjs.suggestSystem(client, message, suggestion, {
    slash: true,
    // other options

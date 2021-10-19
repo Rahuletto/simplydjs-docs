@@ -4,9 +4,9 @@ sidebar_position: 8
 
 # betterBtnRole
 
-This is an example of betterBtnRole | **This is a BETA function. Expect bugs**
+This is an example of betterBtnRole
 
-:::tip TIP
+:::info
 This is a slash only function | You can't use this function with normal message
 :::
 
@@ -14,17 +14,35 @@ This is a slash only function | You can't use this function with normal message
 
 ```js
 const simplydjs = require("simply-djs");
+```
 
+_`interactionCreate` Event_ (btn-add command)
+
+```js
 // interactionCreate event
 
-// btnrole-add slash command
 simplydjs.betterBtnRole(client, interaction, {
-  type: "add"
-});
+  type: "add",
 
-// btnrole-remove slash command
+  // Slash Option Customization
+  chSlash: 'channel', // Custom Channel Option
+  idSlash: 'message ID', // Custom ID Option
+  roleSlash: 'role', // Custom Role Option
+  labelSlash: 'name', // Custom Label Option
+  styleSlash: 'color', // Custom Style Option
+  emojiSlash: 'emoji' // Custom Emoji Option
+});
+```
+
+_`interactionCreate` Event_ (btn-remove command)
+```js
 simplydjs.betterBtnRole(client, interaction, {
-  type: "remove"
+  type: "remove",
+
+    // Slash Option Customization
+  chSlash: 'channel', // Custom Channel Option
+  idSlash: 'message ID', // Custom ID Option
+  roleSlash: 'role', // Custom Role Option
 });
 ```
 
@@ -140,5 +158,20 @@ import Link from '@docusaurus/Link';
 | Options | Type                                                                                                                          | Required | Default | Description                      |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------- |
 | `type`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String (add/remove)</Link> | ✓        | _none_  | Type of the betterBtnRole to use |
+
+</div>
+
+### Slash Option Customization.
+
+<div style={{textAlign: 'center'}}>
+
+| Options | Type                                                                                                                          | Required | Default | Description                      |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------- |
+| `chSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _channel_  | Custom Channel Option (Customizability++)|
+| `idSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _message_  | Custom Message ID Option |
+| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _role_  | Custom Role Option |
+| `labelSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _label_  | Custom Label Option |
+| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _style_  | Custom Style Option |
+| `emojiSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _emoji_  | Custom Emoji Option |
 
 </div>

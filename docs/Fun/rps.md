@@ -3,52 +3,69 @@ sidebar_position: 2
 ---
 
 # rps
+
 This is an example of rps (Rock Paper Scissors)
 
 ### With Customization
+
 ```js
-const simplydjs = require('simply-djs')
+const simplydjs = require("simply-djs");
+```
+
+_`messageCreate` Event (rps command)_
+
+```js
 // messageCreate Event
-// rps command
+
 simplydjs.rps(message, {
-            embedColor: "hex code", // default: #075FFF
-            timeoutEmbedColor: "hex code", // default: #c90000
-            drawEmbedColor: "hex code", // default: #075FFF
-            winEmbedColor: "hex code", // default: #06bd00
-            embedFooter: "A Game of RPS",
-            rockColor: "colors", // default: SECONDARY
-            paperColor: "colors", // default: SECONDARY
-            scissorsColor: "colors", // default: SECONDARY
-        })
+  embedColor: "hex code", // default: #075FFF
+  timeoutEmbedColor: "hex code", // default: #c90000
+  drawEmbedColor: "hex code", // default: #075FFF
+  winEmbedColor: "hex code", // default: #06bd00
+  embedFooter: "A Game of RPS",
+  rockColor: "colors", // default: SECONDARY
+  paperColor: "colors", // default: SECONDARY
+  scissorsColor: "colors" // default: SECONDARY
+});
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info INFO
+
+### Without Customization
+
+_`messageCreate` Event (rps command)_
 
 ```js
 // messageCreate Event
-// rps command
 
-simplydjs.rps(message)
+simplydjs.rps(message);
 ```
+
 :::
 
 :::tip TIP
-### You can make rps for slash commands
 
-#### Note. You really need experience in making slash commands.
+### Slash Support.
+
+You can make rps for slash commands
+
+_`interactionCreate` Event (rps command)_
+
 ```js
-// interactionCreate event
-// rps slash command
-interaction.deferReply()
+// interactionCreate Event
+
+await interaction.deferReply();
 
 simplydjs.rps(interaction, {
-    slash: true,
-    // other options
-})
+  slash: true,
+
+  // Slash Options
+  userSlash: "option name" // User Slash Option Name
+});
 ```
 
 #### Slash command format
+
 ```js
 {
   name: 'rps',
@@ -61,29 +78,34 @@ simplydjs.rps(interaction, {
       }],
 }
 ```
+
 :::
 
 ## Output
+
 ![image](https://user-images.githubusercontent.com/71836991/131489358-a463ac58-190d-4572-87ff-17a0e580350e.png)
 
 ## Options for rps function
+
 import Link from '@docusaurus/Link';
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `slash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Slash Support for the rps (need to be in a slash command) |
+| Options     | Type                                                                                                               | Required | Default | Description                                               |
+| ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------- |
+| `slash`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the rps (need to be in a slash command) |
+| `userSlash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _user_  | Slash Option Name (Customizability)                       |
 
 ### Embed
 
 <div style={{textAlign: 'center'}}>
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `embedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#075FFF* | Color of the rps embed |
-| `timeoutEmbedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#cc0000* | Color of the rps timeout embed |
-| `drawEmbedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#075FFF* | Color of the rps tie embed |
-| `winEmbedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *##06bd00* | Color of the rps winner embed |
-| `credit`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *true* | Credit the package |
+| Options             | Type                                                                                                               | Required | Default    | Description                    |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------- | ------------------------------ |
+| `embedColor`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_  | Color of the rps embed         |
+| `embedFoot`         | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _credit_   | Footer of the Embed..          |
+| `timeoutEmbedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#cc0000_  | Color of the rps timeout embed |
+| `drawEmbedColor`    | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_  | Color of the rps tie embed     |
+| `winEmbedColor`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _##06bd00_ | Color of the rps winner embed  |
+| `credit`            | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_     | Credit the package             |
 
 </div>
 
@@ -91,10 +113,10 @@ import Link from '@docusaurus/Link';
 
 <div style={{textAlign: 'center'}}>
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `rockColor`|<Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *SECONDARY* |  Color of the rps Rock Button |
-| `paperColor`|<Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *SECONDARY* |  Color of the rps Paper Button |
-| `scissorsColor`|<Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *SECONDARY* |  Color of the rps Scissors Button |
+| Options         | Type                                                                                                | Required | Default     | Description                      |
+| --------------- | --------------------------------------------------------------------------------------------------- | -------- | ----------- | -------------------------------- |
+| `rockColor`     | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SECONDARY_ | Color of the rps Rock Button     |
+| `paperColor`    | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SECONDARY_ | Color of the rps Paper Button    |
+| `scissorsColor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SECONDARY_ | Color of the rps Scissors Button |
 
 </div>

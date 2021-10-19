@@ -13,9 +13,11 @@ const simplydjs = require('simply-djs')
 
 let { Database } = require('quickmongo')
 let db = new Database('mongo String')
+```
 
+_`interactionCreate` Event_
+```js
 // interactionCreate Event
-
 simplydjs.clickBtn(interaction, {
     // for ticketSystem function
     embedDesc: 'embed description',
@@ -29,15 +31,18 @@ simplydjs.clickBtn(interaction, {
     timeout: true, 
     cooldownMsg: 'message',
     categoryID: 'category id',
-    role: 'role id'
+    role: 'role id',
+    trEmoji: 'emoji id', // default: 📜
+    trColor: 'color from buttons', // default: PRIMARY
     // for giveawaySystem function
     db: db
     })
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info
+### Without Customization
 
+_`interactionCreate` Event_
 ```js
 // interactionCreate Event
 
@@ -97,6 +102,17 @@ import Link from '@docusaurus/Link';
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | `openColor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘ | *SUCCESS* | The color of the Reopen Ticket Button |
 | `openEmoji` | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘ | *🔓* | The emoji of the Reopen Ticket Button |
+
+</div>
+
+### Transcript Ticket Options
+
+<div style={{textAlign: 'center'}}>
+
+| Options     | Type    | Required | Default | Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| `trColor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘ | *PRIMARY* | The color of the Transcript Ticket Button |
+| `trEmoji` | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘ | *📜* | The emoji of the Transcript Ticket Button |
 
 </div>
 

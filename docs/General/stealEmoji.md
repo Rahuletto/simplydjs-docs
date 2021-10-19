@@ -8,8 +8,12 @@ This is an example of stealEmoji
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
-// message event
-// steal command
+```
+
+*`messageCreate` Event (steal command)*
+```js
+// messageCreate Event
+
 simplydjs.stealEmoji(message, args, {
     embedTitle: 'Title', 
     embedColor: 'hex code',
@@ -18,13 +22,13 @@ simplydjs.stealEmoji(message, args, {
 })
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info INFO
+### Without Customization
 
+*`messageCreate` Event (steal command)*
 ```js
-const simplydjs = require('simply-djs')
 // message event
-// steal command
+
 simplydjs.stealEmoji(message, args)
 ```
 

@@ -8,19 +8,24 @@ This is an example of embedCreate
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
+```
 
+_`messageCreate` Event_ (embedcreate command)
+```js
 // messageCreate event
-// embed-create command
+
 simplydjs.embedCreate(message)
 ```
 
 :::tip TIP
-### You can make embedCreate for slash commands
+### Slash Support.
+You can make embedCreate for slash commands
 
-#### Note. You really need experience in making slash commands.
+_`interactionCreate` Event_ (embedcreate command)
 ```js
-// interactionCreate event
-interaction.deferReply()
+// interactionCreate Event
+await interaction.deferReply()
+
 simplydjs.embedCreate(interaction, {
    slash: true,
    // other options

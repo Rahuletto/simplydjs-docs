@@ -14,7 +14,10 @@ const simplydjs = require('simply-djs')
 
 let { Database } = require('quickmongo')
 let db = new Database('mongo String')
+```
 
+_`interactionCreate` Event_
+```js
 // interactionCreate event
 simplydjs.suggestBtn(interaction, db, {
    yesEmoji: 'emoji id', // default: ☑️
@@ -26,9 +29,10 @@ simplydjs.suggestBtn(interaction, db, {
    })
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info
+### Without Customization
 
+_`interactionCreate` Event_
 ```js
 // interactionCreate event
    simplydjs.suggestBtn(interaction, db)

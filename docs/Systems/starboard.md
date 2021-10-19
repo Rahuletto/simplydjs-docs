@@ -15,7 +15,10 @@ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
+```
 
+_`messageReactionAdd` Event_
+```js
 // messageReactionAdd event
 simplydjs.starboard(client, reaction, {
     event: 'messageReactionAdd',
@@ -24,7 +27,10 @@ simplydjs.starboard(client, reaction, {
     emoji:"emoji id", // default: ⭐
     min: 2, // default: 2
   })
+```
 
+_`messageReactionRemove` Event_
+```js
 // messageReactionRemove event
 simplydjs.starboard(client, reaction, {
     event: 'messageReactionRemove',
@@ -33,7 +39,10 @@ simplydjs.starboard(client, reaction, {
     emoji:"emoji id", // default: ⭐
     min: 2, // default: 2
   })
-  
+```
+
+_`messageDelete` Event_
+```js
 // messageDelete event
 simplydjs.starboard(client, message, {
     event: 'messageDelete',
@@ -44,22 +53,29 @@ simplydjs.starboard(client, message, {
   })
 ```
 
-:::tip TIP
-### You can make it without Customization
+:::info
+### Without Customization
 
+_`messageReactionAdd` Event_
 ```js
 // messageReactionAdd event
 simplydjs.starboard(client, reaction, {
     event: 'messageReactionAdd',
     chid: 'channel id',
   })
+```
 
+_`messageReactionRemove` Event_
+```js
 // messageReactionRemove event
 simplydjs.starboard(client, reaction, {
     event: 'messageReactionRemove',
     chid: 'channel id',
   })
-  
+  ```
+
+_`messageDelete` Event_
+  ```js
 // messageDelete event
 simplydjs.starboard(client, message, {
     event: 'messageDelete',
