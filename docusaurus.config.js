@@ -13,14 +13,19 @@ module.exports = {
   organizationName: 'Rahuletto#0243',
   projectName: 'simply-djs',
   themeConfig: {
-
+    announcementBar: {
+      id: 'announce',
+      content:
+        'Install the latest v2.1.0 version to get the new features !',
+      backgroundColor: '#18191a',
+      textColor: '#FFFFFF',
+    },
     algolia: {
       apiKey: '8843ca3b55fd51dbe6123173f85368d8',
       indexName: 'simplyd',
       inputSelector: 'h1',
       searchParameters: {
         hitsPerPage: 4,
-        facetFilters: ["type:lvl2"]
       },
 
       debug: false
@@ -83,43 +88,51 @@ module.exports = {
           title: 'Help',
           items: [
             {
-              label: 'Documentation',
+              label: '• Documentation',
               to: '/docs/intro',
             },
             {
-              label: 'Support Server',
+              label: '• Support Server',
               href: 'https://discord.gg/3JzDV9T5Fn',
             },
           ],
         },
         {
-          title: ' ',
-         /* items: [
-            {
-              label: ' ',
-              to: '/',
-            },
-          ], **/
+          title: 'Learn',
+         items: [
+           {
+            label: '• Discord.js Docs',
+            href: 'https://discord.js.org',
+           },
+          {
+            label: '• Discord.js Guide',
+            href: 'https://discordjs.guide/#before-you-begin',
+          },
+          {
+            label: '• JavaScript',
+            href: 'https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-welcome'
+          }
+          ], 
         },
         {
           title: 'Contact Me',
           items: [
             {
-              label: 'GitHub',
+              label: '• GitHub',
               href: 'https://github.com/Rahuletto',
             },
             {
-              label: 'Twitter',
+              label: '• Twitter',
               href: 'https://twitter.com/rahuletto',
             },
             {
-              label: 'Instagram',
-              href: 'https://instagram.com/rahuletto',
+              label: '• Discord',
+              href: 'https://discord.com/invite/3JzDV9T5Fn',
             },
           ],
         },
       ],
-      copyright: `<br>Copyright © ${new Date().getFullYear()}  Simply Develop. npm i simply-djs<br>Made By Rahuletto#0243 with 💖<br><br>Not affiliated with Discord (or) Discord.js`,
+      copyright: `<br><br>Copyright © ${new Date().getFullYear()}  Simply Develop. npm i simply-djs<br><br>Not affiliated with Discord (or) Discord.js`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -139,4 +152,37 @@ module.exports = {
       },
     ],
   ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        reloadPopup: 'true',
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: 'https://i.imgur.com/kGAUCNo_d.webp?maxwidth=128&fidelity=grand',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json', // your PWA manifest
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: '#2365e0',
+          },
+        ],
+      },
+    ],
+  ],
+
 };

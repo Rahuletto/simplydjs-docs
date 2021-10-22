@@ -9,7 +9,7 @@ const FeatureList = [
       <>
         <li>Simplifies things in discord.js</li>
         <li>Fastest Support ever</li>
-        <li>Customizability at Peak</li>
+        <li>Super Customizable</li>
         <li>Beginner Friendly</li>
         <li>Easier than other packages</li>
         <li>Slash Support</li>
@@ -27,9 +27,9 @@ const FeatureList = [
     title: 'Stats',
     description: (
       <>
-        <li>10k+ Downloads</li>
+        <li>22k+ Downloads</li>
         <li>20+ github Stars</li>
-        <li>20 Functions</li>
+        <li>21 Functions</li>
       </>
     ),
   },

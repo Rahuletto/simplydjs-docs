@@ -22,3 +22,6 @@ simplydjs.nqn(message);
 ## Output
 
 ![nqn](https://user-images.githubusercontent.com/71836991/137880088-d99709ef-3753-4120-a00d-cc4658d4cf1d.png)
+
+### Options
+- No Options.. Yea.
