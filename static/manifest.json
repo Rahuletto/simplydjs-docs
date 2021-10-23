@@ -15,9 +15,9 @@
       }
     ],
     "start_url": "https://simplyd.js.org",
-    "background_color": "#2365e0",
+    "background_color": "#0d52d1",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#2365e0",
+    "theme_color": "#0d52d1",
     "description": "Documentation for Simply-DJS npm Package"
   }
