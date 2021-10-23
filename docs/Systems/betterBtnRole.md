@@ -161,17 +161,17 @@ import Link from '@docusaurus/Link';
 
 </div>
 
-### Slash Option Customization.
+### Slash Customization.
 
 <div style={{textAlign: 'center'}}>
 
 | Options | Type                                                                                                                          | Required | Default | Description                      |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------- |
-| `chSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _channel_  | Custom Channel Option (Customizability++)|
-| `idSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _message_  | Custom Message ID Option |
-| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _role_  | Custom Role Option |
-| `labelSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _label_  | Custom Label Option |
-| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _style_  | Custom Style Option |
-| `emojiSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _emoji_  | Custom Emoji Option |
+| `chSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _channel_  | Custom Channel Option name (Customizability++)|
+| `idSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _message_  | Custom Message ID Option name |
+| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _role_  | Custom Role Option name |
+| `labelSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _label_  | Custom Label Option name |
+| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _style_  | Custom Style Option name |
+| `emojiSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _emoji_  | Custom Emoji Option name |
 
 </div>

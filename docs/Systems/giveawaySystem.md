@@ -145,3 +145,17 @@ import Link from '@docusaurus/Link';
 | `winner`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Integer</Link>| ✘ | *args[1]* | Number of Winners for the giveaway |
 | `prize`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *sus* | Prize given to the giveaway winner |
 </div>
+
+### Slash Customization
+<div style={{textAlign: 'center'}}>
+
+| Options     | Type    | Required | Default | Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Options     | Type    | Required | Default | Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| `timeSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *time* | Custom Time Option name (Customizability++) |
+| `winSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *winners* | Custom Winners Option name |
+| `prizeSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *prize* | Custom Prize Option name |
+| `chSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *channel* | Custom Channel Option name |
+
+</div>

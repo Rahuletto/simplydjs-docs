@@ -280,6 +280,23 @@ table{
     margin: 10px;
 }
 
+.anchor{
+  transition: .5s;
+}
+
+tbody tr{
+  transition: .2s;
+}
+
+tbody:hover tr{
+  opacity: 0.25;
+}
+
+tbody:hover tr:hover{
+  opacity: 1;
+}
+
+
 
 .footer__link-item:hover{
   color: white;

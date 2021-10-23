@@ -34,13 +34,8 @@ _`messageCreate` Event (tictactoe command)_
 
 ```js
 // messageCreate event
-<<<<<<< HEAD
 
 simplydjs.tictactoe(message);
-=======
-// tictactoe command
-simplydjs.tictactoe(client, message)
->>>>>>> 040843a37c58ecc677d5e57ba2a0847c5e51ae2b
 ```
 
 :::
@@ -58,19 +53,12 @@ _`interactionCreate` Event (tictactoe command)_
 
 await interaction.deferReply();
 
-<<<<<<< HEAD
 simplydjs.tictactoe(interaction, {
   slash: true,
 
   // Slash Options
   userSlash: "option name" // User Slash Option Name
 });
-=======
-simplydjs.tictactoe(client, interaction, {
-    slash: true,
-    // other options
-})
->>>>>>> 040843a37c58ecc677d5e57ba2a0847c5e51ae2b
 ```
 
 #### Slash command format
@@ -98,10 +86,18 @@ simplydjs.tictactoe(client, interaction, {
 
 import Link from '@docusaurus/Link';
 
+<div style={{textAlign: 'center'}}>
 | Options     | Type                                                                                                               | Required | Default | Description                                                     |
 | ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
 | `slash`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the Tictactoe (need to be in a slash command) |
-| `userSlash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _user_  | Slash Option Name (Customizability)                             |
+</div>
+
+### Slash Customization
+<div style={{textAlign: 'center'}}>
+| Options     | Type                                                                                                               | Required | Default | Description                                                     |
+| ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
+| `userSlash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _user_  | Customize the Slash Option name (user slash option)                             |
+</div>
 
 ### Embed
 

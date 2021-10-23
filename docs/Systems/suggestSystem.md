@@ -101,6 +101,15 @@ simplydjs.suggestSystem(client, message, suggestion, {
 ## Options for suggestBtn function
 import Link from '@docusaurus/Link';
 
+### Slash Customization
+<div style={{textAlign: 'center'}}>
+
+| Options     | Type    | Required | Default | Description |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| `sugSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *suggestion* | Custom Suggestion Option name (Customizability++) |
+
+</div>
+
 ### Embeds
 <div style={{textAlign: 'center'}}>
 
