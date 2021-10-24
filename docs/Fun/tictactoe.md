@@ -87,16 +87,20 @@ simplydjs.tictactoe(interaction, {
 import Link from '@docusaurus/Link';
 
 <div style={{textAlign: 'center'}}>
+
 | Options     | Type                                                                                                               | Required | Default | Description                                                     |
 | ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
 | `slash`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the Tictactoe (need to be in a slash command) |
+
 </div>
 
 ### Slash Customization
 <div style={{textAlign: 'center'}}>
+
 | Options     | Type                                                                                                               | Required | Default | Description                                                     |
 | ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
 | `userSlash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _user_  | Customize the Slash Option name (user slash option)                             |
+
 </div>
 
 ### Embed

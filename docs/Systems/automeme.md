@@ -48,7 +48,7 @@ import Link from '@docusaurus/Link';
 
 | Options      | Type                                                                                                                       | Required | Default    | Description                                   |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------- | -------- | ---------- | --------------------------------------------- | --- |
-| `chid`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link>       | ✓        | _none_     | Discord Channel id (no memes in general :     | )   |
+| `chid`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link>       | ✓        | _none_     | Discord Channel id (no memes in general)    |
 | `subReddits` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Custom SubReddits</Link> | ✘        | _a array_  | Meme SubReddits                               |
 | `interval`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">milliseconds</Link>     | ✘        | _120000ms_ | Interval Between memes (only in milliseconds) |
 | `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>         | ✘        | _#075FFF_  | Embed Color of the meme embed.                |

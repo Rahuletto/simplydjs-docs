@@ -151,8 +151,6 @@ import Link from '@docusaurus/Link';
 
 | Options     | Type    | Required | Default | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
 | `timeSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *time* | Custom Time Option name (Customizability++) |
 | `winSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *winners* | Custom Winners Option name |
 | `prizeSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *prize* | Custom Prize Option name |
