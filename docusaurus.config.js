@@ -16,7 +16,7 @@ module.exports = {
     announcementBar: {
       id: 'announce',
       content:
-        'Install the latest v2.1.0 version to get the new features !',
+        'Install the latest v2.2.0 version to get the new features !',
       backgroundColor: '#18191a',
       textColor: '#FFFFFF',
     },
