@@ -111,7 +111,7 @@ import Link from '@docusaurus/Link';
 | `role`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _none_           | Support Role ID. Users with the role have access to see the ticket |
 | `pingRole`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _none_           | Its role. But it pings ;) |
 
-### New Options
+#### New Options
 | Options       | Type                                                                                                               | Required | Default                            | Description                                                         |
 | ------------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------- |
 | `ticketname`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _Ticket opened by {tag}_           | Custom Ticket name, Use {tag} {username} {id} for user tag/username/id |
@@ -124,14 +124,13 @@ import Link from '@docusaurus/Link';
 
 | Options      | Type                                                                                                               | Required | Default              | Description                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | -------------------- | ---------------------------------------------------------------------------- |
-
 | `embedDesc`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _a long description_ | Embed Description of the embed which is sent when the ticket has been opened |
 | `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_            | Embed Color of the embed which is sent when the ticket has been opened       |
 | `credit`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_               | Credit the package                                                           |
 
 </div>
 
-### New Options
+#### New Options
 
 <div style={{textAlign: 'center'}}>
 
@@ -139,7 +138,7 @@ import Link from '@docusaurus/Link';
 | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | -------------------- | ---------------------------------------------------------------------------- |
 | `embed`  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed when ticket opened and use {tag} {username} {id} for user tag/username/id in description |
 | `logembed`  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed for logs and use {tag} {username} {id} for user tag/username/id in description |
-| `confirmEmb  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed for confirmation at ticket deletion |
+| `confirmEmb`  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed for confirmation at ticket deletion |
 
 </div>
 
