@@ -133,6 +133,8 @@ import Link from '@docusaurus/Link';
 
 ### New Options
 
+<div style={{textAlign: 'center'}}>
+
 | Options      | Type                                                                                                               | Required | Default              | Description                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | -------------------- | ---------------------------------------------------------------------------- |
 | `embed`  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed when ticket opened and use {tag} {username} {id} for user tag/username/id in description |
