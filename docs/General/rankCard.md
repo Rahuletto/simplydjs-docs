@@ -4,7 +4,11 @@ sidebar_position: 7
 
 # rankCard
 
-This is an example of rankCard (not rank system) | Thanks TheJoaqun#7239 for the help with canvas
+This is the example of rankCard
+
+:::danger Deprecation Warning
+rankCard is being deprecated ! Use simply-xp or use canvacord for rank cards
+:::
 
 ### Required
 

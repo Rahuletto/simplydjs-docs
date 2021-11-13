@@ -109,6 +109,7 @@ import Link from '@docusaurus/Link';
 | `pages`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array of Embeds</Link> | ✓        | _none_  | Array of Embeds to make it as Pages                              |
 | `slash`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>       | ✘        | _false_ | Slash Support for the embedPages (need to be in a slash command) |
 | `pgCount` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>       | ✘        | _false_ | Shows Page Count                                                 |
+| `timeout` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Number</Link>       | ✘        | _120000 (2 min)_ | Disables the button after certain time (in milliseconds)                                                 |
 
 </div>
 

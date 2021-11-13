@@ -75,9 +75,10 @@ simplydjs.ticketSystem(message, message.channel);
 You can make ticketSystem for slash commands
 
 _`interactionCreate` Event_
+
 ```js
 //interactionCreate event
-simplydjs.clickBtn(button)
+simplydjs.clickBtn(button);
 ```
 
 _`interactionCreate` Event_ (setup-ticket command)
@@ -104,10 +105,18 @@ simplydjs.ticketSystem(interaction, interaction.channel, {
 import Link from '@docusaurus/Link';
 
 | Options       | Type                                                                                                               | Required | Default                            | Description                                                         |
-| ------------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------- | ------------------------------------------------------------------- |
-| `slash`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_                            | Slash Support for the ticketSystem (need to be in a slash command)      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------- |
 | `timeout`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_                             | Timeout which deletes the ticket after 10 minutes to reduce clutter |
 | `cooldownMsg` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _You have already opened a ticket_ | Message sent when a ticket is already opened by the user            |
+| `role`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _none_           | Support Role ID. Users with the role have access to see the ticket |
+| `pingRole`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _none_           | Its role. But it pings ;) |
+
+### New Options
+| Options       | Type                                                                                                               | Required | Default                            | Description                                                         |
+| ------------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------- |
+| `ticketname`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _Ticket opened by {tag}_           | Custom Ticket name, Use {tag} {username} {id} for user tag/username/id |
+| `logChannel`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link>   | ✘        | _none_           | Logs When Ticket is deleted (with transcript) |
+
 
 ### Embed
 
@@ -115,12 +124,22 @@ import Link from '@docusaurus/Link';
 
 | Options      | Type                                                                                                               | Required | Default              | Description                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | -------------------- | ---------------------------------------------------------------------------- |
+
 | `embedDesc`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _a long description_ | Embed Description of the embed which is sent when the ticket has been opened |
 | `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_            | Embed Color of the embed which is sent when the ticket has been opened       |
 | `credit`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_               | Credit the package                                                           |
 
 </div>
 
+### New Options
+
+| Options      | Type                                                                                                               | Required | Default              | Description                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | -------------------- | ---------------------------------------------------------------------------- |
+| `embed`  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed when ticket opened and use {tag} {username} {id} for user tag/username/id in description |
+| `logembed`  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed for logs and use {tag} {username} {id} for user tag/username/id in description |
+| `confirmEmb  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed for confirmation at ticket deletion |
+
+</div>
 ### Close Ticket Options
 
 <div style={{textAlign: 'center'}}>
@@ -154,19 +173,27 @@ import Link from '@docusaurus/Link';
 
 </div>
 
-
 ### Transcript Ticket Options
 
 <div style={{textAlign: 'center'}}>
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `trColor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘ | *PRIMARY* | The color of the Transcript Ticket Button |
-| `trEmoji` | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘ | *📜* | The emoji of the Transcript Ticket Button |
+| Options   | Type                                                                                                | Required | Default   | Description                               |
+| --------- | --------------------------------------------------------------------------------------------------- | -------- | --------- | ----------------------------------------- |
+| `trColor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _PRIMARY_ | The color of the Transcript Ticket Button |
+| `trEmoji` | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link>                    | ✘        | _📜_      | The emoji of the Transcript Ticket Button |
 
 </div>
 
 ## Options for ticketSystem function
+
+<div style={{textAlign: 'center'}}>
+
+| Options      | Type                                                                                                               | Required | Default                                        | Description                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------------------- | ----------------------------------------------------------- |
+| `slash`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_                            | Slash Support for the ticketSystem (need to be in a slash command)  |
+| `embed`       | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link> | ✘        | _embed_                            | Custom Embed at Ticket opening panel  |
+
+</div>
 
 ### Embed
 

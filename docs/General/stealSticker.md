@@ -24,6 +24,35 @@ simplydjs.stealSticker(message, args, {
 });
 ```
 
+:::tip TIP
+
+### Slash Support.
+
+You can make stealSticker for slash commands
+
+_`interactionCreate` Event (steal command)_
+
+```js
+// interactionCreate event
+interaction.deferReply();
+
+simplydjs.stealSticker(message, args, {
+  slash: true,
+  // other options
+});
+```
+
+#### Slash command format
+
+```js
+{
+  name: 'steal-sticker',
+  description: 'steal stickers using simply-djs',
+    },
+```
+
+:::
+
 :::info INFO
 
 ### Without Customization
@@ -52,6 +81,7 @@ import Link from '@docusaurus/Link';
 
 | Options      | Type                                                                                                               | Required | Default                       | Description                     |
 | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | ----------------------------- | ------------------------------- |
+| `slash`      | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>  | ✘        | _false_            | Slash Support for the stealSticker (need to be in a slash command) |
 | `embedTitle` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | Sticker Added ;)\*            | Embed Title of the stealSticker |
 | `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_                     | Color of the Embed              |
 | `embedFoot`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _Stop Stealing.. Its Illegal_ | Footer of the Embed             |

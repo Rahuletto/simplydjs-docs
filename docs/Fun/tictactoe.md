@@ -91,6 +91,7 @@ import Link from '@docusaurus/Link';
 | Options     | Type                                                                                                               | Required | Default | Description                                                     |
 | ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
 | `slash`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the Tictactoe (need to be in a slash command) |
+| `resultBtn`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Results will be in buttons not as code blocks |
 
 </div>
 
@@ -111,6 +112,7 @@ import Link from '@docusaurus/Link';
 | ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | --------- | ---------------------------------------- |
 | `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_ | Color of the Tictactoe guide embed       |
 | `embedFoot`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _credits_ | Embed Footer when the credits turned off |
+| `timeoutEmbedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#cc0000_ | Color of the Tictactoe timeout alert embed       |
 | `credit`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_    | Credit the package                       |
 
 </div>
