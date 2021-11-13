@@ -57,7 +57,6 @@ import Link from '@docusaurus/Link';
 </div>
 
 ### Embed
-import Link from '@docusaurus/Link';
 
 <div style={{textAlign: 'center'}}>
 
