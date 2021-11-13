@@ -140,6 +140,7 @@ import Link from '@docusaurus/Link';
 | `confirmEmb  | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>   | ✘        | _embed_ | Custom Embed for confirmation at ticket deletion |
 
 </div>
+
 ### Close Ticket Options
 
 <div style={{textAlign: 'center'}}>
