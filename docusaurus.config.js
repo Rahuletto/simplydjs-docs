@@ -41,6 +41,12 @@ module.exports = {
   "https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
     ],
     throwIfNamespace: false,
+scripts: [
+    {
+     src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      async: true,
+    },
+  ],
     metadatas: [
       {
         name: 'google-site-verification',  content: "pb2-QCQjmdU-4KOGjcrazLLDeY9XDxG25NONdsbbt4I"
