@@ -47,7 +47,7 @@ scripts: [
       async: true,
     },
   ],
-    metadatas: [
+    metadata: [
       {
         name: 'google-site-verification',  content: "pb2-QCQjmdU-4KOGjcrazLLDeY9XDxG25NONdsbbt4I"
       },
