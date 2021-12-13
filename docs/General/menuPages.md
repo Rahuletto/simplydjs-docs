@@ -70,23 +70,7 @@ simplydjs.dropdownPages(message, {
 
 ### Slash Support.
 
-You can make menuPages for slash commands
-
-_`interactionCreate` Event (any command)_
-
-```js
-// interactionCreate Event
-
-let embed = // embed
-let emb2 = // embed
-
-await interaction.deferReply()
-
-simplydjs.menuPages(message, {
-  slash: true,
-  // Other options
-})
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 

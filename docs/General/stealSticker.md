@@ -28,19 +28,7 @@ simplydjs.stealSticker(message, args, {
 
 ### Slash Support.
 
-You can make stealSticker for slash commands
-
-_`interactionCreate` Event (steal command)_
-
-```js
-// interactionCreate event
-interaction.deferReply();
-
-simplydjs.stealSticker(message, args, {
-  slash: true,
-  // other options
-});
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 

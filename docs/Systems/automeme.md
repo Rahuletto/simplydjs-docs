@@ -6,6 +6,12 @@ sidebar_position: 6
 
 This is an example of automeme <br></br><br></br>
 
+:::info INFO
+
+It will avoid posting NSFW memes. Uses reddit api ;)
+
+:::
+
 ### With Customization
 
 ```js

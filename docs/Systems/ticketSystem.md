@@ -72,25 +72,7 @@ simplydjs.ticketSystem(message, message.channel);
 
 ### Slash Support.
 
-You can make ticketSystem for slash commands
-
-_`interactionCreate` Event_
-
-```js
-//interactionCreate event
-simplydjs.clickBtn(button);
-```
-
-_`interactionCreate` Event_ (setup-ticket command)
-
-```js
-// interactionCreate event
-
-simplydjs.ticketSystem(interaction, interaction.channel, {
-  slash: true
-  // Other Options
-});
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 :::
 

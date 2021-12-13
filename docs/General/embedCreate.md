@@ -3,7 +3,14 @@ sidebar_position: 7
 ---
 
 # embedCreate
+
 This is an example of embedCreate
+
+:::tip TIP
+
+This function has became Promised based and can return the embed `<JSON>`
+
+:::
 
 ### With Customization
 ```js
@@ -17,20 +24,14 @@ _`messageCreate` Event_ (embedcreate command)
 simplydjs.embedCreate(message)
 ```
 
+
+## Returns `<JSON>`
+- embedCreate returns the JSON of the embed so you can do something with it.
+
 :::tip TIP
 ### Slash Support.
-You can make embedCreate for slash commands
 
-_`interactionCreate` Event_ (embedcreate command)
-```js
-// interactionCreate Event
-await interaction.deferReply()
-
-simplydjs.embedCreate(interaction, {
-   slash: true,
-   // other options
-})
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 ```js

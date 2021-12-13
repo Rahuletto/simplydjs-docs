@@ -6,6 +6,12 @@ sidebar_position: 9
 
 This is an example of giveawaySystem
 
+:::info INFO
+
+Fixed multiple bugs ;)
+
+:::
+
 ### Required
 ```
 quickmongo
@@ -31,7 +37,7 @@ _`messageCreate` Event_ (gstart command)
 ```js
 // messageCreate event
 
-simplydjs.giveawaySystem(client, db, interaction, {
+simplydjs.giveawaySystem(client, db, message, {
   args: args, // only when using in messageCreate
 
   time: args[0],
@@ -64,24 +70,8 @@ simplydjs.giveawaySystem(client, db, interaction, {
 
 :::tip TIP
 ### Slash Support.
-You can make giveawaySystem for slash commands
 
-_`interactionCreate` Event_
-```js
-//interactionCreate event
-simplydjs.clickBtn(interaction, {
-  db: db
-})
-```
-
-_`interactionCreate` Event_ (gstart command)
-```js
-// interactionCreate Event
-simplydjs.giveawaySystem(client, db, interaction, {
-  slash: true,
-  // other options
-})
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 ```js

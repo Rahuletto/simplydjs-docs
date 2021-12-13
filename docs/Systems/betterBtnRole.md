@@ -7,7 +7,9 @@ sidebar_position: 8
 This is an example of betterBtnRole
 
 :::info
+
 This is a slash only function | You can't use this function with normal message
+
 :::
 
 ### With Customization
@@ -25,12 +27,12 @@ simplydjs.betterBtnRole(client, interaction, {
   type: "add",
 
   // Slash Option Customization
-  chSlash: 'channel', // Custom Channel Option
-  idSlash: 'message ID', // Custom ID Option
-  roleSlash: 'role', // Custom Role Option
-  labelSlash: 'name', // Custom Label Option
-  styleSlash: 'color', // Custom Style Option
-  emojiSlash: 'emoji' // Custom Emoji Option
+  chSlash: 'channel', // Custom Channel Option [Names]
+  idSlash: 'message ID', // Custom ID Option [Names]
+  roleSlash: 'role', // Custom Role Option [Names]
+  labelSlash: 'name', // Custom Label Option [Names]
+  styleSlash: 'color', // Custom Style Option [Names]
+  emojiSlash: 'emoji' // Custom Emoji Option [Names]
 });
 ```
 
@@ -40,9 +42,9 @@ simplydjs.betterBtnRole(client, interaction, {
   type: "remove",
 
     // Slash Option Customization
-  chSlash: 'channel', // Custom Channel Option
-  idSlash: 'message ID', // Custom ID Option
-  roleSlash: 'role', // Custom Role Option
+  chSlash: 'channel', // Custom Channel Option [Names]
+  idSlash: 'message ID', // Custom ID Option [Names]
+  roleSlash: 'role', // Custom Role Option [Names]
 });
 ```
 

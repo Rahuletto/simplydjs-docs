@@ -6,6 +6,12 @@ sidebar_position: 1
 
 This is an example of tictactoe
 
+:::tip TIP
+
+This function has became Promised based and can return the winner `<User>`
+
+:::
+
 ### With Customization
 
 ```js
@@ -40,26 +46,14 @@ simplydjs.tictactoe(message);
 
 :::
 
+## Returns `<User>`
+- tictactoe returns the user who won the match. so you can reward them with some money or xp.
+
 :::tip TIP
 
 ### Slash Support.
 
-You can make tictactoe for slash commands
-
-_`interactionCreate` Event (tictactoe command)_
-
-```js
-// interactionCreate event
-
-await interaction.deferReply();
-
-simplydjs.tictactoe(interaction, {
-  slash: true,
-
-  // Slash Options
-  userSlash: "option name" // User Slash Option Name
-});
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 

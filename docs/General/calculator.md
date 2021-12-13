@@ -25,19 +25,7 @@ simplydjs.calculator(message, {
 
 ### Slash Support
 
-You can make calculator for slash commands
-
-_`interactionCreate` Event (calculator slash command)_
-
-```js
-// interactionCreate Event
-await interaction.deferReply();
-
-simplydjs.calculator(interaction, {
-  slash: true
-  // other options
-});
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 

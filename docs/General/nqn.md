@@ -6,6 +6,12 @@ sidebar_position: 5
 
 This is an example of nqn
 
+:::info INFO
+
+Console logging Bug fixed
+
+:::
+
 ### With Customization
 
 ```js

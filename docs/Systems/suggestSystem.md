@@ -5,6 +5,7 @@ sidebar_position: 2
 # suggestSystem
 This is an example of suggestSystem
 
+
 ### With Customization
 ```js
 const simplydjs = require('simply-djs')
@@ -58,25 +59,8 @@ simplydjs.suggestSystem(client, message, args, {
 
 :::tip TIP
 ### Slash Support.
-You can make suggestSystem for slash commands
 
-_`interactionCreate` Event_
-```js
-// interactionCreate event
-simplydjs.suggestBtn(interaction, db)
-```
-
-_`interactionCreate` Event_ (suggest command)
-```js
-// interactionCreate event
-const suggestion = interaction.options.getString('suggestion');
-
-await interaction.deferReply()
-simplydjs.suggestSystem(client, message, suggestion, {
-   slash: true,
-   // other options
-})
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 ```js

@@ -69,19 +69,7 @@ simplydjs.embedPages(client, message, pages)
 
 ### Slash Support.
 
-You can make embedPages for slash commands
-
-_`interactionCreate` Event (any command)_
-
-```js
-// interactionCreate Event
-
-await interaction.deferUpdate();
-simplydjs.embedPages(client, interaction, pages, {
-  slash: true
-  // Other Options
-});
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 

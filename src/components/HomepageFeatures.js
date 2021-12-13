@@ -9,10 +9,10 @@ const FeatureList = [
       <>
         <li>Simplifies things in discord.js</li>
         <li>Fastest Support ever</li>
-        <li>Super Customizable</li>
+        <li>Ultra Customizable</li>
         <li>Beginner Friendly</li>
         <li>Easier than other packages</li>
-        <li>Slash Support</li>
+        <li>Auto Slash Recognition</li>
       </>
     ),
   },

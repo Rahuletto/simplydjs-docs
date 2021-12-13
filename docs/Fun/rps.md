@@ -6,6 +6,12 @@ sidebar_position: 2
 
 This is an example of rps (Rock Paper Scissors)
 
+:::tip TIP
+
+This function has became Promised based and can return the winner `<User>`
+
+:::
+
 ### With Customization
 
 ```js
@@ -43,26 +49,14 @@ simplydjs.rps(message);
 
 :::
 
+## Returns `<User>`
+- rps returns the user who won the match. so you can reward them with some money or xp.
+
 :::tip TIP
 
 ### Slash Support.
 
-You can make rps for slash commands
-
-_`interactionCreate` Event (rps command)_
-
-```js
-// interactionCreate Event
-
-await interaction.deferReply();
-
-simplydjs.rps(interaction, {
-  slash: true,
-
-  // Slash Options
-  userSlash: "option name" // User Slash Option Name
-});
-```
+The package supports `Auto Slash Recognition !` So no more slash options.
 
 #### Slash command format
 

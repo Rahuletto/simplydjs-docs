@@ -6,6 +6,12 @@ sidebar_position: 3
 
 This is an example of chatbot
 
+:::info INFO
+
+Translations and localizations are coming soon. (Meaning native language support.)
+
+:::
+
 ### With Customization
 
 ```js

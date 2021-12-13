@@ -6,6 +6,14 @@ sidebar_position: 6
 
 This is an example of btnrole
 
+:::tip TIP
+
+It is now possible to make btnrole slash based too.
+
+The package supports `Auto Slash Recognition !` So no more slash options.
+
+:::
+
 ### Required
 
 ```js
