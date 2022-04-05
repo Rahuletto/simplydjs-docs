@@ -1,6 +1,5 @@
 ---
 id: embedType
-title: 
 tags:
   - Types
   - Customization
@@ -37,7 +36,7 @@ embed: {
 import Link from '@docusaurus/Link';
 
 | Parameter      | Type                                                                                                                       | Description                                   |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------- | --------  | --------------------------------------------- |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | `author`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageEmbedAuthor">MessageEmbedAuthor</Link>       | Author of an embed passed as a object    |
 | `title`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | Title of the embed in a function    |
 | `footer`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageEmbedFooter">MessageEmbedFooter</Link>       | Footer of an embed passed as a object    |
