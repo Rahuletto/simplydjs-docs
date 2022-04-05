@@ -4,57 +4,43 @@ sidebar_position: 6
 
 # automeme
 
-This is an example of automeme <br></br><br></br>
+Auto meme sender so others would laugh at jokes without someone's effort !
 
-:::info INFO
-
-It will avoid posting NSFW memes. Uses reddit api ;)
-
-:::
-
-### With Customization
 
 ```js
-const simplydjs = require("simply-djs");
+simplydjs.automeme(client, { 
+  channelId: '01234567890123' // channelId (required)
+
+  // options (optional)
+})
 ```
 
-_`ready` Event_
 
-```js
-// ready Event
-
-simplydjs.automeme(client, {
-  chid: "channel", // channel ids
-  subReddits: ["Custom SubReddits"], // custom subreddits
-  interval: 120000, // in milliseconds
-  embedColor: "hex code"
-});
+Arguements format:
+```ts
+simplydjs.automeme(client: Client, options: memeOptions)
 ```
 
 :::info INFO
-
-### Without Customization
-
-_`ready` Event_
+This should be implemented in `ready` event !
 
 ```js
-// ready Event
-simplydjs.automeme(client);
-```
-
+client.on('ready' => {
+  simplydjs.automeme() // automeme function
+})
 :::
 
 ## Output
 
 ![image](https://user-images.githubusercontent.com/71836991/137742616-05fc1330-aeef-4f40-9031-1d81e93ff705.png)
 
-## Options for automeme function
+## Options `memeOptions`
 
 import Link from '@docusaurus/Link';
 
-| Options      | Type                                                                                                                       | Required | Default    | Description                                   |
+| Parameter      | Type                                                                                                                       | Required | Default    | Description                                   |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------- | -------- | ---------- | --------------------------------------------- | --- |
-| `chid`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link>       | ✓        | _none_     | Discord Channel id (no memes in general)    |
-| `subReddits` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Custom SubReddits</Link> | ✘        | _a array_  | Meme SubReddits                               |
-| `interval`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">milliseconds</Link>     | ✘        | _120000ms_ | Interval Between memes (only in milliseconds) |
-| `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>         | ✘        | _#075FFF_  | Embed Color of the meme embed.                |
+| `channelId`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel?scrollTo=id">Channel ID</Link>       | ✓        | _none_     | Channel ID of an Discord `TextChannel`    |
+| `sub` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</Link> | ✘        | _default array_  | An array of custom subreddits you needed                             |
+| `interval`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">milliseconds</Link>     | ✘        | _120000ms_ | Interval between memes sent by the bot. |
+| `embed` | <Link to="https://simplyd.js.org/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ✘        | _none_  | Pass an CustomizableEmbed Object to customize the embed                |

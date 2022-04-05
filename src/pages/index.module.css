@@ -6,7 +6,7 @@
 .heroBanner {
   gap: 2.5rem;
   color: '#4752C4';
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-weight: 400;
   padding: 4rem 0;
   text-align: center;
@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 966px) {
   .heroBanner {
-    font-family: 'Poppins';
+    font-family: 'Lexend Deca';
   font-weight: 400;
     padding: 2rem;
     
@@ -27,7 +27,7 @@
 .buttons {
   margin-top: 54px;
   
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-weight: 400;
   display: flex;
   align-items: center;

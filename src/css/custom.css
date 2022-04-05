@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend-Deca:wght@400&display=swap');
 
 html[data-theme='light'] .DocSearch {
   border-radius: 10px;
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(94, 100, 112, 0.7);
   /* Modal */
@@ -33,7 +33,7 @@ html[data-theme='dark'] .DocSearch-Button-Placeholder {
 html[data-theme='dark'] .DocSearch {
   border-radius: 10px;
 
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(47, 55, 69, 0.7);
@@ -99,7 +99,7 @@ html .DocSearch-Button:hover{
 }
 
 :root {
-  --ifm-font-family-base: 'Poppins';
+  --ifm-font-family-base: 'Lexend Deca';
   font-weight: 400;
   --ifm-color-primary: rgb(35, 101, 224);
   --ifm-color-primary-dark: #0d52d1;
@@ -109,7 +109,7 @@ html .DocSearch-Button:hover{
   --ifm-color-primary-lighter: #77a7ff;
   --ifm-color-primary-lightest: #97bbff;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: 'Poppins';
+  --ifm-heading-font-family: 'Lexend Deca';
   --ifm-navbar-link-color: #FFF;
   --ifm-content-clr: rgb(128, 136, 150);
   transition: 0.5s ease-in-out;
@@ -120,7 +120,9 @@ html .DocSearch-Button:hover{
   overflow: auto;
   background: transparent;
 }
-
+a {
+  color: #4d80df
+}
 
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(rgb(35, 101, 224) ,#0d52d1);
@@ -129,6 +131,12 @@ html .DocSearch-Button:hover{
   overflow: auto;
 
 }
+
+pre code {
+ font-family: 'JetBrains Mono';
+ background-color: #161616;
+}
+
 .features {
   align-items: center;
   display: flex;
@@ -306,7 +314,7 @@ tbody:hover tr:hover{
 }
 
 .docusaurus-highlight-code-line {
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -315,7 +323,12 @@ tbody:hover tr:hover{
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #0e0e0e;
+  --ifm-background-surface-color: #0e0e0e;
 }
