@@ -1,6 +1,6 @@
-​import​ ​darkTheme​ ​from​ ​'prism-react-renderer/themes/vsDark/index.cjs.js'​; 
+​let​ ​darkTheme = require('prism-react-renderer/themes/vsDark/index.cjs.js'​); 
   
- ​export​ ​default​ ​{ 
+ module.exports = { 
  ​  ​plain​: ​{ 
  ​    ​color: '#abb2bf'​, 
  ​    ​backgroundColor​: ​'#282c34'​, 
