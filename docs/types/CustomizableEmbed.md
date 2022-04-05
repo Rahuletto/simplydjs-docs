@@ -1,5 +1,4 @@
 ---
-id: embedType
 tags:
   - Types
   - Customization
