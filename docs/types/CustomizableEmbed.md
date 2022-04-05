@@ -1,6 +1,6 @@
 ---
 id: embedType
-title: CustomizableEmbed
+title: 
 tags:
   - Types
   - Customization
@@ -16,6 +16,12 @@ Allows you to customize everything in the embed in most of the functions !
 
 Option Types:
 ```ts
+import {
+  MessageEmbedAuthor,
+  MessageEmbedFooter,
+  ColorResolvable
+} from 'discord.js'
+
 embed: {
   author: MessageEmbedAuthor
 	title: string
