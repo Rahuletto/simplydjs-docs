@@ -7,6 +7,7 @@
  ​  ​}​, 
  ​  ​styles​: ​[ 
  ​    ...​darkTheme​.​styles​, 
+
  ​    ​{ 
  ​      ​types​: ​[​'title'​]​, 
  ​      ​style​: ​{ 
