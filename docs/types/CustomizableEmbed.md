@@ -1,3 +1,11 @@
+---
+id: embedType
+title: CustomizableEmbed
+tags:
+  - Types
+  - Customization
+---
+
 ## CustomizableEmbed
 
 Allows you to customize everything in the embed in most of the functions !
