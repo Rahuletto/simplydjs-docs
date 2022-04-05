@@ -12,24 +12,6 @@ Allows you to customize everything in the embed in most of the functions !
 ### Types:
 - `<Object>`
 
-Option Types:
-```ts
-import {
-  MessageEmbedAuthor,
-  MessageEmbedFooter,
-  ColorResolvable
-} from 'discord.js'
-
-embed: {
-  author: MessageEmbedAuthor
-	title: string
-	footer: MessageEmbedFooter
-	color: ColorResolvable
-	description: string
-	credit: boolean
-}
-```
-
 ## Properties
 
 import Link from '@docusaurus/Link';
