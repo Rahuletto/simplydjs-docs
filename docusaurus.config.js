@@ -25,16 +25,7 @@ module.exports = {
       backgroundColor: "#18191a",
       textColor: "#FFFFFF",
     },
-    algolia: {
-      apiKey: "8843ca3b55fd51dbe6123173f85368d8",
-      indexName: "simplyd",
-      inputSelector: "h1",
-      searchParameters: {
-        hitsPerPage: 5,
-      },
-
-      debug: false,
-    },
+   
 
     hideableSidebar: true,
     stylesheets: [
