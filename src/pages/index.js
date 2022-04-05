@@ -12,7 +12,11 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <link
-        href="https://fonts.googleapis.com/css2?family=Lexend-Deca:wght@400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap"
+        rel="stylesheet"
+      ></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lexend Deca:wght@400&display=swap"
         rel="stylesheet"
       ></link>
       <div className="container">

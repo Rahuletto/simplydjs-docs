@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend-Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 
 html[data-theme='light'] .DocSearch {
   border-radius: 10px;
@@ -120,9 +121,6 @@ html .DocSearch-Button:hover{
   overflow: auto;
   background: transparent;
 }
-a {
-  color: #4d80df
-}
 
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(rgb(35, 101, 224) ,#0d52d1);
@@ -133,7 +131,7 @@ a {
 }
 
 pre code {
- font-family: 'JetBrains Mono';
+ font-family: "JetBrains Mono";
  background-color: #161616;
 }
 
