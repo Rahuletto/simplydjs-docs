@@ -111,6 +111,7 @@ html .DocSearch-Button:hover{
   --ifm-color-primary-lightest: #97bbff;
   --ifm-code-font-size: 95%;
   --ifm-heading-font-family: 'Lexend Deca';
+--ifm-font-family-monospace: 'JetBrains Mono', monospace;
   --ifm-navbar-link-color: #FFF;
   --ifm-content-clr: rgb(128, 136, 150);
   transition: 0.5s ease-in-out;
