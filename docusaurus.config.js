@@ -1,5 +1,5 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/vsDark");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -24,8 +24,17 @@ module.exports = {
       content: "Get ready to feel the heat with simply-djs v3 update ;)",
       backgroundColor: "#18191a",
       textColor: "#FFFFFF",
-    },
-   
+    },/*
+    algolia: {
+      apiKey: "8843ca3b55fd51dbe6123173f85368d8",
+      indexName: "simplyd",
+      inputSelector: "h1",
+      searchParameters: {
+        hitsPerPage: 5,
+      },
+
+      debug: false,
+    },*/
 
     hideableSidebar: true,
     stylesheets: [
