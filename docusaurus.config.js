@@ -5,7 +5,7 @@ const darkCodeTheme = {
  ​    ​backgroundColor​: ​'#282c34'​, 
  ​  ​}​, 
  ​  ​styles​: ​[ 
-     ...darky.styles,
+     
  ​    ​{ 
  ​      ​types​: ​[​'title'​]​, 
  ​      ​style​: ​{ 
