@@ -1,5 +1,5 @@
 
- module.exports = { 
+export default { 
  ​  ​plain​: ​{ 
  ​    ​color: '#abb2bf'​, 
  ​    ​backgroundColor​: ​'#282c34'​, 
