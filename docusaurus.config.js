@@ -1,8 +1,8 @@
-const lightCodeTheme = require('./dark.mjs');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import lightCodeTheme from './dark.mjs'
+import darkCodeTheme from 'prism-react-renderer/themes/dracula'
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+export default {
   title: 'Simply-DJS',
   tagline: 'A Simple, Easy and Beginner friendly Discord.js Package for everyone.',
   url: 'https://simplyd.js.org',
