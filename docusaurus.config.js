@@ -1,4 +1,4 @@
-let lightCodeTheme = require('./dark.js')
+let lightCodeTheme = require('prism-react-renderer/themes/github')
 let darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 module.exports = {
