@@ -1,70 +1,12 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = { 
- ​  ​plain​: ​{ 
- ​    ​color: '#abb2bf'​, 
- ​    ​backgroundColor​: ​'#282c34'​, 
- ​  ​}​, 
- ​  ​styles​: ​[ 
-     
- ​    ​{ 
- ​      ​types​: ​[​'title'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#abb2bf'​, 
- ​        ​fontWeight​: ​'bold'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'property'​,​ ​'parameter'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#e06c75'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'script'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#D4D4D4'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'arrow'​,​ ​'atrule'​,​ ​'tag'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#56b6c2'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'number', 'boolean'​,​ ​'color'​,​ ​'unit'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#d19a66'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'keyword'​,​ ​'rule'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#c678dd'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'regex', 'font-matter'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#98c379'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'maybe-class-name'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#e06c75'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​    ​{ 
- ​      ​types​: ​[​'constant'​]​, 
- ​      ​style​: ​{ 
- ​        ​color​: ​'#e5c07b'​, 
- ​      ​}​, 
- ​    ​}​, 
- ​  ​]​, 
- ​}​;
+const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
+const VersionsArchived = require('./versionsArchived.json');
+
+const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
+  0,
+  5,
+);
+ 
 module.exports = {
   title: "Simply-DJS",
   tagline:
@@ -84,12 +26,13 @@ module.exports = {
     },
     announcementBar: {
       id: "announce",
-      content: "Get ready to feel the heat with simply-djs v3 update ;)",
+      content: "Get ready to feel the heat with simply-djs v3 update",
       backgroundColor: "#18191a",
       textColor: "#FFFFFF",
-    },/*
+    },
     algolia: {
-      apiKey: "8843ca3b55fd51dbe6123173f85368d8",
+      apiKey: "9da3683213790d1d51892d90c865adab",
+      appId: "9CQMIEN04F",
       indexName: "simplyd",
       inputSelector: "h1",
       searchParameters: {
@@ -97,7 +40,7 @@ module.exports = {
       },
 
       debug: false,
-    },*/
+    },
 
     hideableSidebar: true,
     stylesheets: [
@@ -160,6 +103,18 @@ module.exports = {
           label: "GitHub",
           position: "left",
         },
+        {
+            type: 'docsVersionDropdown',
+            position: 'right',
+           dropdownActiveClassDisabled: true,
+            dropdownItemsAfter: [
+              {
+                  label: "2.5.3",
+                  href: "https://v2--simplyd.netlify.app/",
+              }
+              
+            ],
+        },
       ],
     },
     footer: {
@@ -196,7 +151,7 @@ module.exports = {
           ],
         },
         {
-          title: "Contact Me",
+          title: "Contact Us",
           items: [
             {
               label: "• GitHub",
@@ -216,8 +171,118 @@ module.exports = {
       copyright: `<br><br>Copyright © ${new Date().getFullYear()}  Simply Develop. npm i simply-djs<br><br>Not affiliated with Discord (or) Discord.js`,
     },
     prism: {
+
       theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+      darkTheme: {
+  plain: {
+    color: "#e5c07b",
+    backgroundColor: "#1E1E1E",
+  },
+  styles: [
+    {
+      types: ["prolog"],
+      style: {
+        color: "rgb(0, 0, 128)",
+      },
+    },
+    {
+      types: ["comment"],
+      style: {
+        color: "#5c6370",
+      },
+    },
+    {
+      types: ["changed", "keyword", "interpolation-punctuation"],
+      style: {
+        color: "#c678dd",
+      },
+    },
+    {
+      types: ["number", "inserted"],
+      style: {
+        color: "#d19a66",
+      },
+    },
+    {
+      types: ["function", "property-access"],
+      style: {
+        color: "#56b6c2",
+      },
+    },
+    {
+      types: ['property', "builtin"],
+      style: {
+        color: '#e06c75'
+      }
+    },
+    {
+      types: ["constant"],
+      style: {
+        color: "rgb(100, 102, 149)",
+      },
+    },
+    {
+      types: ["attr-name", "variable"],
+      style: {
+        color: "#e06c75",
+      },
+    },
+    {
+      types: ["deleted", "string", "attr-value", "template-punctuation"],
+      style: {
+        color: "#98c379",
+      },
+    },
+    {
+      types: ["selector"],
+      style: {
+        color: "#c678dd",
+      },
+    },
+    {
+      // Fix tag color
+      types: ["tag"],
+      style: {
+        color: "rgb(78, 201, 176)",
+      },
+    },
+    {
+      // Fix tag color for HTML
+      types: ["tag"],
+      languages: ["markup"],
+      style: {
+        color: "rgb(86, 156, 214)",
+      },
+    },
+    {
+      types: ["punctuation", "operator"],
+      style: {
+        color: "#abb2bf",
+      },
+    },
+    {
+      // Fix punctuation color for HTML
+      types: ["punctuation"],
+      languages: ["markup"],
+      style: {
+        color: "#abb2bf",
+      },
+    },
+    
+    {
+      types: ["class-name"],
+      style: {
+        color: "#808080",
+      },
+    },
+    {
+      types: ["char"],
+      style: {
+        color: "rgb(209, 105, 105)",
+      },
+    },
+  ],
+}
     },
   },
   presets: [
@@ -225,6 +290,9 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          versions: {
+              current: { label: "latest" },
+          },
           sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {

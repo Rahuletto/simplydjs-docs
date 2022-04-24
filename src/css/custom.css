@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend Deca:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 html[data-theme='light'] .DocSearch {
   border-radius: 10px;
@@ -111,16 +111,24 @@ html .DocSearch-Button:hover{
   --ifm-color-primary-lightest: #97bbff;
   --ifm-code-font-size: 95%;
   --ifm-heading-font-family: 'Lexend Deca';
---ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
   --ifm-navbar-link-color: #FFF;
   --ifm-content-clr: rgb(128, 136, 150);
   transition: 0.5s ease-in-out;
+  
 }
 ::-webkit-scrollbar{
   width: 10px;
   -webkit-appearance: none;
   overflow: auto;
   background: transparent;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+.theme-back-to-top-button {
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -131,11 +139,30 @@ html .DocSearch-Button:hover{
 
 }
 
-pre code {
+table tr:nth-child(2n) {
+  background-color: #6e6e6e12;
+}
+
+[data-theme="dark"] details table {
+  background-color: #0e0e0eaf;
+}
+
+.darkToggleIcon_node_modules-\@docusaurus-theme-classic-lib-next-theme-ColorModeToggle-styles-module {
+  border-radius: 2px;
+}
+
+[data-theme="dark"] pre code {
  font-family: "JetBrains Mono";
  background-color: #161616;
 }
-
+[data-theme="light"] pre code {
+ font-family: "JetBrains Mono";
+ background-color: #ebebeb;
+}
+h1, h2, h3, h4, h5, p, a {
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+}
 .features {
   align-items: center;
   display: flex;
@@ -182,12 +209,23 @@ color: #FFFFFF;
   padding: 10px;
   color: #FFFFFF;
   font-size: 20px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   cursor: pointer;
   transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
   text-decoration: none;
 }
-
+[data-theme="dark"] .button.button--secondary {
+  color: #f5f6f7;
+  font-weight: 300;
+  border: 0px;
+  background: #202020;
+}
+[data-theme="light"] .button.button--secondary {
+  color: #383838;
+  font-weight: 300;
+  border: 0px;
+  background: #c7c7c7f2;
+}
 table th{
   background: #0D52D1;
     color: #1A1A1A;
@@ -196,10 +234,39 @@ table{
   border: 2px solid #0D52D1;
   border-radius: 15px;
   text-align: center;
-  
+}
+[data-theme="dark"] .table-of-contents__link--active {
+  background-color: #222222;
+  border-radius: 5px;
+  color: white;
+}
+
+[data-theme="light"] .table-of-contents__link--active {
+  background-color: #e2e2e2;
+  border-radius: 5px;
+}
+
+.toc-highlight {
+  padding: 6px
+}
+
+details {
+  border: 0px solid;
+}
+[data-theme="dark"] .details_node_modules-\@docusaurus-theme-classic-lib-next-theme-Details-styles-module {
+  background: #222222;
+  border: 0px solid transparent;
+}
+
+.table-of-contents__left-border {
+  border-left: 0px solid;
 }
 .DocSearch-Button{
   width: 320px;
+}
+
+.navbar__items--right > :last-child {
+  padding-left: 0px;
 }
 
 .navbar__brand{
@@ -214,7 +281,16 @@ table{
   display: flex;
   border-radius: 10px;
 }
+
+.toggleButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-ColorModeToggle-styles-module:hover {
+  border-radius: 6px;
+  background: var(--ifm-color-primary-dark);
+}
 @media(max-width: 997px){
+  html[data-theme='light'] .clean-btn svg path {
+  fill: #0f0f0f
+}
+
   html .DocSearch-Button{
     width: 285px;
   }
@@ -330,4 +406,47 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 html[data-theme='dark'] {
   --ifm-background-color: #0e0e0e;
   --ifm-background-surface-color: #0e0e0e;
+}
+
+header {
+  display: none;
+}
+h1 {
+  font-size: 38px;
+}
+.dropdown--right {
+  background-color: #1a49a0;
+  padding: 5px 20px;
+  height: 38px;
+  transition: 0.2s ease-in-out;
+}
+
+.dropdown--right:hover{
+  padding: 3px 24px;
+  height: 33px;
+  color: white;
+}
+
+a.navbar__link:hover {
+  color: white
+}
+
+
+.tabs__item {
+  align-items: center;
+  margin-bottom: 0px;
+  border: 0px solid;
+  height: 48px;
+  margin-right: 8px;
+  font-weight: 400;
+}
+.tabs__item--active {
+  background-color: var(--ifm-color-primary-dark);
+  border: 0px;
+  border-radius: 6px;
+  color: #ebebeb;
+}
+
+.tabs__item--active:hover {
+  background-color: var(--ifm-color-primary-darkest);
 }

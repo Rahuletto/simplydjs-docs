@@ -9,10 +9,10 @@ const FeatureList = [
       <>
         <li>Simplifies things in discord.js</li>
         <li>Fastest Support ever</li>
-        <li>Ultra Customizable</li>
+        <li>Easier yet Flexible.</li>
         <li>Beginner Friendly</li>
         <li>Easier than other packages</li>
-        <li>Auto Slash Recognition</li>
+        <li>Open source Project</li>
       </>
     ),
   },
@@ -27,9 +27,9 @@ const FeatureList = [
     title: 'Stats',
     description: (
       <>
-        <li>48k+ Downloads</li>
-        <li>30+ github Stars</li>
-        <li>20 Functions</li>
+        <li>115k+ Downloads</li>
+        <li>50+ github Stars</li>
+        <li>20+ Functions</li>
       </>
     ),
   },
@@ -42,10 +42,13 @@ function AboutMe(){
 <h4 className={styles.abtme} style={{fontWeight: '500', fontSize: '30px'}}>Developed by Rahuletto#0243</h4>
 <br></br>
 <p style={{textAlign: 'center'}}>
-   <a href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/v/simply-djs.svg?style=flat-square" /></a>
- <a href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/dt/simply-djs?style=flat-square" /></a><br></br>
-   <a href="https://www.npmjs.com/package/simply-djs"><img src="https://nodei.co/npm/simply-djs.png?downloadRank=true&downloads=true&downloadRank=true&stars=true" /></a><br></br>
-   <a href="https://discord.gg/3JzDV9T5Fn"><img src="https://media.discordapp.net/attachments/867344514943156254/891314222837936168/9sG4YFfuxxvPzCfcJO6XXnuAAAAAElFTkSuQmCC.png" /></a>
+<a href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/v/simply-djs.svg?style=for-the-badge" /></a>
+ <a href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/dt/simply-djs?style=for-the-badge" /></a>
+   <br></br>
+   <a href="https://simplyd.js.org"><img src="https://img.shields.io/badge/Simply--DJS-Documentation-075FFF?style=for-the-badge"/></a>
+      <a href="https://discord.gg/3JzDV9T5Fn"><img src="https://img.shields.io/badge/Discord-Support-5865F2?style=for-the-badge&logo=discord"/></a>
+      <br></br>
+   <a href="https://discord.gg/3JzDV9T5Fn"><img src="https://invidget.switchblade.xyz/3JzDV9T5Fn" /></a>
 </p>
 <br></br>
 <span className={styles.divider}></span>

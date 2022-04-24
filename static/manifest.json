@@ -1,15 +1,15 @@
 {
     "short_name": "Simply-DJS",
-    "name": "Simply-DJS Documentation",
+    "name": "Simply-DJS Docs",
     "lang": "en-US",
     "icons": [
       {
-        "src": "https://i.imgur.com/u8VlLom.png",
+        "src": "https://i.imgur.com/kGAUCNo_d.webp?maxwidth=128&fidelity=grand",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "https://i.imgur.com/u8VlLom.png",
+        "src": "https://i.imgur.com/kGAUCNo_d.webp?maxwidth=128&fidelity=grand",
         "type": "image/png",
         "sizes": "512x512"
       }
@@ -19,5 +19,5 @@
     "display": "standalone",
     "scope": "/",
     "theme_color": "#0d52d1",
-    "description": "Documentation for Simply-DJS node module"
+    "description": "Documentation for Simply-DJS npm Package"
   }
