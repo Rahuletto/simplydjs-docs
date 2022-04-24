@@ -84,6 +84,18 @@ scripts: [
           label: 'GitHub',
           position: 'left',
         },
+        {
+            type: 'docsVersionDropdown',
+            position: 'right',
+           dropdownActiveClassDisabled: true,
+            dropdownItemsAfter: [
+              {
+                  label: "3.0.0-beta-1",
+                  href: "https://v3--simplyd.netlify.app/",
+              }
+              
+            ],
+        },
       ],
     },
     footer: {
@@ -149,6 +161,9 @@ scripts: [
       '@docusaurus/preset-classic',
       {
         docs: {
+          versions: {
+              current: { label: "latest" },
+          },
           sidebarPath: require.resolve('./sidebars.js'),
         
         },
