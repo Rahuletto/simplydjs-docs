@@ -291,7 +291,7 @@ module.exports = {
       {
         docs: {
           versions: {
-              current: { label: "latest" },
+              current: { label: "v3.0.0-beta-1" },
           },
           sidebarPath: require.resolve("./sidebars.js"),
         },
