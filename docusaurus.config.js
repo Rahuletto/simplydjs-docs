@@ -90,7 +90,7 @@ scripts: [
            dropdownActiveClassDisabled: true,
             dropdownItemsAfter: [
               {
-                  label: "3.0.0-beta-1",
+                  label: "3.0.0-dev-2",
                   href: "https://v3--simplyd.netlify.app/",
               }
               
