@@ -58,5 +58,27 @@ simplydjs.emitError(
 )
 ```
 
+## Prevent Project Stop (Just Throw Error):
+Javascript:
+```js
+const colors = require("colors")
+process.on('unhandledRejection', (reason, p) => {
+  console.log(' [antiCrash] :: Unhandled Rejection/Catch'.red);
+  console.log(reason, p);
+});
+process.on("uncaughtException", (err, origin) => {
+  console.log(' [antiCrash] :: Uncaught Exception/Catch'.red);
+  console.log(err.message !== null ? err.message : err, origin);
+}) 
+process.on('uncaughtExceptionMonitor', (err, origin) => {
+  console.log(' [antiCrash] :: Uncaught Exception/Catch (MONITOR)'.red);
+  console.log(err, origin);
+});
+process.on('multipleResolves', (type, promise, reason) => {
+  console.log(' [antiCrash] :: Multiple Resolves'.red);
+  console.log(type, promise, reason);
+});
+```
+
 - name: `string`
 - tip: `string`
