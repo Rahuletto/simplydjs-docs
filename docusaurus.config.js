@@ -112,23 +112,11 @@ module.exports = {
           dropdownActiveClassDisabled: true,
           dropdownItemsAfter: [
             {
-              label: "2.5.3",
+              label: "v2.5.3",
               href: "https://v2--simplyd.netlify.app/",
             }
 
           ],
-        },
-        {
-            type: 'docsVersionDropdown',
-            position: 'right',
-           dropdownActiveClassDisabled: true,
-            dropdownItemsAfter: [
-              {
-                  label: "3.0.0-dev-2",
-                  href: "https://v3--simplyd.netlify.app/",
-              }
-              
-            ],
         },
       ],
     },
