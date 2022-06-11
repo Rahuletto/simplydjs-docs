@@ -118,6 +118,18 @@ module.exports = {
 
           ],
         },
+        {
+            type: 'docsVersionDropdown',
+            position: 'right',
+           dropdownActiveClassDisabled: true,
+            dropdownItemsAfter: [
+              {
+                  label: "3.0.0-dev-2",
+                  href: "https://v3--simplyd.netlify.app/",
+              }
+              
+            ],
+        },
       ],
     },
     footer: {
