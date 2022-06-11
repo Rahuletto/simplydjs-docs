@@ -1,179 +1,129 @@
 ---
-sidebar_position: 8
+sidebar_position: 2
+tags:
+  - Systems
 ---
 
 # betterBtnRole
 
-This is an example of betterBtnRole
+A **Button Role builder** that lets **admins create** button roles. | *Requires: [**manageBtn()**](/docs/handler/manageBtn)*
 
-:::info
+## Program
 
-This is a slash only function | You can't use this function with normal message
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-:::
-
-### With Customization
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`interactionCreate` Event_ (btn-add command)
+</TabItem>
 
-```js
-// interactionCreate event
+<TabItem value="ts">
 
-simplydjs.betterBtnRole(client, interaction, {
-  type: "add",
-
-  // Slash Option Customization
-  chSlash: 'channel', // Custom Channel Option [Names]
-  idSlash: 'message ID', // Custom ID Option [Names]
-  roleSlash: 'role', // Custom Role Option [Names]
-  labelSlash: 'name', // Custom Label Option [Names]
-  styleSlash: 'color', // Custom Style Option [Names]
-  emojiSlash: 'emoji' // Custom Emoji Option [Names]
-});
+```ts
+import simplydjs from "simply-djs";
 ```
 
-_`interactionCreate` Event_ (btn-remove command)
+</TabItem>
+
+</Tabs>
+
 ```js
 simplydjs.betterBtnRole(client, interaction, {
-  type: "remove",
-
-    // Slash Option Customization
-  chSlash: 'channel', // Custom Channel Option [Names]
-  idSlash: 'message ID', // Custom ID Option [Names]
-  roleSlash: 'role', // Custom Role Option [Names]
-});
+	type: 'add' // type (required) [add (or) remove]
+  // options (optional)
+})
 ```
 
-### Slash Command Type
-
-```js
-// btnrole-add
-    {
-      name: 'btnrole-add',
-      description: 'Button roles is slash ?!',
-      options: [
-         {
-        name: 'channel',
-        type: 'CHANNEL',
-        description: 'channel of that message',
-        required: true,
-      },
-        {
-        name: 'message',
-        type: 'STRING',
-        description: 'the message',
-        required: true,
-      },
-      {
-        name: 'role',
-        type: 'ROLE',
-        description: 'what role',
-        required: true,
-      },
-      {
-        name: 'label',
-        type: 'STRING',
-        description: 'name of the button ?',
-        required: false,
-      },
-      {
-        name: 'style',
-        type: 'STRING',
-        description: 'color of the button',
-        required: false,
-        choices: [
-          {
-            name: 'PRIMARY',
-            value: 'PRIMARY'
-          },
-          {
-            name: 'SECONDARY',
-            value: 'SECONDARY'
-          },
-          {
-            name: 'SUCCESS',
-            value: 'SUCCESS'
-          },
-          {
-            name: 'DANGER',
-            value: 'DANGER'
-          },
-        ]
-      },
-      {
-        name: 'emoji',
-        type: 'STRING',
-        description: 'emoji maybe ?',
-        required: false,
-      },
-      ],
-
-    }
-```
-
-```js
-// btnrole-remove
-{
-      name: 'btnrole-remove',
-      description: 'Button roles removal is slash ?!',
-      options: [
-         {
-        name: 'channel',
-        type: 'CHANNEL',
-        description: 'channel of that message',
-        required: true,
-      },
-        {
-        name: 'message',
-        type: 'STRING',
-        description: 'the message',
-        required: true,
-      },
-      {
-        name: 'role',
-        type: 'ROLE',
-        description: 'what role',
-        required: true,
-      },
-
-      ],
-
-    }
-```
 
 ## Output
 
-![image](https://media.discordapp.net/attachments/877596016138936430/890999104044404776/8wFg3SdnkDaQAAAABJRU5ErkJggg.png)
+![image](https://user-images.githubusercontent.com/71836991/173194443-04239bfa-0d22-44cb-9011-5a789dc23153.png)
+![image](https://user-images.githubusercontent.com/71836991/173194351-4f5c36bc-15ed-48ae-acec-4f045aa6fb35.png)
 
-![image](https://media.discordapp.net/attachments/877596016138936430/890999286509232208/AYPhA9qN4HCXAAAAAElFTkSuQmCC.png)
+## Arguments:
+```ts
+simplydjs.betterBtnRole(
+  client: Discord.Client,
+  interaction: Discord.CommandInteraction,
+  options: betterBtnOptions
+)
+```
 
-## Options for betterBtnRole function
+- client: [`Discord.Client`](https://discord.js.org/#/docs/discord.js/stable/class/Client)
+- interaction [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`betterBtnOptions`](#options-betterbtnoptions)
+
+## Options `betterBtnOptions`
 
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `custom` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌        | _false_     | Throws an error for custom error messages to the user |
+| `type` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">add / remove</Link> | ✅        | _none_  | The type which adds new buttons or removes existing buttons.  |
+| `channel` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/TextChannel">TextChannel</Link> | ❌        | _none_  | The channel of the message |
+| `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The label of the button you're trying to create |
+| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The emoji of the button you're trying to create |
+| `messageId` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌       | _none_  | The message you're trying to add a button to.  |
+| `role` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Role">Role</Link> | ❌ | _none_  | The role to be given when a button is clicked |
+| `style` | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageButtonStyle">MessageButtonStyle</Link> | ❌ | _PRIMARY_  | The style of the button that is getting created.  |
 
-| Options | Type                                                                                                                          | Required | Default | Description                      |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------- |
-| `type`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String (add/remove)</Link> | ✓        | _none_  | Type of the betterBtnRole to use |
+:::info NOTE
+## `custom` option
 
-</div>
+When the `custom` option is true, The package will [reject](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject). You can do .catch() to send any custom error message
 
-### Slash Customization.
+```js
+simplydjs.betterBtnRole(client, interaction, {
+  type: 'add'
+}).catch(err => {
+  // Error handling.
+});
+```
 
-<div style={{textAlign: 'center'}}>
+It will return a `string` as an error code.
 
-| Options | Type                                                                                                                          | Required | Default | Description                      |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------- |
-| `chSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _channel_  | Custom Channel Option name (Customizability++)|
-| `idSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _message_  | Custom Message ID Option name |
-| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _role_  | Custom Role Option name |
-| `labelSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _label_  | Custom Label Option name |
-| `roleSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _style_  | Custom Style Option name |
-| `emojiSlash`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _emoji_  | Custom Emoji Option name |
 
-</div>
+<Tabs
+  defaultValue="add"
+  values= {[
+    { label: 'Add Type', value: 'add', },
+    { label: 'Remove Type', value: 'remove', },
+  ]
+}>
+<TabItem value="add">
+
+```
+NO_MSG - No Message found in the message Id
+OVERLOAD - Message reached the maximum amount of buttons
+NOT_FOUND - Message not found
+OTHER_MSG - The message is sent by another user. Cannot add button.
+```
+
+</TabItem>
+
+<TabItem value="remove">
+
+```
+NO_MSG - No Message found in the message Id
+NO_BTN - There is no button found in the search.
+NOT_FOUND - Message not found
+OTHER_MSG - The message is sent by another user. Cannot add button.
+```
+
+</TabItem>
+
+</Tabs>
+
+:::

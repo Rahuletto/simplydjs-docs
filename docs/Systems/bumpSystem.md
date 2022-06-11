@@ -1,105 +1,104 @@
 ---
 sidebar_position: 3
+tags:
+  - Systems
 ---
 
 # bumpSystem
 
-This is an example of bumpSystem
+A Very cool bump reminder system that reminds when a bump is necessary
+[Only Disboard]
 
-### With Customization
+:::note
+This function requires you to [connect()](/docs/General/connect) to the mongo database !
+:::
+
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
-const { Database } = require("quickmongo");
-
-const db = new Database(mongoURL); // your MongoDB String
 ```
 
-_`ready` Event_
+</TabItem>
+
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
 
 ```js
-// ready event
-simplydjs.bumpSystem(client, db, {
-  event: "ready",
-  chid: ["channel id"],
-  bumpEmbed: embed1,
-  thanksEmbed: emb2
-});
+simplydjs.bumpSystem(client, message, {
+  channelId: ["01234567890123"], // channelId (required if auto: false)
+  // options (optional)
+})
 ```
-_`messageCreate` Event_
-```js
-// messageCreate event
-simplydjs.bumpSystem(client, db, {
-  event: "messageCreate",
-  message: message,
-  chid: ["channel id"],
-  bumpEmbed: embed1,
-  thanksEmbed: emb2
-});
-```
+
 
 :::info INFO
+This should be implemented in the `messageCreate` event and requires a `Message Intent` !
 
-### Without Customization
-
-_`ready` Event_
 ```js
-// ready event
-simplydjs.bumpSystem(client, db, {
-  event: "ready",
-  chid: ["channel id"]
-});
+client.on('messageCreate' => {
+  simplydjs.bumpSystem() // bump function
+})
 ```
-
-_`messageCreate` Event_
-```js
-// messageCreate event
-simplydjs.bumpSystem(client, db, {
-  event: "messageCreate",
-  message: message,
-  chid: ["channel id"]
-});
-```
-
 :::
+
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/131494338-0b558ee4-063b-4b29-8c4d-54300b484811.png)
+![image](https://user-images.githubusercontent.com/71836991/137742616-05fc1330-aeef-4f40-9031-1d81e93ff705.png)
 
-## Options for bumpSystem function
+## Arguments:
+```ts
+simplydjs.bumpSystem(
+  client: Discord.Client,
+  message: Discord.Message,
+  options: bumpOptions
+)
+```
+
+- client: [`Discord.Client`](https://discord.js.org/#/docs/discord.js/stable/class/Client)
+- message: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message)
+- options: [`bumpOptions`](#options-bumpoptions)
+
+## Options `bumpOptions`
 
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `content` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌        | _none_     | The content of your message that is sent to remind (maybe a ping) |
+| `embed` | <Link to="#typeembed">TypeEmbed</Link>       | ❌        | _default embeds_     | The embed to remind or thank the user who bumped |
+| `toggle` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌        | _true_     | Toggle the bumpSystem for your preference. |
+| `auto` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌        | _true_     | Sets the channelId automatically to remind. |
+| `channelId`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel?scrollTo=id">Channel ID[]</Link>       | ❌        | _none_     | Array of Channel ID of a Discord `TextChannel` (Only when auto: false)   |
 
-| Options | Type                                                                                                             | Required | Default | Description                                            |
-| ------- | ---------------------------------------------------------------------------------------------------------------- | -------- | ------- | ------------------------------------------------------ |
-| `event` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✓        | _none_  | Event you are using the function (ready/messageCreate) |
+<details style={{border: '0px solid'}}>
+  <summary>TypeEmbed options</summary>
 
-</div>
+## `TypeEmbed`
 
-### ready Event Options
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `thankEmb`        | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed">MessageEmbed</Link> |  The embed sent to thank the user who bumped the server   |
+| `bumpEmb`        | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed">MessageEmbed</Link> |  The embed sent to remind others to bump the server   |
 
-<div style={{textAlign: 'center'}}>
-
-| Options       | Type                                                                                                           | Required | Default | Description                                     |
-| ------------- | -------------------------------------------------------------------------------------------------------------- | -------- | ------- | ----------------------------------------------- |
-| `chid`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</Link> | ✓        | _none_  | Bump Channel IDs to see if you bumped it right  |
-| `bumpEmbed`   | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                           | ✘        | _embed_ | Embed sent when the bot needs to remind to bump |
-| `thanksEmbed` | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                           | ✘        | _embed_ | Embed sent when someone bumps                   |
-
-</div>
-
-### messageCreate event Options
-
-<div style={{textAlign: 'center'}}>
-
-| Options       | Type                                                                                                           | Required | Default | Description                                     |
-| ------------- | -------------------------------------------------------------------------------------------------------------- | -------- | ------- | ----------------------------------------------- |
-| `chid`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</Link> | ✓        | _none_  | Bump Channel IDs to see if you bumped it right  |
-| `message`     | <Link to="https://discord.js.org/#/docs/main/stable/class/Message">Message</Link>                              | ✓        | _none_  | To check if the bump is successful              |
-| `bumpEmbed`   | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                           | ✘        | _embed_ | Embed sent when the bot needs to remind to bump |
-| `thanksEmbed` | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                           | ✘        | _embed_ | Embed sent when someone bumps                   |
-
-</div>
+</details>

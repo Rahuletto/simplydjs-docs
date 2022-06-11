@@ -1,150 +1,91 @@
 ---
-sidebar_position: 2
+sidebar_position: 7
+tags:
+  - Systems
 ---
 
 # suggestSystem
-This is an example of suggestSystem
 
+How cool is **stealing an emoji** from another server ? Feel the power with this function
 
-### With Customization
-```js
-const simplydjs = require('simply-djs')
-
-let { Database } = require('quickmongo')
-let db = new Database('mongo String')
-```
-
-_`interactionCreate` Event_
-```js
-// interactionCreate event
-simplydjs.suggestBtn(interaction, db, {
-   yesEmoji: 'emoji id', // default: ☑️
-   yesColor: 'buttonColor', // default: green 
-   noEmoji: 'emoji id', // default: X
-   noColor: 'buttonColor', // default: red
-   denyEmbColor: 'hex color', // default: RED
-   agreeEmbColor: 'hex color', // default: GREEN
-   })
-   ```
-_`messageCreate` Event_ (suggest command)
-   ```js
-// messageCreate event
-simplydjs.suggestSystem(client, message, args, {
-   chid: 'channel id',
-   embedColor: 'hex color', // defaultL #075FFF
-   yesEmoji: 'emoji id', // default: ☑️
-   yesColor: 'buttonColor', // default: green 
-   noEmoji: 'emoji id', // default: X
-   noColor: 'buttonColor', // default: red
-})
-```
-
-:::info
-### Without Customization
-
-_`interactionCreate` Event_
-```js
-// interactionCreate event
-   simplydjs.suggestBtn(interaction, db)
-```
-
-_`messageCreate` Event_ (suggest command)
-```js
-// messageCreate event
-simplydjs.suggestSystem(client, message, args, {
-   chid: 'channel id'
-})
-```
+:::note
+This function requires you to [connect()](/docs/General/connect) to the mongo database !
 :::
 
-:::tip TIP
-### Slash Support.
+## Program
 
-The package supports `Auto Slash Recognition !` So no more slash options.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-#### Slash command format
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
+
 ```js
-{
-  name: 'suggest',
-  description: 'suggestSystem using simply-djs',
-  options: [{
-    name: 'suggestion',
-    type: 'STRING',
-    description: 'Suggestion',
-    required: true,
-  }],
-
-    },
+const simplydjs = require("simply-djs");
 ```
 
-:::
+</TabItem>
+
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
+
+```js
+simplydjs.suggestSystem(interaction, { 
+  channelId: '01234567890123' // channelId (required)
+
+  // options (optional)
+})
+```
 
 ## Output
-![image](https://user-images.githubusercontent.com/71836991/128165290-aa3f9c50-1fc3-4f5c-805d-e32e0e0b7be3.png)
 
-## Options for suggestBtn function
+![image](https://user-images.githubusercontent.com/71836991/166235500-8f036a66-2c53-43c6-9a39-0f7f96c8f15b.png)
+
+
+## Arguments:
+```ts
+simplydjs.suggestSystem(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: suggestOptions
+)
+```
+
+- interaction [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`suggestOptions`](#options-suggestoptions)
+
+## Options `suggestOptions`
+
 import Link from '@docusaurus/Link';
 
-### Slash Customization
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `channelId`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel?scrollTo=id">Channel ID</Link>       | ✅        | _none_     | Channel ID of a Discord `TextChannel`    |
+| `buttons` | <Link to="#suggestbuttons">suggestButtons</Link> | ❌        | _default buttons_  | Pass a suggestButtons Object to customize the button  |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `suggestion`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _none_ | The suggestion to post in the channel |
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `sugSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *suggestion* | Custom Suggestion Option name (Customizability++) |
 
-</div>
+<details style={{border: '0px solid'}}>
+  <summary>suggestButtons options</summary>
 
-### Embeds
-<div style={{textAlign: 'center'}}>
+## `suggestButtons`
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `denyEmbColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *RED* | Color of the denied suggestion embed |
-| `agreeEmbColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *GREEN* | Color of the accepted suggestion embed |
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `upvote`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `downvote`       | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
 
-</div>
-
-### Buttons
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `yesEmoji`|<Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link>| ✘ | *☑️* | Emoji of the button which accepts suggestion |
-| `yesColor`| <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *SUCCESS* | Color for the Accept Suggestion button |
-| `noEmoji`|<Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link>| ✘ | *X* | Emoji of the button which denies suggestion |
-| `noColor`| <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *DANGER* | Color for the Deny Suggestion button |
-
-</div>
-
-## Options for suggestSystem function
-
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `slash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Slash Support for the suggestSystem (need to be in a slash command) |
-| `chid` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link> | ✓ | *none* | Channel to send the sweet suggestions |
-
-</div>
-
-### Embeds
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `embedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#075FFF* | Color of the suggestion embed |
-| `credits`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *true* | Credit the package |
-
-</div>
-
-### Buttons
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `yesEmoji`|<Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link>| ✘ | *☑️* | Emoji of the button which accepts suggestion |
-| `yesColor`| <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *SUCCESS* | Color for the Accept Suggestion button |
-| `noEmoji`|<Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link>| ✘ | *X* | Emoji of the button which denies suggestion |
-| `noColor`| <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link>| ✘ | *DANGER* | Color for the Deny Suggestion button |
-
-</div>
+</details>

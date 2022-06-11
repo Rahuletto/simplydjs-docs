@@ -1,12 +1,13 @@
 ---
-sidebar_position: 8
+sidebar_position: 1
 tags:
-  - General
+  - Others
+  - New
 ---
 
-# nqn
+# emitError
 
-NQN bot feature. But you have the power to do it.
+Produce error messages just like Simply DJS
 
 ## Program
 
@@ -39,22 +40,23 @@ import simplydjs from "simply-djs";
 </Tabs>
 
 ```js
-simplydjs.nqn(message)
+simplydjs.emitError({ name: "Test", tip: "This is just to test" })
 ```
 
-## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194812-ee172699-ac64-4d7a-aad3-b3faafa1e8e0.png)
+:::danger WARNING
+This may cause your entire project to stop as it emits an error not logging in the console.
+:::
 
 ## Arguments:
 ```ts
-simplydjs.nqn(
-  message: Discord.Message,
+simplydjs.emitError(
+  {
+    name: string,
+    tip: string
+  }
 )
 ```
 
-- message: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message)
-
-
-## Options
-- No options for nqn function
+- name: `string`
+- tip: `string`

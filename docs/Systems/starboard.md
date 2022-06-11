@@ -1,104 +1,106 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
+tags:
+  - Systems
 ---
 
 # starboard
-This is an example of starboard
 
-### Required
-```
-Intents.FLAGS.GUILD_MESSAGE_REACTIONS
-// and
-partials: ['MESSAGE', 'CHANNEL', 'REACTION']
-```
+Efficient yet Simplest starboard system ever existed !
 
-### With Customization
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
+
 ```js
-const simplydjs = require('simply-djs')
+const simplydjs = require("simply-djs");
 ```
 
-_`messageReactionAdd` Event_
+</TabItem>
+
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
+
 ```js
-// messageReactionAdd event
 simplydjs.starboard(client, reaction, {
-    event: 'messageReactionAdd',
-    chid: 'channel id',
-    embedColor: 'hex code', // default: #FFC83D
-    emoji:"emoji id", // default: ⭐
-    min: 2, // default: 2
-  })
+  // options (Optional)
+})
 ```
 
-_`messageReactionRemove` Event_
-```js
-// messageReactionRemove event
-simplydjs.starboard(client, reaction, {
-    event: 'messageReactionRemove',
-    chid: 'channel id',
-    embedColor: 'hex code', // default: #FFC83D
-    emoji:"emoji id", // default: ⭐
-    min: 2, // default: 2
-  })
-```
+:::info INFO
+  ## Usage:
+  This function should be used only in `messageReactionAdd`, `messageReactionDelete` and `messageDelete` events
+:::
 
-_`messageDelete` Event_
-```js
-// messageDelete event
-simplydjs.starboard(client, message, {
-    event: 'messageDelete',
-    chid: 'channel id',
-    embedColor: 'hex code', // default: #FFC83D
-    emoji:"emoji id", // default: ⭐
-    min: 2, // default: 2
-  })
-```
+:::tip
+  When using the function for `messageDelete` event, replace `reaction` to `message`
 
-:::info
-### Without Customization
-
-_`messageReactionAdd` Event_
-```js
-// messageReactionAdd event
-simplydjs.starboard(client, reaction, {
-    event: 'messageReactionAdd',
-    chid: 'channel id',
-  })
-```
-
-_`messageReactionRemove` Event_
-```js
-// messageReactionRemove event
-simplydjs.starboard(client, reaction, {
-    event: 'messageReactionRemove',
-    chid: 'channel id',
-  })
-  ```
-
-_`messageDelete` Event_
+  - Example:
   ```js
-// messageDelete event
-simplydjs.starboard(client, message, {
-    event: 'messageDelete',
-    chid: 'channel id',
+  client.on('messageDelete', () => {
+    simplydjs.starboard(client, message, {
+      // options (Optional)
+    })
   })
-```
+  
+  ```
 :::
 
 ## Output
-![image](https://user-images.githubusercontent.com/71836991/129900817-becb2c35-5ad5-44fd-972f-4a9dcafb0551.png)
 
-## Options for starboard function
+![image](https://user-images.githubusercontent.com/71836991/173193331-11bbc2ba-0ec5-4953-a410-431d8cea267c.png)
+
+
+## Arguments:
+```ts
+simplydjs.starboard(
+  client: Discord.Client,
+  reaction: Discord.Message | Discord.MessageReaction,
+  options: starboardOption
+)
+```
+
+- client: [`Discord.Client`](https://discord.js.org/#/docs/discord.js/stable/class/Client)
+- reaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.MessageReaction`](https://discord.js.org/#/docs/discord.js/stable/class/MessageReaction)
+- options: [`starboardOption`](#starboardembed)
+
+## Options `starboardOption`
+
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `channelId`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel?scrollTo=id">Channel ID</Link>       | ✅        | _none_     | Channel ID of a Discord `TextChannel`    |
+| `embed` | <Link to="#starboardembed">StarboardEmbed</Link>         | ❌        | _default embed_  | Pass a StarboardEmbed Object to customize the embed  |
+| `emoji`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _⭐_ | Emoji required as reaction to list the message on the starboard |
+| `min`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string/number</Link>     | ❌        | _2_ | The number of reactions required to list in the starboard |
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `chid` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link> | ✓ | *none* | Channel to send the sweet suggestions |
-| `event` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✓ | *none* | Event you are using the function (messageReactionAdd / messageReactionRemove / messageDelete) |
-| `emoji` | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘ | *none* | Other Emoji can also be a star |
-| `embedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#FFC83D* | Color of the starboard Embed |
-| `min`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Integer</Link>| ✘ | *2* | Minimum stars needed to be on starboard |
-| `credits`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *true* | Credit the package |
+<details style={{border: '0px solid'}}>
+  <summary>StarboardEmbed options</summary>
 
-</div>
+## `StarboardEmbed`
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `author`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageEmbedAuthor">MessageEmbedAuthor</Link>       | Author of the embed passed as an object    |
+| `title`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | Title of the embed in a function    |
+| `color`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/ColorResolvable">ColorResolvable</Link>       | Color of the embed passed as a Hex Code (or) RGB Value    |
+| `description`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>        | Description of the embed that you're trying to edit.   |
+
+</details>

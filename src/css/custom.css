@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 html[data-theme='light'] .DocSearch {
   border-radius: 10px;
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(94, 100, 112, 0.7);
   /* Modal */
@@ -33,10 +34,10 @@ html[data-theme='dark'] .DocSearch-Button-Placeholder {
 html[data-theme='dark'] .DocSearch {
   border-radius: 10px;
 
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  --docsearch-container-background: rgb(0 0 0 / 80%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
   /* Search box */
@@ -99,7 +100,7 @@ html .DocSearch-Button:hover{
 }
 
 :root {
-  --ifm-font-family-base: 'Poppins';
+  --ifm-font-family-base: 'Lexend Deca';
   font-weight: 400;
   --ifm-color-primary: rgb(35, 101, 224);
   --ifm-color-primary-dark: #0d52d1;
@@ -109,10 +110,12 @@ html .DocSearch-Button:hover{
   --ifm-color-primary-lighter: #77a7ff;
   --ifm-color-primary-lightest: #97bbff;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: 'Poppins';
+  --ifm-heading-font-family: 'Lexend Deca';
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
   --ifm-navbar-link-color: #FFF;
   --ifm-content-clr: rgb(128, 136, 150);
-  transition: 0.5s ease-in-out;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
 }
 ::-webkit-scrollbar{
   width: 10px;
@@ -121,13 +124,90 @@ html .DocSearch-Button:hover{
   background: transparent;
 }
 
-
+html, body {
+  scroll-behavior: smooth;
+}
+.theme-back-to-top-button {
+  display: none;
+}
+.shield {
+  margin-left: 3px;
+  margin-right: 3px;
+}
 ::-webkit-scrollbar-thumb{
-  background: linear-gradient(rgb(35, 101, 224) ,#0d52d1);
+  background: #0d52d1;
   border: 1px #1A1A1A solid;
-  border-radius: 10px;
+  border-radius: 3.5px;
   overflow: auto;
 
+}
+
+p {
+  font-weight: 500;
+}
+.pagination-nav__link {
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 2px solid #6e6e6e12;
+  border-radius: 14px;
+}
+
+.pagination-nav__link:hover .pagination-nav__label {
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: white;
+}
+
+.pagination-nav__link:hover .pagination-nav__sublabel {
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: white;
+}
+
+.pagination-nav__label::after {
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-left: 0px;
+}
+
+.pagination-nav__link:hover .pagination-nav__label::after {
+  margin-left: 5px;
+}
+
+.pagination-nav__label::before {
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-right: 0px;
+}
+
+.pagination-nav__link:hover .pagination-nav__label::before {
+  margin-right: 5px;
+}
+
+.pagination-nav__link:hover {
+  cursor: pointer;
+  box-shadow: 0 0 12px #000;
+  background-color: #043da8;
+}
+
+table tr:nth-child(2n) {
+  background-color: #6e6e6e12;
+}
+
+[data-theme="dark"] details table {
+  background-color: #0e0e0eaf;
+}
+
+.darkToggleIcon_node_modules-\@docusaurus-theme-classic-lib-next-theme-ColorModeToggle-styles-module {
+  border-radius: 2px;
+}
+
+[data-theme="dark"] pre code {
+ font-family: "JetBrains Mono";
+ background-color: #161616;
+}
+[data-theme="light"] pre code {
+ font-family: "JetBrains Mono";
+ background-color: #ebebeb;
+}
+h1, h2, h3, h4, h5, p, a {
+  font-family: 'Lexend Deca';
+  font-weight: 400;
 }
 .features {
   align-items: center;
@@ -175,12 +255,23 @@ color: #FFFFFF;
   padding: 10px;
   color: #FFFFFF;
   font-size: 20px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   cursor: pointer;
-  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-decoration: none;
 }
-
+[data-theme="dark"] .button.button--secondary {
+  color: #f5f6f7;
+  font-weight: 300;
+  border: 0px;
+  background: #202020;
+}
+[data-theme="light"] .button.button--secondary {
+  color: #383838;
+  font-weight: 300;
+  border: 0px;
+  background: #c7c7c7f2;
+}
 table th{
   background: #0D52D1;
     color: #1A1A1A;
@@ -189,10 +280,39 @@ table{
   border: 2px solid #0D52D1;
   border-radius: 15px;
   text-align: center;
-  
+}
+[data-theme="dark"] .table-of-contents__link--active {
+  background-color: #222222;
+  border-radius: 5px;
+  color: white;
+}
+
+[data-theme="light"] .table-of-contents__link--active {
+  background-color: #e2e2e2;
+  border-radius: 5px;
+}
+
+.toc-highlight {
+  padding: 6px
+}
+
+details {
+  border: 0px solid;
+}
+[data-theme="dark"] .details_node_modules-\@docusaurus-theme-classic-lib-next-theme-Details-styles-module {
+  background: #222222;
+  border: 0px solid transparent;
+}
+
+.table-of-contents__left-border {
+  border-left: 0px solid;
 }
 .DocSearch-Button{
   width: 320px;
+}
+
+.navbar__items--right > :last-child {
+  padding-left: 0px;
 }
 
 .navbar__brand{
@@ -207,7 +327,21 @@ table{
   display: flex;
   border-radius: 10px;
 }
+
+.toggleButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-ColorModeToggle-styles-module:hover {
+  border-radius: 6px;
+  background: var(--ifm-color-primary-dark);
+}
+
+img {
+  border-radius: 10px
+}
+
 @media(max-width: 997px){
+  html[data-theme='light'] .clean-btn svg path {
+  fill: #0f0f0f
+}
+
   html .DocSearch-Button{
     width: 285px;
   }
@@ -217,7 +351,7 @@ table{
   }
 }
 .navbar-sidebar{
-  transition: 0.5s ease-in-out;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .text--center h3{
   font-size: 25px;
@@ -244,7 +378,7 @@ table{
 
 
 .navbar__link{
-  transition: 0.3s ease-in-out;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 10px;
 }
 .head__code:hover{
@@ -264,7 +398,7 @@ table{
 }
 
 .footer__link-item{
-  transition: .5s;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);;
 }
 
 .close {
@@ -281,11 +415,11 @@ table{
 }
 
 .anchor{
-  transition: .5s;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);;
 }
 
 tbody tr{
-  transition: .2s;
+  transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);;
 }
 
 tbody:hover tr{
@@ -306,7 +440,7 @@ tbody:hover tr:hover{
 }
 
 .docusaurus-highlight-code-line {
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -315,7 +449,55 @@ tbody:hover tr:hover{
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #0e0e0e;
+  --ifm-background-surface-color: #0e0e0e;
+}
+
+header {
+  display: none;
+}
+h1 {
+  font-size: 38px;
+}
+.dropdown--right {
+  background-color: #0e47b1;
+  padding: 5px 20px;
+  height: 38px;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);;
+}
+
+.dropdown--right:hover{
+  padding: 3px 24px;
+  height: 33px;
+  color: white;
+}
+
+a.navbar__link:hover {
+  color: white
+}
+
+
+.tabs__item {
+  align-items: center;
+  margin-bottom: 0px;
+  border: 0px solid;
+  height: 48px;
+  margin-right: 8px;
+  font-weight: 400;
+}
+.tabs__item--active {
+  background-color: var(--ifm-color-primary-dark);
+  border: 0px;
+  border-radius: 6px;
+  color: #ebebeb;
+}
+
+.tabs__item--active:hover {
+  background-color: var(--ifm-color-primary-darkest);
 }

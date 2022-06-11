@@ -1,64 +1,85 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
+tags:
+  - Fun
 ---
 
 # chatbot
 
-This is an example of chatbot
+A chatbot system that is both technically advanced and intelligent, and is your buddy.
 
-:::info INFO
 
-Translations and localizations are coming soon. (Meaning native language support.)
+## Program
 
-:::
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-### With Customization
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`messageCreate` Event_
+</TabItem>
+
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
 
 ```js
-// messageCreate Event
+simplydjs.chatbot(client, message, { 
+  channelId: '01234567890123' // channelId (required)
 
-simplydjs.chatbot(client, message, {
-  chid: "channel id",
-  name: "chatbot" // default: Your bot name
-});
+  // options (optional)
+})
 ```
 
 :::info INFO
-
-### Without Customization
-
-_`messageCreate` Event_
+This should be implemented in the `messageCreate` event and requires a `Message Intent` !
 
 ```js
-// messageCreate Event
-
-simplydjs.chatbot(client, message, {
-  chid: "channel id"
-});
-```
-
+client.on('messageCreate', (message) => {
+  simplydjs.chatbot() // chatbot function
+})
 :::
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/128004987-058f76b2-37ff-4009-a14e-e69cd8cb3747.png)
+![image](https://user-images.githubusercontent.com/71836991/173194200-b4ced434-880a-4cc8-a8ef-c94c1d6b008f.png)
 
-## Options for chatbot function
+## Arguments:
+```ts
+simplydjs.chatbot(
+  client: Discord.Client,
+  message: Discord.Message,
+  options: chatbotOptions
+)
+```
+
+- client: [`Discord.Client`](https://discord.js.org/#/docs/discord.js/stable/class/Client)
+- message [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message)
+- options: [`chatbotOptions`](#options-chatbotoptions)
+
+## Options `chatbotOptions`
 
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type                                                                                                                 | Required | Default          | Description                        |
-| ----------- | -------------------------------------------------------------------------------------------------------------------- | -------- | ---------------- | ---------------------------------- |
-| `chid`      | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link> | ✓        | _none_           | Channel ID for the chatbot to talk |
-| `name`      | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>     | ✘        | _your bot name_  | The chatbot name                   |
-| `developer` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>     | ✘        | _Rahuletto#0243_ | The Developer of the bot           |
-
-</div>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `channelId`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel?scrollTo=id">Channel ID</Link>       | ✓        | _none_     | Channel ID of a Discord `TextChannel`    |
+| `toggle` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link> | ❌        | _true_  | Enable or Disable the chatbot for your preference.                            |
+| `name`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _Simply-DJS_ | Name of the chatbot you are talking to. |
+| `developer`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _Rahuletto#0243_ | Name of the developer who maintains the chatbot. |

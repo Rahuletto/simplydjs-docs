@@ -1,131 +1,96 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
+tags:
+  - General
 ---
 
 # embedPages
 
-This is an example of embedPages
+An *powerful yet customizable* **Embed Paginator**
 
-### With Customization
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`messageCreate` Event (Any Command)_
+</TabItem>
 
-```js
-// messageCreate Event
+<TabItem value="ts">
 
-let embed1 = new Discord.MessageEmbed().setTitle("Page 1");
-
-let embed2 = new Discord.MessageEmbed().setTitle("Page 2");
-
-let pages = [embed1, embed2]; // REQUIRED
-
-// its still possible without embed
-// let pages = ['page1', 'page2', 'page3']
-
-simplydjs.embedPages(client, message, pages, {
-  firstEmoji: "emoji id",
-  backEmoji: "emoji id",
-  delEmoji: "emoji id",
-  forwardEmoji: "emoji id",
-  lastEmoji: "emoji id",
-
-  btncolor: "colors",
-  delcolor: "colors",
-  skipcolor: "colors",
-
-  skipBtn: true,
-  delBtn: true
-});
+```ts
+import simplydjs from "simply-djs";
 ```
 
-:::info INFO
+</TabItem>
 
-### Without Customization
-
-_`messageCreate` Event (any command)_
+</Tabs>
 
 ```js
-// messageCreate Event
+let pages = [] // Contains array of MessageEmbed.
 
-let embed1 = // embed
-
-let embed2 = // embed
-
-let pages = [embed1, embed2] // REQUIRED
-
-// its still possible without embed
-// let pages = ['page1', 'page2', 'page3']
-
-simplydjs.embedPages(client, message, pages)
+simplydjs.embedPages(interaction, pages, {
+  // options (Optional)
+})
 ```
 
-:::
-
-:::tip TIP
-
-### Slash Support.
-
-The package supports `Auto Slash Recognition !` So no more slash options.
-
-#### Slash command format
-
-```js
-{
-  name: 'embedpages',
-  description: 'Just embedPages.. Using simply-djs'
-}
-```
-
-:::
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/127869308-72817b88-a41a-4e46-af2b-5e556bafafa3.png)
+![image](https://user-images.githubusercontent.com/71836991/173194656-d6a39729-50f3-4238-8522-714743a9232a.png)
 
-## Options for embedPages function
+## Arguments:
+```ts
+simplydjs.embedCreate(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  pages: Discord.MessageEmbed[]
+  options: pagesOption
+)
+```
+
+- interaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- pages: [`Discord.MessageEmbed[]`](https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed)
+- options: [`pagesOption`](#options-pagesoption)
+
+## Options `pagesOption`
 
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `buttons` | <Link to="#pagebuttons">Pagebuttons</Link> | ❌        | _default buttons_  | Pass a Pagebuttons Object to customize the button  |
+| `skips`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _true_             | Enable/Disable the first/last page buttons     |
+| `delete`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _true_             | Enable/Disable the Delete message button     |
+| `dynamic`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _false_             | Change buttons corresponding to the page you are in  |
+| `count`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _false_             | Show the current page number you are in |
+| `rows` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageActionRow">MessageActionRow[]</Link>       | ❌        | _none_     | Add custom rows to the message |
+| `timeout`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</Link>   | ❌        | _120000_             | Show the current page number you are in |
+| `disable`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Label' (or) 'Emoji' (or) 'None'</Link> | ❌  | _label_ | Render the button with an emoji or a label. |
 
-| Options   | Type                                                                                                                     | Required | Default | Description                                                      |
-| --------- | ------------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ---------------------------------------------------------------- |
-| `pages`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array of Embeds</Link> | ✓        | _none_  | Array of Embeds to make it as Pages                              |
-| `slash`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>       | ✘        | _false_ | Slash Support for the embedPages (need to be in a slash command) |
-| `pgCount` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>       | ✘        | _false_ | Shows Page Count                                                 |
-| `timeout` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Number</Link>       | ✘        | _120000 (2 min)_ | Disables the button after certain time (in milliseconds)                                                 |
 
-</div>
+<details style={{border: '0px solid'}}>
+  <summary>Pagebuttons option</summary>
 
-### Button Emojis
+## `Pagebuttons`
 
-<div style={{textAlign: 'center'}}>
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `firstBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `nextBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `backBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `lastBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `deleteBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
 
-| Options        | Type                                                                             | Required | Default | Description                                                     |
-| -------------- | -------------------------------------------------------------------------------- | -------- | ------- | --------------------------------------------------------------- |
-| `firstEmoji`   | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘        | _⏪_    | Emoji of First Page Button                                      |
-| `backEmoji`    | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘        | _◀️_    | Emoji of Previous Page Button                                   |
-| `delEmoji`     | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘        | _🗑️_    | Emoji of Delete Message Button                                  |
-| `forwardEmoji` | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘        | _▶️_    | Emoji for Next Page Button                                      |
-| `lastEmoji`    | <Link to="https://discord.js.org/#/docs/main/stable/class/Emoji">Emoji ID</Link> | ✘        | _⏩_    | Emoji for Last Page Button (Not Required when skipBtn is false) |
-
-</div>
-
-### Button colors
-
-| Options     | Type                                                                                                | Required | Default   | Description                             |
-| ----------- | --------------------------------------------------------------------------------------------------- | -------- | --------- | --------------------------------------- |
-| `btncolor`  | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SUCCESS_ | Color of the Next/Previous Page Buttons |
-| `delcolor`  | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _DANGER_  | Color of Delete Page Button             |
-| `skipcolor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _PRIMARY_ | Color of First/Last Page Buttons        |
-
-### Button Options
-
-| Options   | Type                                                                                                               | Required | Default | Description                              |
-| --------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ---------------------------------------- |
-| `skipBtn` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_  | Enables/Disables First/Last Page Buttons |
-| `delBtn`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_  | Enables/Disables Delete Button           |
+</details>

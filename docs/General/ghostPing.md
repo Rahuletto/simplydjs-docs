@@ -1,58 +1,79 @@
 ---
-sidebar_position: 1
+sidebar_position: 6
+tags:
+  - General
 ---
 
 # ghostPing
 
-This is an example of ghostPing
+A great system to see **who ghost pinged**
 
-### With Customization
+
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`messageDelete` Event_
+</TabItem>
+
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
 
 ```js
-// messageDelete Event
 simplydjs.ghostPing(message, {
-    logChannel: 'channel id',
-
-    embedDesc: 'desc',
-    embedColor: 'hex color',
-    embedFoot: 'Footer'
-    // (Or)
-    embed: embed
+    // options (Optional)
 })
 ```
 
 :::info INFO
-
-### Without Customization
-
-_`messageDelete` Event_
+This should be implemented in the `messageDelete` event and requires a `Message Intent` !
 
 ```js
-// messageDelete Event
-simplydjs.ghostPing(message);
-```
-
+client.on('messageDelete', (message) => {
+  simplydjs.ghostPing() // ghostPing function
+})
 :::
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/128010116-601c6d6e-8d90-42d7-b741-446943e106be.png)
+![image](https://user-images.githubusercontent.com/71836991/173194741-39361215-a763-4044-b652-61ce6013becb.png)
 
-## Options for ghostPing function
+## Arguments:
+```ts
+simplydjs.ghostPing(
+  message: Discord.Message,
+  options: ghostOptions
+)
+```
+
+- message: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message)
+- options: [`ghostOptions`](#options-ghostoptions)
+
+## Options `ghostOptions`
 
 import Link from '@docusaurus/Link';
 
-| Options      | Type                                                                                                                 | Required | Default            | Description                                     |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- | -------- | ------------------ | ----------------------------------------------- |
-| `embed`      | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                                 | ✘        | _embed_            | Embed that sends when there is a ghost Ping     |
-| `embedDesc`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>     | ✘        | (_a long message_) | Embed Description                               |
-| `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>   | ✘        | _#075FFF_          | Color of the embed                              |
-| `embedFoot`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>     | ✘        | _Ghost Ping oop_   | Foot of the embed (Need to make credits: false) |
-| `logChannel` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Channel ID</Link> | ✘        | _none_             | Channel ID to log ghost ping                    |
-| `credit`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>   | ✘        | _true_             | Credit the package                              |
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |
+| `custom`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _false_             | Resolve an Promise instead of sending a message (Useful for auto-moderation) |

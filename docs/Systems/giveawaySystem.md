@@ -1,149 +1,110 @@
 ---
-sidebar_position: 9
+sidebar_position: 4
+tags:
+  - Systems
 ---
 
 # giveawaySystem
 
-This is an example of giveawaySystem
+A **Powerful** yet simple giveawaySystem | *Requires: [**manageBtn()**](/docs/handler/manageBtn)*
 
-:::info INFO
-
-Fixed multiple bugs ;)
-
+:::note
+This function requires you to [connect()](/docs/General/connect) to the mongo database !
 :::
 
-### Required
-```
-quickmongo
-```
+## Program
 
-### With Customization
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
-
-let { Database } = require('quickmongo')
-let db = new Database('mongo String')
 ```
-_`interactionCreate` Event_
+
+</TabItem>
+
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
+
 ```js
-//interactionCreate event
-simplydjs.clickBtn(interaction, {
-  db: db
+simplydjs.giveawaySystem(client, interaction, { 
+  // options (optional)
 })
 ```
-
-_`messageCreate` Event_ (gstart command)
-```js
-// messageCreate event
-
-simplydjs.giveawaySystem(client, db, message, {
-  args: args, // only when using in messageCreate
-
-  time: args[0],
-  winners: args[1],
-  prize: args[2],
-})
-```
-
-
-:::info INFO
-### Without Customization
-
-_`interactionCreate` Event_
-```js
-//interactionCreate event
-simplydjs.clickBtn(interaction, {
-  db: db
-})
-```
-
-_`messageCreate` Event_ (gstart command)
-```js
-// messageCreate event
-// g-start command
-simplydjs.giveawaySystem(client, db, interaction, {
-  args: args // only when using in messageCreate
-})
-```
-:::
-
-:::tip TIP
-### Slash Support.
-
-The package supports `Auto Slash Recognition !` So no more slash options.
-
-#### Slash command format
-```js
-{
-      name: 'giveaway',
-      description: 'Create giveaway using simply-djs',
-      options: [{
-        name: 'time',
-        type: 'STRING',
-        description: 'Time when to finish the giveaway',
-        required: true,
-      },
-      {
-        name: 'winners',
-        type: 'INTEGER',
-        description: 'Number of Winners for the giveaway',
-        required: true,
-      },
-      {
-        name: 'prize',
-        type: 'STRING',
-        description: 'Prize given to the giveaway winner',
-        required: true,
-      },
-      {
-        name: 'channel',
-        type: 'CHANNEL',
-        description: 'Channel to start the giveaway',
-        required: false,
-      }
-      ],
-
-    }
-```
-
-:::
 
 ## Output
 
-![image](https://media.discordapp.net/attachments/867344514943156254/891303440913948732/tWAa0gAAAABJRU5ErkJggg.png)
+![image](https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png)
 
-## Options for giveawaySystem function
+
+## Arguments:
+```ts
+simplydjs.giveawaySystem(
+  client: Discord.Client
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: giveawayOptions
+)
+```
+
+- client: [`Discord.Client`](https://discord.js.org/#/docs/discord.js/stable/class/Client)
+- interaction [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`giveawayOptions`](#options-giveawayoptions)
+
+## Options `giveawayOptions`
 
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `prize`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _none_ | The prize rewarded to the winner in the giveaway |
+| `winners`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _1_ | The number of winners who will win at the end of the giveaway |
+| `time`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _1h_ | The time of the end of that particular giveaway |
+| `channel`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel">TextChannel</Link>       | ❌        | _none_     | Channel of a Discord `TextChannel`    |
+| `buttons` | <Link to="#gsysbuttons">gSysButtons</Link> | ❌        | _default buttons_  | Pass a gSysButtons Object to customize the button  |
+| `manager`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Role ID</Link> | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Role">Role</Link>     | ❌        | _none_ | The role of the giveaway manager |
+| `req`   | <Link to="#requirement">Requirement Object</Link> | ❌        | _none_ | The requirements to enter the giveaway |
+| `ping`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Role ID</Link> | ❌  | _none_ | Ping an role to let others know there is a giveaway |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `fields` | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/EmbedFieldData">EmbedFieldData[]</Link>         | ❌        | _default fields_  | Pass an Array of Embed Fields to customize the embed fields |
+| `disable`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Label' (or) 'Emoji'</Link> | ❌  | _label_ | Render the button with an emoji or a label. |
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `slash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Slash Support for the giveawaySystem (need to be in a slash command) |
+<details style={{border: '0px solid'}}>
+  <summary>requirement options</summary>
 
-</div>
+## `requirement`
 
-### Options for Giveaway
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `type`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Role' (or) 'Guild' (or) 'None'</Link> |  The type of the requirements whether its role required or guild joined.   |
+| `id`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | The Role ID (if type: 'Role') or Guild ID (if type: 'Guild')  |
 
-<div style={{textAlign: 'center'}}>
+</details>
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `time`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Time (1m/1h/1d)</Link>| ✘ | *args[0]* | Time to when to finish the giveaway |
-| `winner`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Integer</Link>| ✘ | *args[1]* | Number of Winners for the giveaway |
-| `prize`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *sus* | Prize given to the giveaway winner |
-</div>
+<details style={{border: '0px solid'}}>
+  <summary>gSystButtons options</summary>
 
-### Slash Customization
-<div style={{textAlign: 'center'}}>
+## `gSysButtons`
 
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `timeSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *time* | Custom Time Option name (Customizability++) |
-| `winSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *winners* | Custom Winners Option name |
-| `prizeSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *prize* | Custom Prize Option name |
-| `chSlash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *channel* | Custom Channel Option name |
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `enter`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+|  `end`       | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+|  `reroll`       | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
 
-</div>
+</details>

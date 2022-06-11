@@ -1,128 +1,110 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
+tags:
+  - General
 ---
 
 # menuPages
 
-This is an example of menuPages/dropdownPages (Two names)
+An Embed paginator using Select Menus
 
-### With Customization
+
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`messageCreate` Event (any command)_
+</TabItem>
 
-```js
-// messageCreate Event
+<TabItem value="ts">
 
-let embed = // embed
-let emb2 = // embed
-
-simplydjs.dropdownPages(message, {
-  type: 1, // default: 1
-  embed: embed,
-  placeHolder: 'menuPages using simply-djs',
-  rows: [] // custom row to send the message with more buttons
-  data:[
-    {
-      label: 'Label',
-      desc: 'description',
-      emoji: 'emoji id',
-      embed: emb2, // embed sent when clicked
-    },
-  // etc..
-  ]
-})
-
+```ts
+import simplydjs from "simply-djs";
 ```
 
-:::info INFO
+</TabItem>
 
-### Without Customization
-
-_`messageCreate` Event (any command)_
+</Tabs>
 
 ```js
-// messageCreate Event
-
-let embed = // embed
-let emb2 = // embed
-
-simplydjs.dropdownPages(message, {
-  embed: embed
-  data:[
-    {
-      label: 'Label',
-      desc: 'description',
-      emoji: 'emoji id',
-      embed: emb2, // embed sent when clicked
-    },
-  // etc..
-  ]
+simplydjs.menuPages(interaction, {
+    data: [
+      {...}
+    ], // array of data objects (required)
+    // options (Optional)
 })
 ```
-
-:::
-
-:::tip TIP
-
-### Slash Support.
-
-The package supports `Auto Slash Recognition !` So no more slash options.
-
-#### Slash command format
-
-```js
-{
-  name: 'menupages',
-  description: 'menuPages using simply-djs',
-}
-```
-
-:::
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/129902270-328bb8c3-f3f0-4d97-a4bc-28e309f565b8.png)
+![image](https://user-images.githubusercontent.com/71836991/173194790-3e73226f-72f0-40ae-8222-0ac41d889e24.png)
 
-## Options for menuPages function
+## Arguments:
+```ts
+simplydjs.menuPages(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: menuEmbOptions
+)
+```
+
+- interaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`menuEmbOptions`](#options-menuemboptions)
+
+## Options `menuEmbOptions`
 
 import Link from '@docusaurus/Link';
 
-| Options | Type                                                                                                               | Required | Default | Description                                                     |
-| ------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
-| `embed` | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                               | ✓        | _none_  | Homepage                                                        |
-| `data`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</Link>     | ✓        | _none_  | Data to make it pages                                           |
-| `slash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the menuPages (need to be in a slash command) |
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `type`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">1 (or) 2</Link>   | ❌        | _1_             | The type of menuPage. (1 for ephemeral reply & 2 for editing message) |
+| `rows` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageActionRow">MessageActionRow[]</Link>       | ❌        | _none_     | Add custom rows to the message |
+| `embed` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed">MessageEmbed</Link>       | ✅        | _none_     | The embed of your message that is sent with the select menu |
+| `delete` | <Link to="#deleteOpt">deleteOpt</Link>       | ❌         | _default object_     | The data object for the custom delete menu option |
+| `data` | <Link to="#dataobj">dataObj[]</Link>       | ✅        | _none_     | The data necessary to create the pages. (Array of <Link to="#dataobj">dataObj</Link>) |
+| `placeHolder` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _'Dropdown pages'_  | Placeholder of the select menu |
 
-### Menu Options
 
-| Options       | Type                                                                                                             | Required | Default           | Description                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------------------- | -------- | ----------------- | ------------------------------------------------ |
-| `type`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Number</Link> | ✘        | _1_               | Type 1 - Ephemeral Reply / Type 2 - Message Edit |
-| `rows`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</Link>   | ✘        | _none_            | Array of MessageActionRow                        |
-| `placeHolder` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘        | _'Dropdown Page'_ | Place Holder of the menu                         |
+<details style={{border: '0px solid'}}>
+  <summary>dataObj option</summary>
 
-### Options for data
 
-| Options | Type                                                                                                               | Required | Default | Description                              |
-| ------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ---------------------------------------- |
-| `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✓        | _none_  | Label for the option to send embed       |
-| `desc`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✓        | _none_  | Description for the option to send embed |
-| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Emoji ID</Link> | ✘        | _none_  | Emoji for the option to send embed       |
-| `embed` | <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link>                               | ✓        | _none_  | Embed sent when the option is selected   |
+### `dataObj`
 
-### Delete Option
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ✅        | _none_  | The label of the option |
+| `desc` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ✅        | _none_     | The description of the option |
+| `embed` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed">MessageEmbed</Link>       | ✅        | _none_     | The embed of your message when the option is selected |
+| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ✅        | _none_  | The emoji of the option |
 
-| Options     | Type                                                                                                               | Required | Default                        | Description                          |
-| ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------------------------------ | ------------------------------------ |
-| `delOption` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_                         | Disable/Enable the Delete Option     |
-| `delLabel`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _Delete_                       | Label of the delete option in menu   |
-| `delDesc`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _Delete the Select Menu Embed_ | Description of delete option in menu |
-| `delEmoji`  | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Emoji ID</Link> | ✘        | _❌_                           | Emoji of Delete Message Button       |
+</details>
 
-</div>
+<details style={{border: '0px solid'}}>
+  <summary>deleteOpt option</summary>
+
+
+### `deleteOpt`
+
+
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `enable`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ✅        | _true_             | Enable/ Disable the delete option |
+| `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The label of the delete option |
+| `desc` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌       | _none_     | The description of the delete option |
+| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The emoji of the delete option |
+
+</details>

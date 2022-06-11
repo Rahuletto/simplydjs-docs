@@ -1,128 +1,87 @@
 ---
 sidebar_position: 2
+tags:
+  - Fun
 ---
 
 # rps
 
-This is an example of rps (Rock Paper Scissors)
+A classic RPS game, except this time it's on Discord to play with your pals, how cool is that ?
 
-:::tip TIP
+## Program
 
-This function has became Promised based and can return the winner `<User>`
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-:::
-
-### With Customization
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`messageCreate` Event (rps command)_
+</TabItem>
 
-```js
-// messageCreate Event
+<TabItem value="ts">
 
-simplydjs.rps(message, {
-  embedColor: "hex code", // default: #075FFF
-  timeoutEmbedColor: "hex code", // default: #c90000
-  drawEmbedColor: "hex code", // default: #075FFF
-  winEmbedColor: "hex code", // default: #06bd00
-  embedFooter: "A Game of RPS",
-  rockColor: "colors", // default: SECONDARY
-  paperColor: "colors", // default: SECONDARY
-  scissorsColor: "colors" // default: SECONDARY
-});
+```ts
+import simplydjs from "simply-djs";
 ```
 
-:::info INFO
+</TabItem>
 
-### Without Customization
-
-_`messageCreate` Event (rps command)_
+</Tabs>
 
 ```js
-// messageCreate Event
-
-simplydjs.rps(message);
+simplydjs.rps(interaction, { 
+  // options (optional)
+})
 ```
-
-:::
-
-## Returns `<User>`
-- rps returns the user who won the match. so you can reward them with some money or xp.
-
-:::tip TIP
-
-### Slash Support.
-
-The package supports `Auto Slash Recognition !` So no more slash options.
-
-#### Slash command format
-
-```js
-{
-  name: 'rps',
-  description: 'Just a fun rps using simply-djs',
-  options: [{
-        name: 'user',
-        type: 'USER',
-        description: 'user to compete with in rps using simply-djs',
-        required: true,
-      }],
-}
-```
-
-:::
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/131489358-a463ac58-190d-4572-87ff-17a0e580350e.png)
+![image](https://user-images.githubusercontent.com/71836991/166234316-74ac4ea1-58f9-46ed-92ac-d5b0139d02f9.png)
 
-## Options for rps function
+## Arguments:
+```ts
+simplydjs.rps(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: rpsOptions
+)
+```
+
+- interaction [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`rpsOptions`](#options-rpsoptions)
+
+## Options `rpsOptions`
 
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _Default Embed_     | Pass a CustomizableEmbed Object to customize the embed  |
+| `drawColor` | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/ColorResolvable">ColorResolvable</Link> | ❌        | _#075FFF_  | Color of the embed when the match is a draw. |
+| `winColor` | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/ColorResolvable">ColorResolvable</Link> | ❌        | _GREEN_  | Color of the embed when someone wins in the match. |
+| `opponent`   | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
+| `buttons` | <Link to="#rpsbuttons">rpsButtons</Link> | ❌   | _Default Buttons_     | Pass an rpsButtons Object to customize the buttons  |
 
-| Options     | Type                                                                                                               | Required | Default | Description                                               |
-| ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------- |
-| `slash`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the rps (need to be in a slash command) |
+----------------
 
-</div>
+<details style={{border: '0px solid'}}>
+  <summary>rpsButtons option</summary>
 
-### Slash Customization
-<div style={{textAlign: 'center'}}>
+## `rpsButtons`
 
-| Options     | Type                                                                                                               | Required | Default | Description                                                     |
-| ----------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | --------------------------------------------------------------- |
-| `userSlash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _user_  | Customize the Slash Option name (user slash option)                             |
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `rock`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> | Pass an btnTemplate Object to customize the button    |
+| `paper`       | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `scissors`    | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
 
-</div>
-
-### Embed
-
-<div style={{textAlign: 'center'}}>
-
-| Options             | Type                                                                                                               | Required | Default    | Description                    |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ---------- | ------------------------------ |
-| `embedColor`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_  | Color of the rps embed         |
-| `embedFoot`         | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>   | ✘        | _credit_   | Footer of the Embed..          |
-| `timeoutEmbedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#cc0000_  | Color of the rps timeout embed |
-| `drawEmbedColor`    | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_  | Color of the rps tie embed     |
-| `winEmbedColor`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _##06bd00_ | Color of the rps winner embed  |
-| `credit`            | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_     | Credit the package             |
-
-</div>
-
-### Buttons
-
-<div style={{textAlign: 'center'}}>
-
-| Options         | Type                                                                                                | Required | Default     | Description                      |
-| --------------- | --------------------------------------------------------------------------------------------------- | -------- | ----------- | -------------------------------- |
-| `rockColor`     | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SECONDARY_ | Color of the rps Rock Button     |
-| `paperColor`    | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SECONDARY_ | Color of the rps Paper Button    |
-| `scissorsColor` | <Link to="https://discord.js.org/#/docs/main/stable/typedef/MessageButtonStyle">Button Style</Link> | ✘        | _SECONDARY_ | Color of the rps Scissors Button |
-
-</div>
+</details>

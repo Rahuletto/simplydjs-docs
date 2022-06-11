@@ -1,55 +1,74 @@
 ---
-sidebar_position: 3
+sidebar_position: 9
+tags:
+  - General
 ---
 
 # stealEmoji
-This is an example of stealEmoji
 
-### With Customization
+How cool is **stealing an emoji** from another server ? Feel the power with this function
+
+
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
+
 ```js
-const simplydjs = require('simply-djs')
+const simplydjs = require("simply-djs");
 ```
 
-*`messageCreate` Event (steal command)*
-```js
-// messageCreate Event
+</TabItem>
 
-simplydjs.stealEmoji(message, args, {
-    embedTitle: 'Title', 
-    embedColor: 'hex code',
-    embedFoot: 'Text for Footer',
-    failedMsg: 'sorry emoji not found'
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
+```
+
+</TabItem>
+
+</Tabs>
+
+```js
+simplydjs.stealEmoji(interaction, {
+    // options (Optional)
 })
 ```
 
-:::info INFO
-### Without Customization
+## Output
 
-*`messageCreate` Event (steal command)*
-```js
-// message event
+![image](https://user-images.githubusercontent.com/71836991/173194858-eb5ddc17-4301-42b5-b6f7-4a1f3b8c3b80.png)
 
-simplydjs.stealEmoji(message, args)
+## Arguments:
+
+```ts
+simplydjs.stealEmoji(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: stealOptions
+)
 ```
 
-:::
+- interaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`stealOptions`](#options-stealoptions)
 
-## Output
-![image](https://user-images.githubusercontent.com/71836991/127869837-880e67da-9a32-4df7-a070-6f2ae89e6a3f.png)
+## Options `stealOptions`
 
-## Options for stealEmoji function
+
 import Link from '@docusaurus/Link';
 
-#### Embed
 
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `embedTitle` |<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘ | *Emoji Added ;)* | Embed Title of the stealEmoji |
-| `embedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#075FFF* | Color of the Embed |
-| `embedFoot`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *Stop Stealing.. Its Illegal* | Footer of the Embed |
-| `failedMsg`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *Couldn't find an emoji from it* | Message sent when emoji is invalid (or) emoji not found |
-| `credit`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *true* | Credit the package |
-
-</div>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌       | _none_     | The emoji that is getting stealed |
+| `name` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌       | _none_     | The name of the new emoji that is being created from old one |

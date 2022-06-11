@@ -1,73 +1,70 @@
 ---
-sidebar_position: 7
+sidebar_position: 4
+tags:
+  - General
 ---
 
 # embedCreate
 
-This is an example of embedCreate
+Lets you create embeds with **an interactive builder**
 
-:::tip TIP
 
-This function has became Promised based and can return the embed `<JSON>`
+## Program
 
-:::
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-### With Customization
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
+
 ```js
-const simplydjs = require('simply-djs')
+const simplydjs = require("simply-djs");
 ```
 
-_`messageCreate` Event_ (embedcreate command)
-```js
-// messageCreate event
+</TabItem>
 
-simplydjs.embedCreate(message)
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
 ```
 
+</TabItem>
 
-## Returns `<JSON>`
-- embedCreate returns the JSON of the embed so you can do something with it.
+</Tabs>
 
-:::tip TIP
-### Slash Support.
-
-The package supports `Auto Slash Recognition !` So no more slash options.
-
-#### Slash command format
 ```js
-{
-  name: 'embedCreate',
-  description: 'create embeds using simply-djs',
-    },
+simplydjs.embedCreate(interaction, { 
+  // options (optional)
+})
 ```
 
-:::
 
 ## Output
-![image](https://user-images.githubusercontent.com/71836991/130612479-52cb2d40-91e6-45c2-9f11-69e193e92dfe.png)
 
-## Options for embedCreate function
+![image](https://user-images.githubusercontent.com/71836991/173194554-6e1429b6-b92c-4afe-9d25-0f54a23169d8.png)
+
+## Arguments:
+```ts
+simplydjs.embedCreate(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: embOptions
+)
+```
+
+- interaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`embOptions`](#options-embOptions)
+
+## Options `embOptions`
+
 import Link from '@docusaurus/Link';
 
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `slash`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Slash Support for the embedCreate (need to be in a slash command) |
-
-</div>
-
-### Embed
-
-<div style={{textAlign: 'center'}}>
-
-| Options     | Type    | Required | Default | Description |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| `embedTitle`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link>| ✘ | *Create Embed* | Embed title of the Guide embed in embedCreate |
-| `embedColor`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link>| ✘ | *#075FFF* | Embed color of the Guide embed in embedCreate |
-| `embedFoot`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</Link> | ✘ | *credits* | Embed footer of the Guide embed in embedCreate |
-| `embed`| <Link to="https://discord.js.org/#/docs/main/stable/class/MessageEmbed">Embed</Link> | ✘ | *embed* | Custom embed for embedCreate guide |
-| `credit`|<Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link>| ✘ | *false* | Credit the Package. Overrides embedFoot |
-
-
-</div>
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |

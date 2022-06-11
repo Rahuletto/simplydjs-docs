@@ -1,12 +1,13 @@
 ---
-sidebar_position: 8
+sidebar_position: 2
 tags:
-  - General
+  - Others
+  - New
 ---
 
-# nqn
+# ms
 
-NQN bot feature. But you have the power to do it.
+Converts Human readable time to milliseconds
 
 ## Program
 
@@ -39,22 +40,27 @@ import simplydjs from "simply-djs";
 </Tabs>
 
 ```js
-simplydjs.nqn(message)
+simplydjs.ms('human readable time')
 ```
 
-## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194812-ee172699-ac64-4d7a-aad3-b3faafa1e8e0.png)
+:::info INFO
+This can be implemented anywhere. Even outside of discord.js ;)
+:::
 
 ## Arguments:
 ```ts
-simplydjs.nqn(
-  message: Discord.Message,
+simplydjs.ms(
+  str: string,
 )
 ```
 
-- message: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message)
+- str: `string`
 
+## Returns:
+- `<string>`
 
-## Options
-- No options for nqn function
+```js
+// Human readable time: 0.5d 2h 3m 5s
+50585000
+```

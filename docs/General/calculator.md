@@ -1,62 +1,81 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
+tags:
+  - General
 ---
 
 # calculator
 
-This is an example of calculator
+An Unique **calculator** which can be *used inside Discord*
 
-### With Customization
+## Program
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="js"
+  values= {[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="js">
 
 ```js
 const simplydjs = require("simply-djs");
 ```
 
-_`messageCreate` Event (calculator command)_
+</TabItem>
 
-```js
-// messageCreate Event
-simplydjs.calculator(message, {
-  embedColor: "hex code"
-});
+<TabItem value="ts">
+
+```ts
+import simplydjs from "simply-djs";
 ```
 
-:::tip TIP
+</TabItem>
 
-### Slash Support
-
-The package supports `Auto Slash Recognition !` So no more slash options.
-
-#### Slash command format
+</Tabs>
 
 ```js
-{
-  name: 'calculator',
-  description: 'Just a casual calculator. Using simply-djs'
-}
+simplydjs.calculator(interaction)
 ```
-
-:::
 
 ## Output
 
-![calc](https://user-images.githubusercontent.com/71836991/127868737-1284360e-2b74-4500-af24-99b88bbcb1a0.png)
+![image](https://user-images.githubusercontent.com/71836991/166237804-7c93a186-a957-49e6-8591-5e83a4892ff7.png)
 
-## Options for calculator function
+## Arguments:
+```ts
+simplydjs.calculator(
+  interaction: Discord.Message | Discord.CommandInteraction,
+  options: calcOptions
+)
+```
+
+- interaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
+- options: [`calcOptions`](#options-calcoptions)
+
+## Options `calcOptions`
 
 import Link from '@docusaurus/Link';
 
-| Options | Type                                                                                                               | Required | Default | Description                                                      |
-| ------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ---------------------------------------------------------------- |
-| `slash` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _false_ | Slash Support for the Calculator (need to be in a slash command) |
+| Parameter | Type | Required | Default    | Description |
+| --------- | ----- | -------- | -------- | ---------- |
+| `buttons` | <Link to="#calcbuttons">calcButtons</Link> | ❌        | _default buttons_  | Pass a calcButtons Object to customize the button  |
+| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
 
-### Embed
 
-<div style={{textAlign: 'center'}}>
+<details style={{border: '0px solid'}}>
+  <summary>calcButtons options</summary>
 
-| Options      | Type                                                                                                               | Required | Default   | Description                                            |
-| ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | --------- | ------------------------------------------------------ |
-| `embedColor` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Hex Code</Link> | ✘        | _#075FFF_ | Color of the Embed which has the Result for Calculator |
-| `credit`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</Link> | ✘        | _true_    | Credit the package                                     |
+## `calcButtons`
 
-</div>
+| Parameter      | Type                                                                                                                       | Description                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `numbers`        | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageButtonStyle">MessageButtonStyle</Link> |  Pass a Button Style of the buttons which contains numbers   |
+| `symbols`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageButtonStyle">MessageButtonStyle</Link> |  Pass a Button Style of the buttons which contains special characters (or) expressions   |
+| `delete`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageButtonStyle">MessageButtonStyle</Link> |  Pass a Button Style of the buttons which deletes the calculator  |
+
+</details>
