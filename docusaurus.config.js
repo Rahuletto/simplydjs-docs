@@ -90,7 +90,7 @@ scripts: [
            dropdownActiveClassDisabled: true,
             dropdownItemsAfter: [
               {
-                  label: "3.0.0-dev-2",
+                  label: "latest",
                   href: "https://v3--simplyd.netlify.app/",
               }
               
@@ -162,7 +162,7 @@ scripts: [
       {
         docs: {
           versions: {
-              current: { label: "latest" },
+              current: { label: "v2.5.3" },
           },
           sidebarPath: require.resolve('./sidebars.js'),
         
