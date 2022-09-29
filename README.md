@@ -30,6 +30,26 @@
 ## How to
 
 <details>
+  <summary><h3>Edit/Change the text</h3></summary>
+  
+  ## It is just a normal `Markdown` file.
+  It's very identical to a normal `.txt` (text) file with some spicyness
+  
+  Just don't ! Edit ! the CSS !
+  
+  # Editing
+  Lets say you have to edit some specific file
+  
+  - ### Create a fork
+  - ### Go to `docs` folder and select a category folder
+  - ### Choose your desired file
+  - ### Edit it ;)
+  - ### After finishing, Create a pull request
+  - ### We will take care about it after then.
+  
+</details>
+
+<details>
   <summary><h3>Add new function ?</h3></summary>
   
   ### As per Docusaurus, Every file inside a folder runs as a route.
@@ -56,12 +76,3 @@
   
 </details>
 
-
-<details>
-  <summary><h3>Edit/Change the text</h3></summary>
-  
-  ## It is just a normal `Markdown` file.
-  It's very identical to a normal `.txt` (text) file with some spicyness
-  
-  Just don't ! Edit ! the CSS !
-</details>
