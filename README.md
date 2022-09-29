@@ -25,7 +25,7 @@
 - - This documentation uses Meta's Docusaurus framework (Uses React)
 - - This is fully made with **Markdown** and **CSS**
 - - The one who contributes don't need to be a Html/CSS pro.
-- - This is not meant to be forked and be modified.
+- - This is not meant to be forked and be modified. (as it doesn't have any license)
 
 ## How to
 
