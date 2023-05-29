@@ -2,7 +2,7 @@
 title: CustomizableEmbed
 position: 2
 tags:
-  - interfaces
+  - typedef
   - Customization
 ---
 

@@ -6,7 +6,7 @@ tags:
 
 # btnRole
 
-A **Button Role System** that lets you create button roles with your own message. | *Requires: [**manageBtn()**](/docs/handler/manageBtn)*
+A **Button Role System** that lets you create button roles with your own message. | *Requires: [**manageBtn()**](/docs/handler/manageBtnRole)*
 
 ## Implementation
 

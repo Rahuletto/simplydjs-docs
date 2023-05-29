@@ -48,7 +48,9 @@ import Link from '@docusaurus/Link';
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageSuggest |
 | `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
-
+| `ticketname` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _{user.tag}_   | The name of the ticket and channel that gets created  |
+| `category` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_   | The category to add tickets on. This organises your server |
+| `buttons` | <Link to="#ticketbuttons">ticketButtons</Link> | ❌   | _default buttons_ | Pass a ticketButtons Object to customize embeds |
 
 ```ts
 export type manageTicketOptions = {

@@ -2,7 +2,7 @@
 title: buttonTemplate
 position: 1
 tags:
-  - interfaces
+  - typedef
   - Customization
 ---
 

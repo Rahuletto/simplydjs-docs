@@ -45,7 +45,7 @@ simplydjs.betterBtnRole(
 ): Promise<string>
 ```
 
-- interaction [`ExtendedInteraction`](/typedef/extended-interaction)
+- interaction [`ExtendedInteraction`](/cocs/typedef/ExtendedInteraction)
 - options: [`betterBtnOptions`](#betterbtnoptions)
 
 ## Options

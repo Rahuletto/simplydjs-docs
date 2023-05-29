@@ -135,6 +135,10 @@ img {
   border-radius: 14px;
 }
 
+.footer img {
+  border-radius: 0px;
+}
+
 pre,
 code {
   font-family: 'JetBrains Mono' !important;

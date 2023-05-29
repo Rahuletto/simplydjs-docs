@@ -73,6 +73,17 @@ import Link from '@docusaurus/Link';
 | `toggle` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌        | _true_     | Toggle the bumpReminder on or off. |
 | `channelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string[]</Link> | ❌ | _none_     | Array of Channel Id to check any bump messages  |
 
+
+```ts
+export type bumpOptions = {
+	strict: boolean;
+	content?: string;
+	embed?: Embeds;
+	toggle?: boolean;
+	channelId?: string[];
+};
+```
+
 -------------
 
 ### `Embeds`
@@ -81,6 +92,13 @@ import Link from '@docusaurus/Link';
 | --------- | ----- | -------- | -------- | ---------- |
 | `thank` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/EmbedBuilder">EmbedBuilder</Link>       | ❌  | EmbedBuilder  | Override the default thank embed with custom one |
 | `remind` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/EmbedBuilder">EmbedBuilder</Link>  | ❌  | EmbedBuilder  | Override the default reminder embed with custom one |
+
+```ts
+interface Embeds {
+	thank?: EmbedBuilder;
+	remind?: EmbedBuilder;
+}
+```
 
 ---------------------
 

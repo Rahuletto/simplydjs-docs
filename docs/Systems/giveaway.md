@@ -59,6 +59,26 @@ import Link from '@docusaurus/Link';
 | `embed` | <Link to="#giveawayembeds">GiveawayEmbeds</Link>         | ❌        | _default embed_  | Objects of embeds that can be customized  |
 | `type`   | `'Label'`/`'Emoji'`/`'Both'` | ❌  | _label_ | Show the button with an emoji or a label or with both. |
 
+```ts
+export type giveawayOptions = {
+	prize?: string;
+	winners?: number;
+	channel?: GuildTextBasedChannel | TextChannel;
+	time?: string;
+
+	buttons?: GiveawayButtons;
+
+	manager?: Role | string;
+
+	requirements?: Requirement;
+	pingRole?: Role | string;
+
+	embed?: GiveawayEmbeds;
+
+	type?: 'Label' | 'Emoji' | 'Both';
+	strict?: boolean;
+};
+```
 
 -----------
 
@@ -70,7 +90,16 @@ import Link from '@docusaurus/Link';
 |  `end`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the button   |
 |  `reroll`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the button   |
 
+```ts
+interface GiveawayButtons {
+	enter?: buttonTemplate;
+	end?: buttonTemplate;
+	reroll?: buttonTemplate;
+}
+```
+
 -------------
+
 ### `Requirement`
 
 | Parameter      | Type  | Description  |
@@ -89,6 +118,15 @@ import Link from '@docusaurus/Link';
 |  `load`       | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
 |  `result`       | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
 
+```ts
+export interface GiveawayEmbeds {
+	giveaway?: CustomizableEmbed;
+	load?: CustomizableEmbed;
+	result?: CustomizableEmbed;
+}
+```
+
+--------------------
 
 ## Resolve
 
