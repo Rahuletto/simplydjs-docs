@@ -8,7 +8,7 @@ tags:
 
 An Unique **calculator** which can be *used inside Discord*
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -46,7 +46,7 @@ simplydjs.calculator(interaction)
 
 ![image](https://user-images.githubusercontent.com/71836991/166237804-7c93a186-a957-49e6-8591-5e83a4892ff7.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.calculator(
   interaction: Discord.Message | Discord.CommandInteraction,
@@ -64,7 +64,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `buttons` | <Link to="#calcbuttons">calcButtons</Link> | ❌        | _default buttons_  | Pass a calcButtons Object to customize the button  |
-| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
 
 
 <details style={{border: '0px solid'}}>

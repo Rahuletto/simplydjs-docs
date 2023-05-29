@@ -1,65 +1,35 @@
 ---
-sidebar_position: 7
+sidebar_position: 5
 tags:
   - Systems
 ---
 
 # starboard
 
-Efficient yet Simplest starboard system ever existed !
+Easiest starboard system ever existed !
 
-## Program
+> This function should be used only in `messageReactionAdd`, `messageReactionDelete` and `messageDelete` events
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
+## Implementation
 
 ```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
-
-```js
-simplydjs.starboard(client, reaction, {
+simplydjs.starboard(reaction, {
   // options (Optional)
 })
 ```
 
-:::info INFO
-  ## Usage:
-  This function should be used only in `messageReactionAdd`, `messageReactionDelete` and `messageDelete` events
-:::
 
 :::tip
   When using the function for `messageDelete` event, replace `reaction` to `message`
 
-  - Example:
+  Example:
+
   ```js
   client.on('messageDelete', () => {
-    simplydjs.starboard(client, message, {
+    simplydjs.starboard(message, {
       // options (Optional)
     })
   })
-  
   ```
 :::
 
@@ -68,39 +38,98 @@ simplydjs.starboard(client, reaction, {
 ![image](https://user-images.githubusercontent.com/71836991/173193331-11bbc2ba-0ec5-4953-a410-431d8cea267c.png)
 
 
-## Arguments:
+## Types
 ```ts
 simplydjs.starboard(
-  client: Discord.Client,
-  reaction: Discord.Message | Discord.MessageReaction,
+  reactionOrMessage: MessageReaction | ExtendedMessage,
   options: starboardOption
-)
+): Promise<void>
 ```
 
-- client: [`Discord.Client`](https://discord.js.org/#/docs/discord.js/stable/class/Client)
-- reaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.MessageReaction`](https://discord.js.org/#/docs/discord.js/stable/class/MessageReaction)
-- options: [`starboardOption`](#starboardembed)
+- reaction: [`MessageReaction`](https://old.discordjs.dev/#/docs/discord.js/main/class/MessageReaction) | [`ExtendedMessage`](/docs/typedef/ExtendedMessage)
+- options: [`starboardOption`](#starboardoption)
 
-## Options `starboardOption`
+## Options
+
+`starboardOption`
 
 import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `channelId`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/Channel?scrollTo=id">Channel ID</Link>       | ✅        | _none_     | Channel ID of a Discord `TextChannel`    |
-| `embed` | <Link to="#starboardembed">StarboardEmbed</Link>         | ❌        | _default embed_  | Pass a StarboardEmbed Object to customize the embed  |
-| `emoji`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _⭐_ | Emoji required as reaction to list the message on the starboard |
-| `min`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string/number</Link>     | ❌        | _2_ | The number of reactions required to list in the starboard |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in starboard |
+| `channelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string</Link>  | ✅  | - | Channel Id to send the star board    |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌  | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `min`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</Link>     | ❌  | 2 | The number of reactions required to list in the starboard |
+| `emoji`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | ⭐ | Emoji required as reaction to list the message on the starboard |
 
-<details style={{border: '0px solid'}}>
-  <summary>StarboardEmbed options</summary>
 
-## `StarboardEmbed`
-| Parameter      | Type                                                                                                                       | Description                                   |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `author`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageEmbedAuthor">MessageEmbedAuthor</Link>       | Author of the embed passed as an object    |
-| `title`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | Title of the embed in a function    |
-| `color`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/ColorResolvable">ColorResolvable</Link>       | Color of the embed passed as a Hex Code (or) RGB Value    |
-| `description`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>        | Description of the embed that you're trying to edit.   |
+--------------------
 
-</details>
+## Example
+
+
+
+- ### Default settings
+
+```js title="messageReactionAdd.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.starboard(reaction, {
+  channelId: '1234567890123', // required
+})
+```
+
+--------------------
+
+```js title="messageReactionRemove.js"
+simplydjs.starboard(reaction, {
+  channelId: '1234567890123', // required
+})
+```
+
+--------------------
+
+```js title="messageDelete.js"
+simplydjs.starboard(message, {
+  channelId: '1234567890123', // required
+})
+```
+
+- ### Customized with options
+
+
+```js title="messageReactionAdd.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.starboard(reaction, {
+  channelId: '1234567890123', // required
+  strict: true,
+  embed: {
+    title: "Starboard"
+    color: simplydjs.toRgb("#406dbc")
+  }
+  emoji: '⭐',
+  min: 2,
+})
+```
+
+--------------------
+
+```js title="messageReactionRemove.js"
+simplydjs.starboard(reaction, {
+  channelId: '1234567890123', // required
+  strict: true,
+  emoji: '⭐',
+  min: 2,
+})
+```
+
+--------------------
+
+```js title="messageDelete.js"
+simplydjs.starboard(message, {
+  channelId: '1234567890123', // required
+  strict: true,
+})
+```

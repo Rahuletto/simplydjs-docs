@@ -8,7 +8,7 @@ tags:
 
 NQN bot feature. But you have the power to do it.
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -46,7 +46,7 @@ simplydjs.nqn(message)
 
 ![image](https://user-images.githubusercontent.com/71836991/173194812-ee172699-ac64-4d7a-aad3-b3faafa1e8e0.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.nqn(
   message: Discord.Message,

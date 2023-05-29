@@ -1,0 +1,173 @@
+---
+sidebar_position: 3
+title: Migrating to v4
+tags: 
+  - Guide
+---
+
+# Migrating to v4
+
+Coming from v3 ? Everything looks weird and new ? Don't worry. We got you with a migration guide.
+
+
+<details style={{border: '0px solid'}}>
+  <summary>Summary</summary>
+
+  - [Deprecated functions](#deprecated-functions)
+  - [Changed option names](#changed-option-names)
+  - [Removal of `client` argument](#removal-of-client-argument)
+  - [Complications in `embed` option](#complications-in-embed-option)
+  - [Deprecation of Hex codes](#deprecation-of-hex-codes)
+  - [Deprecating legacy button styles](#deprecating-legacy-button-styles)
+  
+</details>
+
+
+### Deprecated functions.
+  * We deprecated few functions to make their names meaningfull. This is the list of what functions are deprecated
+
+```diff
+@@ In favor of new names @@
+
+- automeme()
++ meme()
+
+- bumpSys()
++ bumpReminder()
+
+- embedCreate()
++ embedCreator()
+
+- embedPages()
++ buttonPages()
+
+- suggestSystem()
++ suggest()
+
+- ticketSystem()
++ ticketSetup()
+
+- manageBtn() 
++ manageBtnRole()
++ manageTicket()
++ manageGiveaway()
+
+- manageSug()
++ manageSuggest()
+```
+
+<br></br>
+
+
+### Changed option names
+  * Previously we had meaningless variable and option names. Now that's gone. Everything has proper name. Making it easier to contribute and debug. Please visit the documentation of the specific function to learn more.
+
+<br></br>
+
+### Removal of `client` argument
+  * We finally figured out how to get `client` property without an useless argument. Please visit the documentation of the specific function to learn more.
+
+Example:
+
+```js title=chatbot.js
+// From
+simplydjs.chatbot(client, message, { 
+  channelId: '01234567890123'
+})
+
+// To
+simplydjs.chatbot(message, { 
+  channelId: '01234567890123'
+})
+```
+
+<br></br>
+
+### Complications in `embed` option
+  * As we added more customization in embed option, It makes the option much complicated. So please visit the documentation of the specific function to learn more.
+
+Example:
+
+```js title=tictactoe.js
+// From
+simplydjs.tictactoe(interaction, { 
+  embed: {
+    title: "Tic Tac Toe",
+    description: "This is an example embed of tictactoe",
+    color: "#075FFF"
+  }
+})
+
+// To
+simplydjs.tictactoe(interaction, { 
+  embed: {
+    game: {
+      title: "Tic Tac Toe",
+      description: "This is an example embed of tictactoe",
+      color: simplydjs.toRgb('#406dbc')
+    }, 
+    draw: {
+      title: "Oh no",
+      description: "That was a tie.",
+      color: "LightGrey"
+    },
+    win: {
+      title: "You won",
+      description: "Yay you won congrats",
+      color: 'DarkGreen'
+    }
+  }
+})
+```
+
+
+<br></br>
+
+
+### Deprecation of Hex codes
+  * Discord.JS will not allow hex codes (in future). To accompany this, we made a function `toRgb()` to convert your hex code to RGB Array. 
+
+  * You can use hex codes until Discord.JS allows
+
+```js title=tictactoe.js
+// From
+simplydjs.calculator(interaction, { 
+  embed: {
+    color: "#075FFF"
+  }
+})
+
+// To
+simplydjs.calculator(interaction, { 
+  embed: {
+    color: simplydjs.toRgb("#406dbc")
+  }
+})
+```
+
+<br></br>
+
+
+### Deprecating legacy button styles
+  * Discord.JS moved from `string` to `enum` type for their Button styles leading to deprecation of string typed button styles.
+
+For Example,
+```js title=Discord.JS v13
+// Wrong
+button: {
+  style: "PRIMARY" // We still support this type but discord.js don't
+}
+```
+
+```js title=Discord.JS v14
+// Right
+import { ButtonStyle } from "discord.js"
+
+button: {
+  style: ButtonStyle.Primary // This is an enum type
+}
+```
+
+  * But we still support legacy style for buttons. So there is no hassle to migrate it. But we recommend changing to `ButtonStyle` enum.
+
+<br></br>

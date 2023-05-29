@@ -1,15 +1,15 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 tags:
   - Others
   - New
 ---
 
-# ms
+# version
 
-Converts Human readable time to milliseconds
+Provides the package version you are currently using.
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -40,27 +40,13 @@ import simplydjs from "simply-djs";
 </Tabs>
 
 ```js
-simplydjs.ms('human readable time')
+simplydjs.version
 ```
 
 
 :::info INFO
-This can be implemented anywhere. Even outside of discord.js ;)
+This literally returns the version number. Nothing fancy.
 :::
-
-## Arguments:
-```ts
-simplydjs.ms(
-  str: string,
-)
-```
-
-- str: `string`
 
 ## Returns:
 - `<string>`
-
-```js
-// Human readable time: 0.5d 2h 3m 5s
-50585000
-```

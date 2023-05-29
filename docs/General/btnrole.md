@@ -8,7 +8,7 @@ tags:
 
 A **Button Role System** that lets you create button roles with your own message. | *Requires: [**manageBtn()**](/docs/handler/manageBtn)*
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -56,7 +56,7 @@ This is **totally** different from [betterBtnRole](/docs/Systems/betterBtnRole) 
 
 ![image](https://user-images.githubusercontent.com/71836991/173194351-4f5c36bc-15ed-48ae-acec-4f045aa6fb35.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.btnRole(
   interaction: Discord.Message | Discord.CommandInteraction,

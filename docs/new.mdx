@@ -1,36 +1,92 @@
 ---
 sidebar_position: 2
-title: What's new
+title: Update log
 tags: 
     - New
 ---
 
-# What's New ?
+# Update log
 
-This is an Update log of what have been updated ! [v3.0.0]
+### Major Version v4.x.x !
+
+Summary:
+```diff
++ All new `strict` mode.
++ Proper Typings and Commenting
++ ChatGPT integration in chatbot
++ Super Customizable embed
++ Variable names that just make sense
+
+- Removed `credit` option
+- Deprecated few modules (Renaming things)
+```
+
+## v4.x.x
+
+- #### All new `strict` mode.
+  * This new strict mode makes sure everything runs perfectly. Will throw an error if anything goes wrong. Defaults to`false`
+
+<br></br>
+
+- #### Proper Typings and Commenting
+  * Now every argument or every variable is type-safe.
+
+<br></br>
+
+- #### ChatGPT integration in chatbot
+  * We have integrated ChatGPT (OpenAI API) into the chatbot function. Look its documentation for <a class="link" href="/docs/fun/chatbot">More info</a>
+
+<br></br>
+
+- #### Super Customizable embed
+  * We added `fields`, `thumbnail`, `image` and literally everything that Discord.JS provides for embed. So you can customize even more. Making your bot, yours.
+
+<br></br>
+
+- #### Variable names that just make sense
+  * Previously we had meaningless variable and option names. Now that's gone. Everything has proper name. Making it easier to contribute and debug.
+
+<br></br>
+
+- #### Removed `credit` option
+  * We listened to the people. We heared that the `credit` option annoys people. So that's gone too.
+
+<br></br>
+
+- #### Deprecated few modules
+  * As we said earlier, We had meaningless names. Now that's changed with a proper name, leading to deprecation of old names.
+
+```js
+// Ordinary functions
+automeme() --> meme()
+bumpSys() --> bumpReminder()
+embedCreate() --> embedCreator()
+embedPages() --> buttonPages()
+suggestSystem() --> suggest()
+ticketSystem() --> ticketSetup()
+
+// System Handlers
+manageBtn() 
+  |--> manageBtnRole()
+  |--> manageTicket()
+  \--> manageGiveaway() // Splitted into three separate handlers
+
+manageSug() --> manageSuggest()
+
+```
+
+<br></br>
+
+## Others
 
 - ## ⚡ Breaking Changes !
-  * Conversion to Typescript
-  * Conversion to Mongoose
-  * Uniform Options just like discord.js
+  * Conversion to Discord.JS v14
+  * Better Type-safe
+  * Appropriate Option names
 
 <br></br>
-
-- ## 🔨 Simply-DJS v3
-  * Total package got remastered !
-  * New Dependencies !
-  * Massive Bug squash 🐞
-  * Changed to [Simply API](https://simplyapi.js.org) for chatbot
-  * Removal of `modmail`, `rankCard`, `stealSticker`, `clickBtn` | Addition of `connect`, `manageBtn`
-  * 100% Promise Based
-  * Faster and Smaller
-
-<br></br>
-
 
 - ## 🗒 Documentation
-  * Massive UI overhaul
-  * Simpler Experience
-  * Detailed documentation
-  * Smoother animations
-  * Minor additions like `Tags`
+  * `Very Massive` UI overhaul
+  * Website Re-done
+  * New Search algorithm

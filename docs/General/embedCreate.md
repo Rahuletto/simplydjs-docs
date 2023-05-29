@@ -9,7 +9,7 @@ tags:
 Lets you create embeds with **an interactive builder**
 
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -50,7 +50,7 @@ simplydjs.embedCreate(interaction, {
 
 ![image](https://user-images.githubusercontent.com/71836991/173194554-6e1429b6-b92c-4afe-9d25-0f54a23169d8.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.embedCreate(
   interaction: Discord.Message | Discord.CommandInteraction,
@@ -67,4 +67,4 @@ import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `embed` | <Link to="/docs/types/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |

@@ -9,7 +9,7 @@ tags:
 An Embed paginator using Select Menus
 
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -52,7 +52,7 @@ simplydjs.menuPages(interaction, {
 
 ![image](https://user-images.githubusercontent.com/71836991/173194790-3e73226f-72f0-40ae-8222-0ac41d889e24.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.menuPages(
   interaction: Discord.Message | Discord.CommandInteraction,

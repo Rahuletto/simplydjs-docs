@@ -1,19 +1,284 @@
-const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
+
 
 const VersionsArchived = require('./versionsArchived.json');
+const oneDark = {
+  plain: {
+    color: "#abb2bf",
+    backgroundColor: "#23272E",
+  },
+  styles: [
+    
+    {
+      types: ["italic"],
+      style: {
+        fontStyle: "italic",
+      },
+    },
+    {
+      types: ["important", "bold"],
+      style: {
+        fontWeight: "bold",
+      },
+    },
+    {
+      types: ["regex"],
+      styles: {
+        color: '#C678DD'
+      }
+    },
+    {
+      types: ["comment"],
+      style: {
+        color: "#7F848E",
+        fontStyle: "italic"
+      },
+    },
+    {
+      types: ["builtin", "changed", "keyword", "interpolation-punctuation"],
+      style: {
+        color: "#C678DD",
+      },
+    },
+    {
+      types: ["boolean"],
+      style: {
+          color: '#D19A66'
+      }
+    },
+    {
+      types: ["property-access"],
+      style: {
+        color: "#56B6C2"
+      }
+    },
+    {
+      types: ["number", "inserted"],
+      style: {
+        color: "#D19A66",
+      },
+    },
+    {
+      types: ["attr-name", "variable", "literal-property", 'property'],
+      style: {
+        color: "#E06C75",
+      },
+    },
+    
+    {
+      types: ["deleted", "string", "attr-value", "template-punctuation"],
+      style: {
+        color: "#98C379",
+      },
+    },
+    {
+      types: ["selector"],
+      style: {
+        color: "#56B6C2",
+      },
+    },
+    {
+      types: ["punctuation", "operator"],
+      style: {
+        color: "#ABB2BF",
+      },
+    },
+    {
+      types: ["function"],
+      style: {
+        color: "#61AFEF",
+      },
+    },
+    {
+      types: ["function"],
+      languages: ["bash"],
+      style: {
+        color: "#cf8c4c",
+      },
+    },
+    
+    {
+      types: ["class-name", "constant", "maybe-class-name", "imports"],
+      style: {
+        color: "#E5C07B",
+      },
+    },
+    
+    {
+      types: ["char"],
+      style: {
+        color: "#98C379",
+      },
+    },
+    {
+      types: ["deleted"],
+      languages: ['diff'],
+      style: {
+        color: "#ffdcd7",
+        backgroundColor: '#67060c'
+      },
+    },
+
+    {
+      types: ["inserted"],
+      languages: ['diff'],
+      style: {
+        color: "#aff5b4",
+        backgroundColor: '#033a16'
+      },
+    },
+    
+  ],
+}
+
+const oneLight = {
+  plain: {
+
+    color: "#383A42",
+    backgroundColor: "#FAFAFA",
+  },
+  styles: [
+    
+    {
+      types: ["italic"],
+      style: {
+        fontStyle: "italic",
+      },
+    },
+    {
+      types: ["important", "bold"],
+      style: {
+        fontWeight: "bold",
+      },
+    },
+    {
+      types: ["regex"],
+      styles: {
+        color: '#C678DD'
+      }
+    },
+    {
+      types: ["comment"],
+      style: {
+        color: "#A0A1A7",
+        fontStyle: "italic"
+      },
+    },
+    {
+      types: ["builtin", "changed", "keyword", "interpolation-punctuation"],
+      style: {
+        color: "#A626A4",
+      },
+    },
+    {
+      types: ["boolean"],
+      style: {
+          color: '#986801'
+      }
+    },
+    {
+      types: ["property-access"],
+      style: {
+        color: "#56B6C2"
+      }
+    },
+    {
+      types: ["number", "inserted"],
+      style: {
+        color: "#986801",
+      },
+    },
+    {
+      types: ["attr-name", "variable", "literal-property", 'property'],
+      style: {
+        color: "#E45649",
+      },
+    },
+    
+    {
+      types: ["deleted", "string", "attr-value", "template-punctuation"],
+      style: {
+        color: "#50A14F",
+      },
+    },
+    {
+      types: ["selector"],
+      style: {
+        color: "#383A42",
+      },
+    },
+    {
+      types: ["punctuation", "operator"],
+      style: {
+        color: "#383A42",
+      },
+    },
+    {
+      types: ["function"],
+      style: {
+        color: "#4078F2",
+      },
+    },
+    {
+      types: ["function"],
+      languages: ["bash"],
+      style: {
+        color: "#cf8c4c",
+      },
+    },
+    
+    {
+      types: ["class-name", "maybe-class-name", "imports"],
+      style: {
+        color: "#C18401",
+      },
+    },
+    {
+      types: ["constant"],
+      styles: {
+        color: "#383A42"
+      }
+    },
+    {
+      types: ["char"],
+      style: {
+        color: "#50A14F",
+      },
+    },
+    {
+      types: ["deleted"],
+      languages: ['diff'],
+      style: {
+        color: "#ffdcd7",
+        backgroundColor: '#67060c'
+      },
+    },
+
+    {
+      types: ["inserted"],
+      languages: ['diff'],
+      style: {
+        color: "#aff5b4",
+        backgroundColor: '#033a16'
+      },
+    },
+    
+    
+  ],
+}
 
 const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
   0,
   5,
 );
 
+
 module.exports = {
   title: "Simply-DJS",
   tagline:
-    "Powerful yet a Simple, East and Beginner friendly discord.js Package for everyone",
+    "The simplest way to build complex Discord bots.",
   url: "https://simplyd.js.org",
   baseUrl: "/",
-  favicon: "https://i.imgur.com/u8VlLom.png",
+  favicon: "https://i.imgur.com/XFUIwPh.png",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   organizationName: "Rahuletto#0243",
@@ -31,9 +296,9 @@ module.exports = {
     },
     announcementBar: {
       id: "announce",
-      content: "Have an wonderful experience with the v3 update",
-      backgroundColor: "#18191a",
-      textColor: "#FFFFFF",
+      content: "Hop into the blazingly light and stable v4 version 🔥",
+      backgroundColor: "#406DBC",
+      textColor: "#0C0C0C",
     },
     algolia: {
       apiKey: "9da3683213790d1d51892d90c865adab",
@@ -43,17 +308,17 @@ module.exports = {
       searchParameters: {
         hitsPerPage: 5,
       },
+      startUrls: ['https://simplyd.js.org/'],
+      sitemaps: ['https://simplyd.js.org/sitemap.xml'],
 
-      debug: false,
+      debug: true,
     },
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
       "https://kit.fontawesome.com/a6e95e39af.js",
       "https://buttons.github.io/buttons.js",
-      "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap",
       "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
       "/js/code-block-buttons.js",
-      "https://fonts.googleapis.com/css2?family=Lexend-Deca:wght@400&display=swap",
     ],
     throwIfNamespace: false,
     scripts: [
@@ -69,20 +334,20 @@ module.exports = {
       },
       {
         property: "og:title",
-        content: "Simply DJS",
+        content: "Simply-DJS",
       },
       {
         property: "og:description",
         content:
-          "Simply-DJS is an Powerful yet a Simple, East and Beginner friendly discord.js Package that interacts with discord.js that makes your code much easier.",
+          "The easiest way to build sophisticated systems in your Discord bots. Made for DiscordJS v14",
       },
       {
         property: "og:site_name",
-        content: "Simply DJS",
+        content: "Simply-DJS",
       },
       {
         name: "theme-color",
-        content: "#0d52d1",
+        content: "#0C0C0C",
       },
     ],
     navbar: {
@@ -112,9 +377,18 @@ module.exports = {
           dropdownActiveClassDisabled: true,
           dropdownItemsAfter: [
             {
-              label: "v2.5.3",
+              label: "v3",
+              href: "https://v3--simplyd.netlify.app/",
+            },
+            {
+              label: "v2",
               href: "https://v2--simplyd.netlify.app/",
+            },
+            {
+              label: "v1",
+              href: "https://github.com/Rahuletto/simply-djs/blob/08a7b5cf6a5419432c92e0bc64c7e47b393ba779/README.md"
             }
+
 
           ],
         },
@@ -151,6 +425,7 @@ module.exports = {
               label: "• JavaScript",
               href: "https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-welcome",
             },
+
           ],
         },
         {
@@ -168,124 +443,16 @@ module.exports = {
               label: "• Discord",
               href: "https://discord.com/invite/3JzDV9T5Fn",
             },
+
           ],
         },
       ],
-      copyright: `<br><br>Copyright © ${new Date().getFullYear()}  Simply Develop. npm i simply-djs<br><br>Not affiliated with Discord (or) Discord.js`,
+      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria- label="Deploys by Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
+              <br><br><span class="monospace">Copyright © ${new Date().getFullYear()} Rahuletto.</span><br><br><div class="warning">Not affiliated with Discord (or) Discord.js</div>`,
     },
     prism: {
-
-      theme: lightCodeTheme,
-      darkTheme: {
-        plain: {
-          color: "#e5c07b",
-          backgroundColor: "#1E1E1E",
-        },
-        styles: [
-          {
-            types: ["prolog"],
-            style: {
-              color: "rgb(0, 0, 128)",
-            },
-          },
-          {
-            types: ["comment"],
-            style: {
-              color: "#5c6370",
-            },
-          },
-          {
-            types: ["changed", "keyword", "interpolation-punctuation"],
-            style: {
-              color: "#c678dd",
-            },
-          },
-          {
-            types: ["number", "inserted"],
-            style: {
-              color: "#d19a66",
-            },
-          },
-          {
-            types: ["function", "property-access"],
-            style: {
-              color: "#56b6c2",
-            },
-          },
-          {
-            types: ['property', "builtin"],
-            style: {
-              color: '#e06c75'
-            }
-          },
-          {
-            types: ["constant"],
-            style: {
-              color: "rgb(100, 102, 149)",
-            },
-          },
-          {
-            types: ["attr-name", "variable"],
-            style: {
-              color: "#e06c75",
-            },
-          },
-          {
-            types: ["deleted", "string", "attr-value", "template-punctuation"],
-            style: {
-              color: "#98c379",
-            },
-          },
-          {
-            types: ["selector"],
-            style: {
-              color: "#c678dd",
-            },
-          },
-          {
-            // Fix tag color
-            types: ["tag"],
-            style: {
-              color: "rgb(78, 201, 176)",
-            },
-          },
-          {
-            // Fix tag color for HTML
-            types: ["tag"],
-            languages: ["markup"],
-            style: {
-              color: "rgb(86, 156, 214)",
-            },
-          },
-          {
-            types: ["punctuation", "operator"],
-            style: {
-              color: "#abb2bf",
-            },
-          },
-          {
-            // Fix punctuation color for HTML
-            types: ["punctuation"],
-            languages: ["markup"],
-            style: {
-              color: "#abb2bf",
-            },
-          },
-
-          {
-            types: ["class-name"],
-            style: {
-              color: "#808080",
-            },
-          },
-          {
-            types: ["char"],
-            style: {
-              color: "rgb(209, 105, 105)",
-            },
-          },
-        ],
-      }
+      theme: oneLight,
+      darkTheme: oneDark,
     },
   },
   presets: [
@@ -294,7 +461,7 @@ module.exports = {
       {
         docs: {
           versions: {
-            current: { label: "latest" },
+            current: { label: "v4 (latest)" },
           },
           sidebarPath: require.resolve("./sidebars.js"),
         },
@@ -320,7 +487,7 @@ module.exports = {
           {
             tagName: "link",
             rel: "icon",
-            href: "https://i.imgur.com/u8VlLom.png",
+            href: "https://i.imgur.com/XFUIwPh.png",
           },
           {
             tagName: "link",
@@ -330,7 +497,7 @@ module.exports = {
           {
             tagName: "meta",
             name: "theme-color",
-            content: "#0d52d1",
+            content: "#406DBC",
           },
         ],
       },

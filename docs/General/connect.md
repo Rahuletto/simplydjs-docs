@@ -8,7 +8,7 @@ tags:
 
 Connect to a mongo database to access some functions ! *Requires* ***[mongodb uri](https://mongodb.com/)***
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -51,7 +51,7 @@ const simplydjs = require("simply-djs");
 simplydjs.connect() // connect function at the next line
 :::
 
-## Arguments:
+## Types
 ```ts
 simplydjs.connect(
   db: string,

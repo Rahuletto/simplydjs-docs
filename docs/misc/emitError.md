@@ -1,15 +1,15 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 tags:
   - Others
   - New
 ---
 
-# version
+# emitError
 
-Provides the package version you are currently using.
+Produce error messages just like Simply DJS
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -40,13 +40,23 @@ import simplydjs from "simply-djs";
 </Tabs>
 
 ```js
-simplydjs.version
+simplydjs.emitError({ name: "Test", tip: "This is just to test" })
 ```
 
 
-:::info INFO
-This literally returns the version number. Nothing fancy.
+:::danger WARNING
+This may cause your entire project to stop as it emits an error not logging in the console.
 :::
 
-## Returns:
-- `<string>`
+## Types
+```ts
+simplydjs.emitError(
+  {
+    name: string,
+    tip: string
+  }
+)
+```
+
+- name: `string`
+- tip: `string`

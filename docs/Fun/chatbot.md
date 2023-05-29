@@ -8,8 +8,7 @@ tags:
 
 A chatbot system that is both technically advanced and intelligent, and is your buddy.
 
-
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -60,7 +59,7 @@ client.on('messageCreate', (message) => {
 
 ![image](https://user-images.githubusercontent.com/71836991/173194200-b4ced434-880a-4cc8-a8ef-c94c1d6b008f.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.chatbot(
   client: Discord.Client,

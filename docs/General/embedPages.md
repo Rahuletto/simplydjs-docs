@@ -8,7 +8,7 @@ tags:
 
 An *powerful yet customizable* **Embed Paginator**
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -51,7 +51,7 @@ simplydjs.embedPages(interaction, pages, {
 
 ![image](https://user-images.githubusercontent.com/71836991/173194656-d6a39729-50f3-4238-8522-714743a9232a.png)
 
-## Arguments:
+## Types
 ```ts
 simplydjs.embedCreate(
   interaction: Discord.Message | Discord.CommandInteraction,
@@ -87,10 +87,10 @@ import Link from '@docusaurus/Link';
 
 | Parameter      | Type                                                                                                                       | Description                                   |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `firstBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
-| `nextBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
-| `backBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
-| `lastBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
-| `deleteBtn`        | <Link to="/docs/types/btnTemplate">btnTemplate</Link> |  Pass an btnTemplate Object to customize the button   |
+| `firstBtn`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
+| `nextBtn`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
+| `backBtn`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
+| `lastBtn`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
+| `deleteBtn`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
 
 </details>

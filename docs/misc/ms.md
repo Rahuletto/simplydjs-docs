@@ -1,15 +1,15 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 tags:
   - Others
   - New
 ---
 
-# toRgb
+# ms
 
-Transforms Hex code into RGB Array (or) RGB String. This makes it easy to convert from discord.js v13 to v14.
+Converts Human readable time to milliseconds
 
-## Program
+## Implementation
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -40,7 +40,7 @@ import simplydjs from "simply-djs";
 </Tabs>
 
 ```js
-simplydjs.toRgb('hex code')
+simplydjs.ms('human readable time')
 ```
 
 
@@ -48,23 +48,19 @@ simplydjs.toRgb('hex code')
 This can be implemented anywhere. Even outside of discord.js ;)
 :::
 
-## Arguments:
+## Types
 ```ts
-simplydjs.toRgb(
-  hex: string,
-  type: 'Array' | 'String'
+simplydjs.ms(
+  str: string,
 )
 ```
 
-- hex: `#string` | `string`
-- type: `Array` | `String`
+- str: `string`
 
 ## Returns:
-- `<Array>` (or) `<string>`
+- `<string>`
 
 ```js
-// Hex code: #FFFFFF
-[255, 255, 255]
-// or
-'rgb(255, 255, 255)'
+// Human readable time: 0.5d 2h 3m 5s
+50585000
 ```

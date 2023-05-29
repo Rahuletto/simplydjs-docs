@@ -1,3 +1,5 @@
 {
-  "v2.5.3": "https://v2--simplyd.netlify.app/"
+  "v3.x.x": "https://v3--simplyd.netlify.app/",
+  "v2.x.x": "https://v2--simplyd.netlify.app/",
+  "v1.x.x": "https://github.com/Rahuletto/simply-djs/blob/08a7b5cf6a5419432c92e0bc64c7e47b393ba779/README.md"
 }
