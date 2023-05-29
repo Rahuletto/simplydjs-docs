@@ -1,18 +1,20 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 tags:
   - Handler
-  - Ticket
+  - Giveaway
 ---
 
-# manageTicket
+# manageGiveaway
 
-A Ticket Handler for **simplydjs ticket system.**
+> Not done
+
+A Giveaway Handler for **simplydjs giveaway system.**
 
 ## Implementation
 
 ```js
-simplydjs.manageTicket(interaction, { 
+simplydjs.manageGiveaway(interaction, { 
   // options (optional)
 })
 ```
@@ -24,7 +26,7 @@ simplydjs.manageTicket(interaction, {
 
 ## Types
 ```ts
-manageTicket(
+manageGiveaway(
 	interaction: ButtonInteraction,
 	options: manageTicketOptions
 ): Promise<DeleteResolve>
