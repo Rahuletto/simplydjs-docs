@@ -194,7 +194,7 @@ module.exports = {
         docs: {
           breadcrumbs: false,
           editUrl: ({versionDocsDirPath, docPath}) =>
-          `https://github.com/Rahuletto/simplydjs-docs/edit/v4/${docPath}`,
+          `https://github.com/Rahuletto/simplydjs-docs/edit/v4/docs/${docPath}`,
           editLocalizedFiles: false,
           editCurrentVersion: false,
           versions: {

@@ -315,23 +315,23 @@ aside {
   --ifm-navbar-height: 0px;
   max-width: 256px
 }
-.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module {
+.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module, .backToTopButtonShow_xfvO {
   background-color: var(--ifm-color-primary) !important;
   border-radius: 14px !important;
 }
-.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module::after {
+.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module::after, .backToTopButtonShow_xfvO::after {
   background-color: var(--ifm-body-background) !important;
 }
 
-.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module:hover {
+.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module:hover, .backToTopButtonShow_xfvO:hover {
   transform: scale(1.1);
 }
 
-.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module:focus {
+.backToTopButton_node_modules-\@docusaurus-theme-classic-lib-theme-BackToTopButton-styles-module:focus, .backToTopButtonShow_xfvO:focus {
   transform: translateY(5px);
 }
 
-.sidebarViewport_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module {
+.sidebarViewport_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module, .sidebarViewport_Xe31 {
   top: 6rem !important;
   background: rgba(7,7,7,0.4);
   border-radius: 12px;
@@ -344,14 +344,14 @@ aside {
 
 
 
-.expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-ExpandButton-styles-module {
+.expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-ExpandButton-styles-module, .expandButton_m80_ {
   background: rgba(7,7,7,0.4) !important;
   border-radius: 12px;
   border: 1px solid rgba(124, 124, 124, 0.3) !important;
 }
 
-html[data-theme='light'] .sidebarViewport_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module,
-html[data-theme='light'] .expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-ExpandButton-styles-module {
+html[data-theme='light'] .sidebarViewport_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module, .sidebarViewport_Xe31,
+html[data-theme='light'] .expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-ExpandButton-styles-module, .expandButton_m80_ {
   background: rgba(255, 255, 255, 0.5) !important;
 }
 
@@ -532,7 +532,7 @@ iframe {
 }
 
 
-html[data-theme="light"] .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
+html[data-theme="light"] .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module, html[data-theme="light"] .codeBlockContainer_Ckt0 {
   border: 2px solid var(--ifm-color-primary-darker);
 }
 
@@ -748,7 +748,7 @@ html[data-theme='light'] .DocSearch-Modal {
   top: 0px !important;
 }
 
-.language-ts .codeBlockContent_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module::after{
+.language-ts .codeBlockContent_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module::after, .language-ts .codeBlockContent_biex::after{
   content: 'TS';
   color: #3178C6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -757,7 +757,7 @@ html[data-theme='light'] .DocSearch-Modal {
   right: 10px;
   bottom: 2px;
 }
-.language-js .codeBlockContent_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module::after{
+.language-js .codeBlockContent_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module::after, .language-js .codeBlockContent_biex::after{
   content: 'JS';
   color: #f0db4f;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -767,11 +767,11 @@ html[data-theme='light'] .DocSearch-Modal {
   bottom: 2px;
 }
 
-.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
+.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module, .codeBlockContainer_Ckt0 {
   border-radius: 12px !important;
 }
 
-.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
+.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module, .codeBlock_bY9V {
   min-width: -webkit-fill-available !important;
   border-radius: 12px !important;
 }
@@ -840,7 +840,7 @@ html[data-theme='light'] .DocSearch-Modal {
   }
   
 
-  .tocCollapsibleExpanded_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-styles-module {
+  .tocCollapsibleExpanded_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-styles-module, .tocCollapsibleExpanded_sAul {
     border-radius: 12px;
     background: rgba(255,255,255,0.03);
   }
