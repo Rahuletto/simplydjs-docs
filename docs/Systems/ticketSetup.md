@@ -21,9 +21,9 @@ simplydjs.ticketSetup(interaction, {
 
 ## Output
 
-![ticket panel](https://user-images.githubusercontent.com/71836991/166234500-94f6db21-9609-430a-93a6-3beced4d7bc6.png)
+![ticket panel](https://i.postimg.cc/gjFnPJ5G/image.png)
 
-![ticket channel](https://user-images.githubusercontent.com/71836991/166234550-bf3b7205-a421-434a-acf3-e184f5e17aa3.png)
+![ticket channel](https://i.postimg.cc/qq44LCS6/image.png)
 
 ## Types
 ```ts

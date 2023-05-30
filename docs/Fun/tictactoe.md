@@ -2,11 +2,14 @@
 sidebar_position: 3
 tags:
   - Fun
+  - New
 ---
 
 # tictactoe
 
-One line implementation of a super enjoyable **tictactoe game**.
+One line implementation of a super enjoyable **tictactoe game**. 
+
+> Now with AI (one-player) mode ! Just don't mention a opponent and you will play with our ai system. Uses [`https`](/docs/misc/https) to call [`simply-api`](https://simplyapi.js.org)
 
 ## Implementation
 
@@ -18,54 +21,125 @@ simplydjs.tictactoe(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194911-6a800bd8-b7f8-4d2f-8089-dba1843b0a75.png)
+![tictactoe](https://i.postimg.cc/R0dkBbDh/image.png)
 
 ## Types
 ```ts
 simplydjs.tictactoe(
-  interaction: Discord.Message | Discord.CommandInteraction,
-  options: tttOptions
-)
+	msgOrInt: ExtendedMessage | ExtendedInteraction,
+	options: tictactoeOptions = {}
+): Promise<User>
 ```
 
-- interaction [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
-- options: [`tttOptions`](#options-tttoptions)
+- msgOrInt [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- options: [`tictactoeOptions`](#tictactoeoptions)
 
-## Options `tttOptions`
+
+- Resolves: [`User`](https://old.discordjs.dev/#/docs/discord.js/main/class/User) (The winner of the game)
+
+## Options
+
+### `tictactoeOptions`
 
 import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _Default Embed_     | Pass a CustomizableEmbed Object to customize the embed  |
-| `result` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Button' / 'Embed'</Link> | ❌        | _'EMBED'_  | Choose the way you want to show the results of the match |
-| `user`   | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
-| `buttons` | <Link to="#tttbuttons">tttButtons</Link> | ❌   | _Default Buttons_     | Pass an tttButtons Object to customize the buttons  |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in tictactoe |
+| `embed` | <Link to="#embeds">Embeds</Link> | ❌   | _Default Embeds_     | Pass an Embeds Object to customize all the embeds  |
+| `type` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Button'/'Embed'</Link> | ❌  | 'Button'  | Choose the way you want to show the results of the match |
+| `user`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
+| `buttons` | <Link to="#tictactoebuttons">tictactoeButtons</Link> | ❌   | _Default Buttons_ | Pass an tictactoeButtons Object to customize the buttons  |
 
-<details style={{border: '0px solid'}}>
-  <summary>tttButtons options</summary>
+```ts
+export type tictactoeOptions = {
+	embed?: Embeds;
+	user?: User;
+	type?: 'Button' | 'Embed';
 
-## `tttButtons`
+	buttons?: tictactoeButtons;
 
-| Parameter      | Type                                                                                                                       | Description                                   |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `X`        | <Link to="#tttBtnTemplate">tttBtnTemplate</Link> | The Customization of the move of the 'X' user    |
-| `O`       | <Link to="#tttBtnTemplate">tttBtnTemplate</Link> | The Customization of the move of the 'O' user    |
-| `idle`    | <Link to="#tttBtnTemplate">tttBtnTemplate</Link> | The Customization of the button which is not occupied   |
+	strict?: boolean;
+};
+```
 
-</details>
+---------------
+
+### `Embeds`
+
+| Parameter    | Type   | Description  |
+| ------------ | ------ | ------------ |
+| `request`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
+| `win`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
+| `draw`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
+| `game`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
+| `timeout`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
+| `decline`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
 
 
-<details style={{border: '0px solid'}}>
-  <summary>tttBtnTemplate</summary>
-  
+```ts
+export interface Embeds {
+	request?: CustomizableEmbed;
+	win?: CustomizableEmbed;
+	draw?: CustomizableEmbed;
+	game?: CustomizableEmbed;
+	timeout?: CustomizableEmbed;
+	decline?: CustomizableEmbed;
+}
+```
 
-## `tttBtnTemplate`
+---------------
+
+### `tictactoeButtons`
+
+| Parameter    | Type   | Description  |
+| ------------ | ------ | ------------ |
+| `X`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the "X" player button   |
+|  `O`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the "O" player button   |
+|  `blank`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize un-moved place button   |
 
 
-| Parameter      | Type                                                                                                                       | Description                                   |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `style`       | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/MessageButtonStyle">MessageButtonStyle</Link>       | The Style of the Button of your choice    |
-| `emoji`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | Custom Emoji (or) any emoji for your button.    |
+```ts
+interface tictactoeButtons {
+	X?: buttonTemplate;
+	O?: buttonTemplate;
+	blank?: buttonTemplate;
+}
+```
 
-</details>
+----------------------
+
+# Example
+
+
+- ### Default settings
+
+```js title="tictactoe.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.tictactoe(interaction)
+```
+
+- ### Customized with options
+
+```js title="tictactoe.js"
+const { ButtonStyle } = require('discord.js')
+const simplydjs = require('simply-djs')
+
+simplydjs.tictactoe(interaction, {
+  strict: true,
+  type: 'Embed',
+  buttons: {
+    X: { style: ButtonStyle.Danger },
+    O: { style: ButtonStyle.Success },
+    blank: { style: ButtonStyle.Secondary }
+  },
+  embed: {
+    game: {
+      color: simplydjs.toRgb("#406dbc")
+    }
+  }
+})
+```
+
+

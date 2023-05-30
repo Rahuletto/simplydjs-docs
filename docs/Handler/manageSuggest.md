@@ -21,7 +21,7 @@ simplydjs.manageSuggest(interaction, {
 
 ## Output
 
-![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)
+![suggestion accepted](https://i.postimg.cc/hjM3kzhd/image.png)
 
 
 ## Types

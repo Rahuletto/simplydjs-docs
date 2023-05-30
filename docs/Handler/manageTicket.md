@@ -19,7 +19,7 @@ simplydjs.manageTicket(interaction, {
 
 ## Output
 
-![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)
+![ticket channel](https://i.postimg.cc/qq44LCS6/image.png)
 
 
 ## Types

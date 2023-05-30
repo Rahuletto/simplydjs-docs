@@ -19,8 +19,9 @@ simplydjs.manageGiveaway(interaction, {
 
 ## Output
 
-![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)
+![giveaway panel](https://i.postimg.cc/hvzb2fmg/image.png)
 
+![giveaway winner](https://i.postimg.cc/V63DQqm5/image.png)
 
 ## Types
 ```ts

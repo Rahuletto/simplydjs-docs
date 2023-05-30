@@ -21,7 +21,7 @@ simplydjs.giveaway(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png)
+![giveaway panel](https://i.postimg.cc/hvzb2fmg/image.png)
 
 
 ## Types

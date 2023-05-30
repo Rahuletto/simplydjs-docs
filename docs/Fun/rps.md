@@ -18,42 +18,123 @@ simplydjs.rps(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/166234316-74ac4ea1-58f9-46ed-92ac-d5b0139d02f9.png)
+![rps](https://i.postimg.cc/vBCNzRK1/image.png)
+
+![rps win](https://i.postimg.cc/ryjTSjCq/image.png)
 
 ## Types
 ```ts
 simplydjs.rps(
-  interaction: Discord.Message | Discord.CommandInteraction,
-  options: rpsOptions
+	msgOrint: ExtendedMessage | ExtendedInteraction,
+	options: rpsOptions
 )
 ```
 
-- interaction [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
-- options: [`rpsOptions`](#options-rpsoptions)
+- msgOrInt [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- options: [`rpsOptions`](#rpsoptions)
 
-## Options `rpsOptions`
+
+## Options
+
+### `rpsOptions`
 
 import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _Default Embed_     | Pass a CustomizableEmbed Object to customize the embed  |
-| `drawColor` | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/ColorResolvable">ColorResolvable</Link> | ❌        | _#406DBC_  | Color of the embed when the match is a draw. |
-| `winColor` | <Link to="https://discord.js.org/#/docs/discord.js/stable/typedef/ColorResolvable">ColorResolvable</Link> | ❌        | _GREEN_  | Color of the embed when someone wins in the match. |
-| `opponent`   | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
-| `buttons` | <Link to="#rpsbuttons">rpsButtons</Link> | ❌   | _Default Buttons_     | Pass an rpsButtons Object to customize the buttons  |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in rps |
+| `embed` | <Link to="#embeds">Embeds</Link> | ❌   | _Default Embed_     | Pass an Embeds Object to customize the embed  |
+| `buttons` | <Link to="#rpsbuttons">rpsButtons</Link> | ❌   | _Default Buttons_     | Pass a rpsButtons Object to customize the buttons  |
+| `opponent`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
+
+
+```ts
+export type rpsOptions = {
+	embed?: Embeds;
+	buttons?: rpsButtons;
+	opponent?: User;
+
+	strict?: boolean;
+};
+```
 
 ----------------
 
-<details style={{border: '0px solid'}}>
-  <summary>rpsButtons option</summary>
 
-## `rpsButtons`
+### `Embeds`
 
-| Parameter      | Type                                                                                                                       | Description                                   |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `rock`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> | Pass an buttonTemplate Object to customize the button    |
-| `paper`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
-| `scissors`    | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  Pass an buttonTemplate Object to customize the button   |
+| Parameter    | Type   | Description  |
+| ------------ | ------ | ------------ |
+| `request`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
+| `win`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
+| `draw`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
+| `game`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
+| `timeout`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
+| `decline`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
 
-</details>
+
+```ts
+export interface Embeds {
+	request?: CustomizableEmbed;
+	win?: CustomizableEmbed;
+	draw?: CustomizableEmbed;
+	game?: CustomizableEmbed;
+	timeout?: CustomizableEmbed;
+	decline?: CustomizableEmbed;
+}
+```
+
+---------------
+
+### `rpsButtons`
+
+| Parameter    | Type   | Description  |
+| ------------ | ------ | ------------ |
+| `rock`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the rock button   |
+|  `paper`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the paper button   |
+|  `scissor`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize scissor button   |
+
+
+```ts
+interface rpsButtons {
+	rock?: buttonTemplate;
+	paper?: buttonTemplate;
+	scissor?: buttonTemplate;
+}
+```
+
+----------------------
+
+# Example
+
+
+- ### Default settings
+
+```js title="rps.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.rps(interaction)
+```
+
+- ### Customized with options
+
+```js title="rps.js"
+const { ButtonStyle } = require('discord.js')
+const simplydjs = require('simply-djs')
+
+simplydjs.rps(interaction, {
+  strict: true,
+  buttons: {
+    rock: { style: ButtonStyle.Primary },
+    paper: { style: ButtonStyle.Success },
+    scissor: { style: ButtonStyle.Danger }
+  },
+  embed: {
+    game: {
+      color: simplydjs.toRgb("#406dbc")
+    }
+  }
+})
+```
+
+
