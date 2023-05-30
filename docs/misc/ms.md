@@ -1,8 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 tags:
-  - Others
-  - New
+  - Misc
 ---
 
 # ms
@@ -11,42 +10,9 @@ Converts Human readable time to milliseconds
 
 ## Implementation
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
-
-```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
-
 ```js
 simplydjs.ms('human readable time')
 ```
-
-
-:::info INFO
-This can be implemented anywhere. Even outside of discord.js ;)
-:::
 
 ## Types
 ```ts
@@ -55,12 +21,30 @@ simplydjs.ms(
 )
 ```
 
-- str: `string`
+- str: [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-## Returns:
-- `<string>`
+## Returns
+- [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
-```js
-// Human readable time: 0.5d 2h 3m 5s
-50585000
+
+-----------------------
+
+## Example
+
+- ### Normal
+
+```js title="ms.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.ms('20s')
+// 20000
+```
+
+- ### Can convert mad-like strings 
+
+```js title="ms.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.ms('0.5d 2h 3m 5s')
+// 50585000
 ```

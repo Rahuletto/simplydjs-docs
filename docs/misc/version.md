@@ -1,8 +1,7 @@
 ---
-sidebar_position: 4
+sidebar_position: 7
 tags:
-  - Others
-  - New
+  - Misc
 ---
 
 # version
@@ -11,36 +10,8 @@ Provides the package version you are currently using.
 
 ## Implementation
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
-
 ```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
-
-```js
-simplydjs.version
+const version = simplydjs.version
 ```
 
 
@@ -48,5 +19,5 @@ simplydjs.version
 This literally returns the version number. Nothing fancy.
 :::
 
-## Returns:
-- `<string>`
+## Returns
+- [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)

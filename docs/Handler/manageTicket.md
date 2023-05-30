@@ -19,12 +19,12 @@ simplydjs.manageTicket(interaction, {
 
 ## Output
 
-[![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)](https://postimg.cc/HJNLz023)
+![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)
 
 
 ## Types
 ```ts
-manageTicket(
+simplydjs.manageTicket(
 	interaction: ButtonInteraction,
 	options: manageTicketOptions
 ): Promise<DeleteResolve>
@@ -46,17 +46,19 @@ import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageSuggest |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
-| `ticketname` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _{user.tag}_   | The name of the ticket and channel that gets created  |
-| `category` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_   | The category to add tickets on. This organises your server |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageTicket |
+| `ticketname` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _{tag}_   | The name of the ticket and channel that gets created  |
 | `buttons` | <Link to="#ticketbuttons">ticketButtons</Link> | ❌   | _default buttons_ | Pass a ticketButtons Object to customize embeds |
+| `pingRoles`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/Role">Role[]</Link> | ❌  | _none_ | Ping an admin role to let them know there is a ticket |
+| `category` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/CategoryChannel?scrollTo=id">string</Link> | ❌  | _none_   | The category to add tickets on. This organises your server |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
+| `logChannelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string</Link>  | ❌  | - | Channel Id to send the ticket chat logs as `.txt` file |
 
 ```ts
 export type manageTicketOptions = {
 	ticketname?: string;
 	buttons?: ticketButtons;
-	pingRoles?: Role[] | string[];
+	pingRoles?: Role[];
 	category?: string;
 	embed?: CustomizableEmbed;
 
@@ -65,7 +67,45 @@ export type manageTicketOptions = {
 };
 ```
 
+----------------------
+
+### `ticketButtons`
+
+
+| Parameter    | Type   | Description  |
+| ------------ | ------ | ------------ |
+| `close`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the close button   |
+| `reopen`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the reopen button   |
+| `delete`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the delete button   |
+| `transcript`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the transcript button   |
+
+
+
+```ts
+interface ticketButtons {
+	close: buttonTemplate;
+	reopen: buttonTemplate;
+	delete: buttonTemplate;
+	transcript: buttonTemplate;
+}
+```
+
 ---------------
+
+## Resolve
+
+### `DeleteResolve`
+
+```ts
+export type DeleteResolve = {
+	type?: 'Delete';
+	channelId?: string;
+	user?: User;
+	data?: AttachmentBuilder; // chat logs in .txt file
+};
+```
+
+----------------
 
 
 ## Example
@@ -75,7 +115,7 @@ export type manageTicketOptions = {
 ```js title="ready.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.manageSuggest(interaction)
+simplydjs.manageTicket(interaction)
 ```
 
 - ### Customized with options
@@ -83,17 +123,18 @@ simplydjs.manageSuggest(interaction)
 ```js title="ready.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.manageSuggest(interaction, {
+simplydjs.manageTicket(interaction, {
   strict: true,
   embed: {
-    accept: { 
-      title: "Accepted the suggestion",
-      color: "DarkGreen"
-    },
-    deny: {
-      title: "Denied the suggestion",
-      color: "Red"
-    }
-  }
+    title: "New ticket",
+    color: simplydjs.toRgb("#406dbc")
+  },
+  buttons: {
+
+  },
+  ticketname: "{username}",
+  pingRoles: ["01234567890123"],
+  category: "01234567890123",
+  logChannelId: "01234567890123"
 })
 ```

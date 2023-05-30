@@ -7,8 +7,6 @@ tags:
 
 # manageGiveaway
 
-> Not done
-
 A Giveaway Handler for **simplydjs giveaway system.**
 
 ## Implementation
@@ -21,51 +19,73 @@ simplydjs.manageGiveaway(interaction, {
 
 ## Output
 
-[![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)](https://postimg.cc/HJNLz023)
+![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)
 
 
 ## Types
 ```ts
-manageGiveaway(
+simplydjs.manageGiveaway(
 	interaction: ButtonInteraction,
-	options: manageTicketOptions
-): Promise<DeleteResolve>
+	options: manageGiveawayOptions
+): Promise<RerollResolve | EndResolve>
 ```
 
 - interaction: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
-- options: [`manageTicketOptions`](#manageticketoptions)
+- options: [`manageGiveawayOptions`](#managegiveawayoptions)
 
 
 
-- Resolves: [`DeleteResolve`](#deleteresolve)
+- Resolves: [`RerollResolve`](#rerollresolve) | [`EndResolve`](#endresolve)
 
 
 ## Options 
 
-### `manageTicketOptions`
+### `manageGiveawayOptions`
 
 import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageSuggest |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
-| `ticketname` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _{user.tag}_   | The name of the ticket and channel that gets created  |
-| `category` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_   | The category to add tickets on. This organises your server |
-| `buttons` | <Link to="#ticketbuttons">ticketButtons</Link> | ❌   | _default buttons_ | Pass a ticketButtons Object to customize embeds |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageGiveaway |
 
 ```ts
-export type manageTicketOptions = {
-	ticketname?: string;
-	buttons?: ticketButtons;
-	pingRoles?: Role[] | string[];
-	category?: string;
-	embed?: CustomizableEmbed;
-
-	logChannelId?: string;
+export type manageGiveawayOptions = {
 	strict?: boolean;
 };
 ```
+
+:::info Info
+## Customization for manageGiveaway
+
+You can customize the buttons and embeds by passing the options in [`giveaway`](/docs/systems/giveaway) function. We export these options to manageGiveaway to match the embeds the same.
+:::
+
+---------------
+
+## Resolve
+
+### `RerollResolve`
+
+```ts
+export type RerollResolve = {
+	type?: 'Reroll';
+	user?: GuildMember[];
+	url?: string;
+};
+```
+
+----------------
+
+### `EndResolve`
+
+```ts
+export type EndResolve = {
+	type?: 'End';
+	user?: GuildMember[];
+	url?: string;
+};
+```
+
 
 ---------------
 
@@ -77,7 +97,7 @@ export type manageTicketOptions = {
 ```js title="ready.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.manageSuggest(interaction)
+simplydjs.manageGiveaway(interaction)
 ```
 
 - ### Customized with options
@@ -85,17 +105,7 @@ simplydjs.manageSuggest(interaction)
 ```js title="ready.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.manageSuggest(interaction, {
-  strict: true,
-  embed: {
-    accept: { 
-      title: "Accepted the suggestion",
-      color: "DarkGreen"
-    },
-    deny: {
-      title: "Denied the suggestion",
-      color: "Red"
-    }
-  }
+simplydjs.manageGiveaway(interaction, {
+  strict: true
 })
 ```

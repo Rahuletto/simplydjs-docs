@@ -10,34 +10,6 @@ An Unique **calculator** which can be *used inside Discord*
 
 ## Implementation
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
-
-```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
-
 ```js
 simplydjs.calculator(interaction)
 ```

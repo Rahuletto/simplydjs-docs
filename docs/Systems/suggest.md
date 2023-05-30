@@ -24,7 +24,7 @@ simplydjs.suggest(interaction, {
 
 ## Output
 
-[![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)](https://postimg.cc/HJNLz023)
+![suggestion.png](https://i.postimg.cc/wvqs60sK/image.png)
 
 
 ## Types
@@ -57,6 +57,17 @@ import Link from '@docusaurus/Link';
 | `suggestion`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _none_ | The suggestion to post in the server |
 | `progress` | <Link to="#progress">Progress</Link> | ❌ | _default_  | Pass a Progress Object to customize the suggestion vote percentage bar  |
 
+```ts
+export type suggestOption = {
+	embed?: CustomizableEmbed;
+	channelId?: string | TextChannel;
+	suggestion?: string;
+	buttons?: suggestButtons;
+	progress?: Progress;
+	strict: boolean;
+};
+```
+
 ----------------
 
 ### `suggestButtons`
@@ -67,6 +78,14 @@ import Link from '@docusaurus/Link';
 |  `upvote`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the upvote button   |
 |  `downvote`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the downvote button   |
 
+```ts
+interface suggestButtons {
+	votedInfo?: buttonTemplate;
+	upvote?: buttonTemplate;
+	downvote?: buttonTemplate;
+}
+```
+
 ----------------
 
 ### `Progress`
@@ -76,6 +95,14 @@ import Link from '@docusaurus/Link';
 | `up`        | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | '🟩' | The emoji to show instead of green box at progress   |
 |  `down`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | '🟥' | The emoji to show instead of red box at progress  |
 |  `blank`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | '⬛' | The emoji to show instead of black box at progress  |
+
+```ts
+export interface Progress {
+	up: string;
+	down: string;
+	blank: string;
+}
+```
 
 ----------------
 

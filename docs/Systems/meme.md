@@ -51,6 +51,17 @@ import Link from '@docusaurus/Link';
 | `sub` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string[]</Link> | ❌        | _default array_  | Array of custom subreddits to send as memes  |
 | `interval`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</Link>     | ❌        | `600000ms` (10m) | Interval between memes sent by the bot. |
 
+```ts
+export type memeOptions = {
+	embed?: CustomizableEmbed;
+	channelId?: string;
+	interval?: number;
+	sub?: string[] | string;
+
+	strict?: boolean;
+};
+```
+
 --------------------
 
 ## Example

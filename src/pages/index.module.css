@@ -26,14 +26,16 @@
 }
 
 .heroBanner {
-  gap: 2.5rem;
-  min-height: 90vh;
+  gap: 2rem;
+  min-height: 100vh;
   
   animation: 0.8s fadein forwards;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: 'DM Sans';
   font-weight: 400;
-  padding: 4rem 0;
+  
+  padding: 3rem 0;
+  padding-top: 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -177,6 +179,12 @@ button {
   .heroBanner {
     padding: 2rem;
     padding-top: 5rem;
+  }
+
+  .import {
+    font-size: 16px;
+    padding: 8px 12px;
+    max-width: none !important;
   }
 
   .subtitle {

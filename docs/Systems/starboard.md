@@ -63,6 +63,16 @@ import Link from '@docusaurus/Link';
 | `min`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</Link>     | ❌  | 2 | The number of reactions required to list in the starboard |
 | `emoji`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | ⭐ | Emoji required as reaction to list the message on the starboard |
 
+```ts
+export type starboardOption = {
+	embed?: CustomizableEmbed;
+	channelId?: string;
+	min?: number;
+	emoji?: string;
+
+	strict?: boolean;
+};
+```
 
 --------------------
 

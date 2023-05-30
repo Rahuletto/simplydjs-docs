@@ -9,12 +9,16 @@ module.exports = {
     "The simplest way to build complex Discord bots.",
   url: "https://simplyd.js.org",
   baseUrl: "/",
-  favicon: "https://i.imgur.com/XFUIwPh.png",
+  favicon: "https://i.postimg.cc/5ynhr6DK/love-1.png", // https://i.imgur.com/XFUIwPh.png
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   organizationName: "Rahuletto#0243",
   projectName: "simply-djs",
   themeConfig: {
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
+    },
     docs: {
       sidebar: {
         hideable: true,
@@ -25,17 +29,14 @@ module.exports = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    announcementBar: {
-      id: "announce",
-      content: "Hop into the blazingly light and stable v4 version 🔥",
-      backgroundColor: "#406DBC",
-      textColor: "#0C0C0C",
-    },
     algolia: {
       apiKey: "9da3683213790d1d51892d90c865adab",
       appId: "9CQMIEN04F",
       indexName: "simplyd",
       inputSelector: "h1",
+      contextualSearch: true,
+      placeholder: "Search Simply-DJS",
+      maxResultsPerGroup: 7,
       searchParameters: {
         hitsPerPage: 5,
       },
@@ -108,7 +109,7 @@ module.exports = {
           dropdownActiveClassDisabled: true,
           dropdownItemsAfter: [
             {
-              label: "v3",
+              label: "v3 (latest)",
               href: "https://v3--simplyd.netlify.app/",
             },
             {
@@ -178,7 +179,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria- label="Deploys by Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
+      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria- label="Deployed in Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
               <br><br><span class="monospace">Copyright © ${new Date().getFullYear()} Rahuletto.</span><br><br><div class="warning">Not affiliated with Discord (or) Discord.js</div>`,
     },
     prism: {
@@ -191,8 +192,13 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          breadcrumbs: false,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+          `https://github.com/Rahuletto/simplydjs-docs/edit/v4/${docPath}`,
+          editLocalizedFiles: false,
+          editCurrentVersion: false,
           versions: {
-            current: { label: "v4 (latest)" },
+            current: { label: "v4 (beta)", banner: 'unreleased' }
           },
           sidebarPath: require.resolve("./sidebars.js"),
         },

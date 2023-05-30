@@ -10,34 +10,6 @@ Connect to a mongo database to access some functions ! *Requires* ***[mongodb ur
 
 ## Implementation
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
-
-```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
-
 ```js
 simplydjs.connect('mongodb uri')
 ```

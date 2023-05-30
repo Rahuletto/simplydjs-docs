@@ -10,34 +10,6 @@ An *powerful yet customizable* **Embed Paginator**
 
 ## Implementation
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
-
-```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
-
 ```js
 let pages = [] // Contains array of MessageEmbed.
 

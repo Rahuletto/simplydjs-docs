@@ -1,70 +1,39 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 tags:
-  - Others
-  - New
+  - Misc
 ---
 
 # toRgb
 
-Transforms Hex code into RGB Array (or) RGB String. This makes it easy to convert from discord.js v13 to v14.
+Transforms Hex code into RGB Array.
 
 ## Implementation
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="js"
-  values= {[
-    { label: 'Javascript', value: 'js', },
-    { label: 'Typescript', value: 'ts', },
-  ]
-}>
-<TabItem value="js">
-
-```js
-const simplydjs = require("simply-djs");
-```
-
-</TabItem>
-
-<TabItem value="ts">
-
-```ts
-import simplydjs from "simply-djs";
-```
-
-</TabItem>
-
-</Tabs>
 
 ```js
 simplydjs.toRgb('hex code')
 ```
 
-
-:::info INFO
-This can be implemented anywhere. Even outside of discord.js ;)
-:::
-
 ## Types
 ```ts
-simplydjs.toRgb(
-  hex: string,
-  type: 'Array' | 'String'
-)
+simplydjs.toRgb(hex: string): ColorResolvable
 ```
 
-- hex: `#string` | `string`
-- type: `Array` | `String`
+- hex: [`#string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-## Returns:
-- `<Array>` (or) `<string>`
+## Returns
+- [`ColorResolvable`](https://old.discordjs.dev/#/docs/discord.js/main/typedef/ColorResolvable)
 
-```js
-// Hex code: #DEDEDE
-[255, 255, 255]
-// or
-'rgb(255, 255, 255)'
+-----------------------
+
+## Example
+
+```js title="rgb.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.toRgb('#406dbc')
+// [64, 109, 188]
+
+simplydjs.toRgb('#f0f0f0')
+// [240, 240, 240]
 ```

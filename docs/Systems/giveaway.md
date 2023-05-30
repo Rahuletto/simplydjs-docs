@@ -107,6 +107,12 @@ interface GiveawayButtons {
 | `type`        | `'Role'`/`'Guild'`/`'None'` |  The type of the requirements whether its role required or guild joined.   |
 | `id`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | The Role ID (if type: 'Role') or Guild ID (if type: 'Guild')  |
 
+```ts
+interface Requirement {
+	type: 'Role' | 'Guild' | 'None';
+	id: string;
+}
+```
 
 ---------------
 

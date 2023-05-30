@@ -50,6 +50,14 @@ import Link from '@docusaurus/Link';
 | `button` | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> | ❌        | _default button_  | Pass a buttonTemplate Object to customize the button  |
 | `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the ticket panel embed  |
 
+```ts
+export type ticketSetupOptions = {
+	embed?: CustomizableEmbed;
+	button?: buttonTemplate;
+	channelId?: string;
+	strict: boolean;
+};
+```
 
 ------------------------
 

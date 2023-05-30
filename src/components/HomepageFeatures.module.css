@@ -220,7 +220,7 @@ html[data-theme='light'] .stat {
 }
 
 .import {
-  font-size: 18px;
+  font-size: 16px;
   display: inline-block;
   border-radius: 12px;
   padding: 10px 14px;
@@ -256,7 +256,7 @@ button {
 
 .tryNow div {
   background-color: var(--ifm-body-background);
-  padding: 18px 12px;
+  padding: 14px 8px;
   border-radius: 21px;
 }
 
