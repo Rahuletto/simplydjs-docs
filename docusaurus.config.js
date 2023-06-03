@@ -7,7 +7,7 @@ module.exports = {
   title: "Simply-DJS",
   tagline:
     "The simplest way to build complex Discord bots.",
-  url: "https://simplyd.pages.dev",
+  url: "https://v4--simplyd.netlify.app",
   baseUrl: "/",
   favicon: "https://i.postimg.cc/5ynhr6DK/love-1.png", // https://i.imgur.com/XFUIwPh.png
   onBrokenLinks: "throw",
@@ -41,8 +41,8 @@ module.exports = {
       searchParameters: {
         hitsPerPage: 5,
       },
-      startUrls: ['https://simplyd.pages.dev/'],
-      sitemaps: ['https://simplyd.pages.dev/sitemap.xml'],
+      startUrls: ['https://v4--simplyd.netlify.app/'],
+      sitemaps: ['https://v4--simplyd.netlify.app/sitemap.xml'],
 
       debug: true,
     },
