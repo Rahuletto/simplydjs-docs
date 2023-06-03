@@ -14,6 +14,7 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   organizationName: "Rahuletto",
   projectName: "simply-djs",
+  trailingSlash: true,
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
@@ -30,10 +31,10 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "9da3683213790d1d51892d90c865adab",
-      appId: "9CQMIEN04F",
-      indexName: "simplyd",
-      ignoreCanonicalTo: false,
+      apiKey: "64107c9458b57c76a57585e3d54d9d36",
+      appId: "0V6L7HOWNI",
+      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
+      ignoreCanonicalTo: true,
       inputSelector: "h1",
       searchParameters: {
         hitsPerPage: 5,
