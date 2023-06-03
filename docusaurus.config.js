@@ -30,9 +30,9 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "64107c9458b57c76a57585e3d54d9d36",
-      appId: "0V6L7HOWNI",
-      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
+      apiKey: "9da3683213790d1d51892d90c865adab",
+      appId: "9CQMIEN04F",
+      indexName: "simplyd",
       ignoreCanonicalTo: false,
       inputSelector: "h1",
       searchParameters: {
@@ -66,7 +66,7 @@ module.exports = {
       {
         property: "og:description",
         content:
-          "The easiest way to build sophisticated systems in your Discord bots. Made for DiscordJS v14",
+          "The simplest way to build complex Discord bots. Made for DiscordJS v14",
       },
       {
         property: "og:site_name",
@@ -178,7 +178,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria- label="Deployed in Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
+      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deployed in Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
               <br><br><span class="monospace">Copyright © ${new Date().getFullYear()} Rahuletto.</span><br><br><div class="warning">Not affiliated with Discord (or) Discord.js</div>`,
     },
     prism: {
@@ -217,6 +217,8 @@ module.exports = {
           "appInstalled",
           "standalone",
           "queryString",
+          'mobile',
+          'saveData'
         ],
         pwaHead: [
           {

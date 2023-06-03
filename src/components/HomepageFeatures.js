@@ -15,15 +15,15 @@ function AboutMe() {
 
       <div className={styles.boxes}>
         <div>
-          <a className="shield" target='_blank'  href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/v/simply-djs.svg?style=for-the-badge" /></a>
-          <a className="shield" target='_blank'  href="https://www.npmjs.com/package/simply-djs"><img src="https://img.shields.io/npm/dt/simply-djs?style=for-the-badge" /></a>
+          <a className="shield"  target='_blank'  href="https://www.npmjs.com/package/simply-djs"><img alt="npm version" src="https://img.shields.io/npm/v/simply-djs.svg?style=for-the-badge" /></a>
+          <a className="shield"  target='_blank'  href="https://www.npmjs.com/package/simply-djs"><img alt="npm downloads" src="https://img.shields.io/npm/dt/simply-djs?style=for-the-badge" /></a>
         </div>
         <div>
-          <a className="shield" href="https://simplyd.js.org"><img src="https://img.shields.io/badge/Simply--DJS-Documentation-406DBC?style=for-the-badge" /></a>
-          <a className="shield" target='_blank'  href="https://discord.gg/3JzDV9T5Fn"><img src="https://img.shields.io/badge/Discord-Support-5865F2?style=for-the-badge&logo=discord" /></a>
+          <a className="shield"  href="https://simplyd.js.org"><img alt="documentation" src="https://img.shields.io/badge/Simply--DJS-Documentation-406DBC?style=for-the-badge" /></a>
+          <a className="shield"  target='_blank'  href="https://discord.gg/3JzDV9T5Fn"><img alt="discord support" src="https://img.shields.io/badge/Discord-Support-5865F2?style=for-the-badge&logo=discord" /></a>
         </div>
 
-        <a href="https://discord.gg/3JzDV9T5Fn" target='_blank'><img src="https://invidget.switchblade.xyz/3JzDV9T5Fn" /></a>
+        <a href="https://discord.gg/3JzDV9T5Fn" target='_blank'><img alt="discord invite" src="https://invidget.switchblade.xyz/3JzDV9T5Fn" /></a>
       </div>
 
 
@@ -54,14 +54,16 @@ export default function HomepageFeatures() {
                 <a href="/docs/intro" className={styles.linkBtn}>Get Started {">"}</a>
               </div>
               <div className={styles.code}>
+                
                 <iframe
                   scrolling="no"
-                  
+                  title="one-line code"
+                  loading="lazy"
                   style={{ minWidth: "-webkit-fill-available", maxWidth: "425px", height: "155px", overflow: "hidden", border: 0 }}
                   src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=552&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=5px&ln=false&fl=1&fm=JetBrains+Mono&fs=11.5px&lh=133%25&si=false&es=2x&wm=false&code=const%2520simplydjs%2520%253D%2520require%28%27simply-djs%27%29%250A%250Asimplydjs.giveaway%28interaction%29%250A"
                   sandbox="allow-scripts allow-same-origin">
                 </iframe>
-                <img className={styles.preview} src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
+                <img className={styles.preview} alt="giveaway one-line" src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
               </div>
             </div>
 
@@ -72,7 +74,7 @@ export default function HomepageFeatures() {
                 <p>Do you think it's some shady code ? Don't worry, Our code is published in github. You can look into the code and bet on it.</p>
               </div>
               <div className={styles.code}>
-                <a className={styles.repo} href="https://github.com/Rahuletto/simply-djs"><img src="https://gh-card.dev/repos/Rahuletto/simply-djs.svg?fullname=" /></a>
+                <a className={styles.repo} href="https://github.com/Rahuletto/simply-djs"><img alt="repository" src="https://gh-card.dev/repos/Rahuletto/simply-djs.svg?fullname=" /></a>
               </div>
             </div>
 
@@ -100,12 +102,13 @@ export default function HomepageFeatures() {
               <div className={styles.code}>
                 <iframe
                   scrolling="no"
+                  loading="lazy"
                   src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=552&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=5px&ln=false&fl=1&fm=JetBrains+Mono&fs=11.5px&lh=133%25&si=false&es=2x&wm=false&code=const%2520simplydjs%2520%253D%2520require%28%27simply-djs%27%29%250A%250Asimplydjs.giveaway%28interaction%252C%2520%257B%250A%2520%2520embed%253A%2520%257B%250A%2520%2520%2520%2520title%253A%2520%2522Giveaways%2522%252C%250A%2520%2520%2520%2509description%253A%2520%2522Are%2520ya%2520winnin%2520son%2520%253F%2522%252C%250A%2520%2520%2520%2520color%253A%2520simplydjs.toRgb%28%27%2523075FFF%27%29%250A%2520%2520%257D%250A%257D%29%250A"
-
+                  title="customization code"
                   style={{ minWidth: "-webkit-fill-available", maxWidth: "560px", minHeight: "345px", overflow: "hidden", border: 0 }}
                   sandbox="allow-scripts allow-same-origin">
                 </iframe>
-                <img style={{ top: "-130px" }} className={styles.preview} src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
+                <img alt="customization" style={{ top: "-130px" }} className={styles.preview} src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
 
               </div>
             </div>

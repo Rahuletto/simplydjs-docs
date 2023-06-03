@@ -16,6 +16,8 @@
   -webkit-font-smoothing: antialiased;
   --ifm-link-color: var(--ifm-color-primary-darker);
 
+  --docsearch-modal-height: 70vh !important;
+  
 }
 
 ::-moz-selection {
@@ -64,6 +66,8 @@ html[data-theme='dark'] {
   --docsearch-primary-color: var(--ifm-color-primary-darker);
   --docsearch-searchbox-background: var(--ifm-body-background) !important;
   --docsearch-muted-color: var(--ifm-color-primary) !important;
+
+  --docsearch-container-background: #0d1011c7 !important;
 
   --ifm-color-primary: #406dbc;
 
@@ -241,7 +245,7 @@ td a,
 }
 
 
-a svg {
+a[target='_blank'] svg {
   display: none;
 } 
 
@@ -589,7 +593,7 @@ iframe {
 .markdown h3 {
   color: var(--ifm-color-primary-dark);
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .pagination-nav__link {
@@ -830,6 +834,7 @@ html[data-theme="light"] .alert--success {
 
 .monospace {
   font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
 }
 
 .row {
@@ -863,9 +868,8 @@ html[data-theme='light'] .DocSearch-Form {
 
 .DocSearch-Modal {
   margin: auto !important;
-  height: 92vh !important;
   width: 92vw !important;
-  margin-top: 30vh !important;
+  margin-top: 48vh !important;
   transform: translateY(-27vh) !important;
   border-radius: 18px !important;
   background: rgba(40, 40, 40, 0.2) !important;
@@ -888,6 +892,7 @@ html[data-theme='light'] .DocSearch-Modal {
 .DocSearch-Button-Key {
   box-shadow: none !important;
   font-family: 'JetBrains Mono', monospace !important;
+  
   background: transparent !important;
   border: 1px solid var(--ifm-color-primary) !important;
   height: 20px !important;
