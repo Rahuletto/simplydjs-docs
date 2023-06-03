@@ -5,7 +5,7 @@ tags:
   - Disboard
 ---
 
-# bumpRemainder
+# bumpReminder
 
  A Very cool bump reminder system that reminds when a bump is necessary
  [Only Disboard].
@@ -18,7 +18,7 @@ tags:
 Requires you to have this in `messageCreate` and `ready` event
 
 ```js title="ready.js"
-simplydjs.bumpRemainder(client, {
+simplydjs.bumpReminder(client, {
   channelId: ["01234567890123"], // channelId (required)
   // other options (optional)
 })
@@ -31,7 +31,7 @@ When implementing in `messageCreate` event, It requires `Message Intent` !
 ```js title="messageCreate.js"
 client.on('messageCreate', async (message) => {
   
-  simplydjs.bumpRemainder(client, message, {
+  simplydjs.bumpReminder(client, message, {
     channelId: ["01234567890123"], // channelId (required)
     // other options (optional)
   })
