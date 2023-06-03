@@ -59,9 +59,9 @@ export type manageBtnRoleOptions = {
 ### `BtnRoleReplies`
 
 | Parameter | Type | Default    | Description |
-| --------- | ----- | -------- | -------- | ---------- |
-| `add` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>  | _✅ Added the {role} role to you._   | The message sent when the role is added.  |
-| `remove` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>  | _❌ Removed the {role} role from you._   | The message sent when the role is removed.  |
+| --------- | ----- | -------- | -------- |
+| `add` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>  | ✅ Added the {role} role to you   | The message sent when the role is added.  |
+| `remove` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>  | ❌ Removed the {role} role from you   | The message sent when the role is removed.  |
 
 ```ts
 export interface BtnRoleReplies {
