@@ -41,6 +41,7 @@ module.exports = {
       searchParameters: {
         hitsPerPage: 5,
       },
+      startUrls: ['https://simplyd.pages.dev/'],
       sitemaps: ['https://simplyd.pages.dev/sitemap.xml'],
 
       debug: true,
