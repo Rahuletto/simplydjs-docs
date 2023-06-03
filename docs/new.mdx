@@ -11,14 +11,15 @@ tags:
 
 Summary:
 ```diff
++ Converted to DiscordJS v14
 + All new `strict` mode.
 + Proper Typings and Commenting
 + ChatGPT integration in chatbot
-+ Super Customizable embed
-+ Variable names that just make sense
++ Super Customizable embed and button
++ Names that just make sense
 
 - Removed `credit` option
-- Deprecated few modules (Renaming things)
+- Deprecated few functions
 ```
 
 ## v4.x.x
@@ -39,11 +40,11 @@ Summary:
 <br></br>
 
 - #### Super Customizable embed
-  * We added `fields`, `thumbnail`, `image` and literally everything that Discord.JS provides for embed. So you can customize even more. Making your bot, yours.
+  * We added `fields`, `thumbnail`, `image` and literally everything that Discord.JS provides for embed. So you can customize even more. Making your bot, yours. Refer [`CustomizableEmbed`](/docs/typedef/CustomizableEmbed)
 
 <br></br>
 
-- #### Variable names that just make sense
+- #### Names that just make sense
   * Previously we had meaningless variable and option names. Now that's gone. Everything has proper name. Making it easier to contribute and debug.
 
 <br></br>
@@ -62,6 +63,7 @@ automeme() --> meme()
 bumpSys() --> bumpReminder()
 embedCreate() --> embedCreator()
 embedPages() --> buttonPages()
+giveawaySystem() --> giveaway()
 suggestSystem() --> suggest()
 ticketSystem() --> ticketSetup()
 
@@ -73,6 +75,9 @@ manageBtn()
 
 manageSug() --> manageSuggest()
 
+// Deprecated and will be removed
+nqn() --> X
+stealEmoji() --> X
 ```
 
 <br></br>
@@ -88,5 +93,5 @@ manageSug() --> manageSuggest()
 
 - ## 🗒 Documentation
   * `Very Massive` UI overhaul
-  * Website Re-done
   * New Search algorithm
+  * Documented every thing that's humanly possible

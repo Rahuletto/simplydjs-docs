@@ -1,11 +1,11 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 tags:
   - Misc
   - New
 ---
 
-# MessageButtonStyle
+# toButtonStyle
 
 Converts your old button style string to [`ButtonStyle`](https://discord-api-types.dev/api/discord-api-types-v10/enum/ButtonStyle)
 
@@ -14,12 +14,12 @@ Converts your old button style string to [`ButtonStyle`](https://discord-api-typ
 
 ## Implementation
 ```js
-simplydjs.MessageButtonStyle("OLD_STYLE")
+simplydjs.toButtonStyle("OLD_STYLE")
 ```
 
 ## Types
 ```ts
-simplydjs.MessageButtonStyle(style: string): ButtonStyle
+simplydjs.toButtonStyle(style: string): ButtonStyle
 ```
 
 - style: [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
@@ -32,6 +32,6 @@ simplydjs.MessageButtonStyle(style: string): ButtonStyle
 ```js title="https.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.MessageButtonStyle("PRIMARY")
+simplydjs.toButtonStyle("PRIMARY")
 // ButtonStyle.Primary
 ```

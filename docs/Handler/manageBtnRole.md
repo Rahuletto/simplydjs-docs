@@ -26,13 +26,15 @@ simplydjs.manageBtnRole(interaction, {
 ## Types
 ```ts
 simplydjs.manageBtnRole(
-	interaction: ButtonInteraction,
+	button: ButtonInteraction,
 	options: manageBtnRoleOptions
 ): Promise<boolean>
 ```
 
-- interaction: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
+- button: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
 - options: [`manageBtnRoleOptions`](#managebtnroleoptions)
+
+- Resolves: [`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (whether gave the role)
 
 ## Options 
 
@@ -62,7 +64,7 @@ export type manageBtnRoleOptions = {
 | `remove` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>  | _❌ Removed the {role} role from you._   | The message sent when the role is removed.  |
 
 ```ts
-interface BtnRoleReplies {
+export interface BtnRoleReplies {
 	add: string;
 	remove: string;
 }

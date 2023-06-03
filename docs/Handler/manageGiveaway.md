@@ -26,12 +26,12 @@ simplydjs.manageGiveaway(interaction, {
 ## Types
 ```ts
 simplydjs.manageGiveaway(
-	interaction: ButtonInteraction,
+	button: ButtonInteraction,
 	options: manageGiveawayOptions
 ): Promise<RerollResolve | EndResolve>
 ```
 
-- interaction: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
+- button: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
 - options: [`manageGiveawayOptions`](#managegiveawayoptions)
 
 

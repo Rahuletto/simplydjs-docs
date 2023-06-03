@@ -32,7 +32,7 @@ simplydjs.giveaway(
 ): Promise<GiveawayResolve | EndResolve>
 ```
 
-- msgOrInt [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
 - options: [`giveawayOptions`](#giveawayoptions)
 
 
@@ -86,21 +86,21 @@ export type giveawayOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `enter`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the button   |
-|  `end`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the button   |
-|  `reroll`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the button   |
+| `enter`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+|  `end`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+|  `reroll`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
 
 ```ts
-interface GiveawayButtons {
-	enter?: buttonTemplate;
-	end?: buttonTemplate;
-	reroll?: buttonTemplate;
+export interface GiveawayButtons {
+	enter?: CustomizableButton;
+	end?: CustomizableButton;
+	reroll?: CustomizableButton;
 }
 ```
 
 -------------
 
-### `Requirement`
+### `Requirements`
 
 | Parameter      | Type  | Description  |
 | -------------- | ----- | ------------ |
@@ -108,7 +108,7 @@ interface GiveawayButtons {
 | `id`       | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | The Role ID (if type: 'Role') or Guild ID (if type: 'Guild')  |
 
 ```ts
-interface Requirement {
+export interface Requirements {
 	type: 'Role' | 'Guild' | 'None';
 	id: string;
 }

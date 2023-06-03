@@ -27,12 +27,13 @@ simplydjs.rps(interaction, {
 simplydjs.rps(
 	msgOrint: ExtendedMessage | ExtendedInteraction,
 	options: rpsOptions
-)
+): Promise<User>
 ```
 
-- msgOrInt [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
 - options: [`rpsOptions`](#rpsoptions)
 
+- Resolves: [`User`](https://old.discordjs.dev/#/docs/discord.js/main/class/User) (The winner of the game)
 
 ## Options
 
@@ -43,15 +44,15 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in rps |
-| `embed` | <Link to="#embeds">Embeds</Link> | ❌   | _Default Embed_     | Pass an Embeds Object to customize the embed  |
-| `buttons` | <Link to="#rpsbuttons">rpsButtons</Link> | ❌   | _Default Buttons_     | Pass a rpsButtons Object to customize the buttons  |
+| `embed` | <Link to="#rpsembeds">RpsEmbeds</Link> | ❌   | _Default Embed_     | Pass an Embeds Object to customize the embed  |
+| `buttons` | <Link to="#rpsbuttons">RpsButtons</Link> | ❌   | _Default Buttons_     | Pass a rpsButtons Object to customize the buttons  |
 | `opponent`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
 
 
 ```ts
 export type rpsOptions = {
-	embed?: Embeds;
-	buttons?: rpsButtons;
+	embed?: RpsEmbeds;
+	buttons?: RpsButtons;
 	opponent?: User;
 
 	strict?: boolean;
@@ -61,7 +62,7 @@ export type rpsOptions = {
 ----------------
 
 
-### `Embeds`
+### `RpsEmbeds`
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
@@ -74,7 +75,7 @@ export type rpsOptions = {
 
 
 ```ts
-export interface Embeds {
+export interface RpsEmbeds {
 	request?: CustomizableEmbed;
 	win?: CustomizableEmbed;
 	draw?: CustomizableEmbed;
@@ -86,20 +87,20 @@ export interface Embeds {
 
 ---------------
 
-### `rpsButtons`
+### `RpsButtons`
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `rock`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the rock button   |
-|  `paper`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the paper button   |
-|  `scissor`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize scissor button   |
+| `rock`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the rock button   |
+|  `paper`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the paper button   |
+|  `scissor`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize scissor button   |
 
 
 ```ts
-interface rpsButtons {
-	rock?: buttonTemplate;
-	paper?: buttonTemplate;
-	scissor?: buttonTemplate;
+export interface RpsButtons {
+	rock?: CustomizableButton;
+	paper?: CustomizableButton;
+	scissor?: CustomizableButton;
 }
 ```
 

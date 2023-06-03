@@ -12,7 +12,7 @@ An Embed paginator using Select Menus
 ## Implementation
 
 ```js
-simplydjs.menuPages(interaction, {
+simplydjs.menuPages(interaction, { 
     data: [
       {...}
     ], // array of data objects (required)
@@ -27,56 +27,151 @@ simplydjs.menuPages(interaction, {
 ## Types
 ```ts
 simplydjs.menuPages(
-  interaction: Discord.Message | Discord.CommandInteraction,
-  options: menuEmbOptions
-)
+	msgOrInt: ExtendedMessage | ExtendedInteraction,
+	options: menuPagesOptions = { strict: false }
+): Promise<void>
 ```
 
-- interaction: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message) | [`Discord.CommandInteraction`](https://discord.js.org/#/docs/discord.js/stable/class/CommandInteraction)
-- options: [`menuEmbOptions`](#options-menuemboptions)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- options: [`menuPagesOptions`](#menupagesoptions)
 
-## Options `menuEmbOptions`
+## Options
+
+### `menuPagesOptions`
 
 import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `type`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">1 (or) 2</Link>   | ❌        | _1_             | The type of menuPage. (1 for ephemeral reply & 2 for editing message) |
-| `rows` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageActionRow">MessageActionRow[]</Link>       | ❌        | _none_     | Add custom rows to the message |
-| `embed` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed">MessageEmbed</Link>       | ✅        | _none_     | The embed of your message that is sent with the select menu |
-| `delete` | <Link to="#deleteOpt">deleteOpt</Link>       | ❌         | _default object_     | The data object for the custom delete menu option |
-| `data` | <Link to="#dataobj">dataObj[]</Link>       | ✅        | _none_     | The data necessary to create the pages. (Array of <Link to="#dataobj">dataObj</Link>) |
-| `placeHolder` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _'Dropdown pages'_  | Placeholder of the select menu |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in menuPages |
+| `type`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Send'/'Edit'</Link>   | ❌ | "Send"             | The type of menuPages. ("Send" for ephemeral reply & "Edit" for editing the page panel) |
+| `rows` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/ActionRowBuilder">ActionRowBuilder[]</Link>       | ❌  | _none_     | Add custom rows to the message |
+| `embed` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/EmbedBuilder">EmbedBuilder</Link>       | ✅        | _none_     | The embed of your message that is sent with the select menu |
+| `delete` | <Link to="#deleteoption">DeleteOption</Link>       | ❌         | _default object_     | The DeleteOption object for the custom delete menu option |
+| `data` | <Link to="#pagemenus">Pagemenus[]</Link>       | ✅        | _none_     | Array of data necessary to create the pages |
+| `placeHolder` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | 'Dropdown pages'  | Placeholder of the select menu |
 
+```ts
+export type menuPagesOptions = {
+	type?: 'Send' | 'Edit';
+	rows?: ActionRowBuilder<StringSelectMenuBuilder>[];
+	embed?: EmbedBuilder;
 
-<details style={{border: '0px solid'}}>
-  <summary>dataObj option</summary>
+	delete?: DeleteOption;
 
+	data?: Pagemenus[];
 
-### `dataObj`
+	placeHolder?: string;
+	strict?: boolean;
+};
+```
+
+--------------
+
+### `Pagemenus`
 
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ✅        | _none_  | The label of the option |
-| `desc` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ✅        | _none_     | The description of the option |
-| `embed` | <Link to="https://discord.js.org/#/docs/discord.js/stable/class/MessageEmbed">MessageEmbed</Link>       | ✅        | _none_     | The embed of your message when the option is selected |
-| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ✅        | _none_  | The emoji of the option |
+| `description` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ✅        | _none_     | The description of the option |
+| `embed` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/EmbedBuilder">EmbedBuilder</Link>      | ✅        | _none_     | The embed of your message when the option is selected |
+| `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The emoji of the option |
 
-</details>
+```ts
+export interface Pagemenus {
+	label?: string;
+	description?: string;
+	embed?: EmbedBuilder;
+	emoji?: string;
+}
+```
 
-<details style={{border: '0px solid'}}>
-  <summary>deleteOpt option</summary>
+------------------
 
-
-### `deleteOpt`
+### `DeleteOption`
 
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `enable`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ✅        | _true_             | Enable/ Disable the delete option |
+| `enable`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _true_             | Enable/ Disable the delete option |
 | `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The label of the delete option |
-| `desc` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌       | _none_     | The description of the delete option |
+| `description` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌       | _none_     | The description of the delete option |
 | `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌        | _none_  | The emoji of the delete option |
 
-</details>
+```ts
+export interface DeleteOption {
+	enable?: boolean;
+	label?: string;
+	description?: string;
+	emoji?: string;
+}
+```
+
+
+-----------------
+
+## Example
+
+- ### Default settings
+
+```js title="buttonPages.js"
+const { EmbedBuilder } = require("discord.js")
+const simplydjs = require('simply-djs')
+
+const pageEmbed = new EmbedBuilder().setTitle('Use menus to move pages')
+const firstEmbed = new EmbedBuilder().setTitle('first embed')
+const lastEmbed = new EmbedBuilder().setTitle('last embed')
+
+simplydjs.menuPages(interaction, { 
+  embed: pageEmbed,
+  data: [
+    {
+      label: "First page",
+      description: "This is the first page of the pagination",
+      embed: firstEmbed
+    },
+    {
+      label: "Last page",
+      description: "This is the last page of the pagination",
+      embed: lastEmbed
+    }
+  ],
+})
+```
+
+- ### Customized with options
+
+```js title="buttonPages.js"
+const { EmbedBuilder } = require("discord.js")
+const simplydjs = require('simply-djs')
+
+const pageEmbed = new EmbedBuilder().setTitle('Use menus to move pages')
+const firstEmbed = new EmbedBuilder().setTitle('first embed')
+const lastEmbed = new EmbedBuilder().setTitle('last embed')
+
+simplydjs.menuPages(interaction, {
+  strict: true,
+  type: 'Send',
+  placeHolder: 'Dropdown Pages',
+  embed: pageEmbed,
+  data: [
+    {
+      label: "First page",
+      description: "This is the first page of the pagination",
+      embed: firstEmbed
+    },
+    {
+      label: "Last page",
+      description: "This is the last page of the pagination",
+      embed: lastEmbed
+    }
+  ],
+
+  delete: {
+    enable: true,
+    label: "Delete message",
+    description: "Delete the menu pagination"
+  }
+})
+```

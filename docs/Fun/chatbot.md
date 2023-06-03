@@ -27,7 +27,7 @@ This should be implemented in the `messageCreate` event and requires `Message In
 
 ```js
 client.on('messageCreate', (message) => {
-  simplydjs.chatbot() // chatbot function
+  simplydjs.chatbot(message) // chatbot function
 })
 ```
 
@@ -42,7 +42,7 @@ client.on('messageCreate', (message) => {
 simplydjs.chatbot(
 	message: ExtendedMessage,
 	options: chatbotOptions
-)
+): Promise<void>
 ```
 - message [`ExtendedMessage`](/docs/typedef/ExtendedMessage)
 - options: [`chatbotOptions`](#chatbotoptions)

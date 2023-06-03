@@ -14,6 +14,7 @@ Easiest starboard system ever existed !
 
 ```js
 simplydjs.starboard(reaction, {
+  channelId: '01234567890123' // channelId (required)
   // options (Optional)
 })
 ```
@@ -27,6 +28,7 @@ simplydjs.starboard(reaction, {
   ```js
   client.on('messageDelete', () => {
     simplydjs.starboard(message, {
+      channelId: '01234567890123' // channelId (required)
       // options (Optional)
     })
   })

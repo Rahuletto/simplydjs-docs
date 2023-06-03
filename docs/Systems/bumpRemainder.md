@@ -59,6 +59,8 @@ simplydjs.bumpReminder(
 - message: [`Message`](https://old.discordjs.dev/#/docs/discord.js/main/class/Message) | [`bumpOptions`](#bumpoptions)
 - options: [`bumpOptions`](#bumpoptions)
 
+- Resolves: [`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (fired when it sends an embed)
+
 ## Options
 
 ### `bumpOptions`
@@ -69,7 +71,7 @@ import Link from '@docusaurus/Link';
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in bumpReminder |
 | `content` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌        | '\u200b'  | The content of message that is sent to remind (useful for a ping) |
-| `embed` | <Link to="#embeds">Embeds</Link> | ❌  | _default embeds_     | The embeds to remind or thank the user who bumped |
+| `embed` | <Link to="#bumpreminderembeds">BumpReminderEmbeds</Link> | ❌  | _default embeds_     | The embeds to remind or thank the user who bumped |
 | `toggle` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌        | _true_     | Toggle the bumpReminder on or off. |
 | `channelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string[]</Link> | ❌ | _none_     | Array of Channel Id to check any bump messages  |
 
@@ -78,7 +80,7 @@ import Link from '@docusaurus/Link';
 export type bumpOptions = {
 	strict: boolean;
 	content?: string;
-	embed?: Embeds;
+	embed?: BumpReminderEmbeds;
 	toggle?: boolean;
 	channelId?: string[];
 };
@@ -86,7 +88,7 @@ export type bumpOptions = {
 
 -------------
 
-### `Embeds`
+### `BumpReminderEmbeds`
 
 | Parameter | Type | Required | Default | Description |
 | --------- | ----- | -------- | -------- | ---------- |
@@ -94,7 +96,7 @@ export type bumpOptions = {
 | `remind` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/EmbedBuilder">EmbedBuilder</Link>  | ❌  | EmbedBuilder  | Override the default reminder embed with custom one |
 
 ```ts
-interface Embeds {
+export interface BumpReminderEmbeds {
 	thank?: EmbedBuilder;
 	remind?: EmbedBuilder;
 }

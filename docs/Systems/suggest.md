@@ -35,9 +35,8 @@ simplydjs.suggestSystem(
 ): Promise<SuggestResolve>
 ```
 
-- msgOrint [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
 - options: [`suggestOption`](#suggestoption)
-
 
 
 - Resolves: [`SuggestResolve`](#suggestresolve)
@@ -53,7 +52,7 @@ import Link from '@docusaurus/Link';
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in suggest |
 | `channelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string</Link>  | ✅  | - | Channel Id to send the suggestion in your server    |
 | `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌  | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
-| `buttons` | <Link to="#suggestbuttons">suggestButtons</Link> | ❌ | _default buttons_  | Pass a suggestButtons Object to customize the button  |
+| `buttons` | <Link to="#suggestbuttons">SuggestButtons</Link> | ❌ | _default buttons_  | Pass a suggestButtons Object to customize the button  |
 | `suggestion`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>     | ❌        | _none_ | The suggestion to post in the server |
 | `progress` | <Link to="#progress">Progress</Link> | ❌ | _default_  | Pass a Progress Object to customize the suggestion vote percentage bar  |
 
@@ -62,7 +61,7 @@ export type suggestOption = {
 	embed?: CustomizableEmbed;
 	channelId?: string | TextChannel;
 	suggestion?: string;
-	buttons?: suggestButtons;
+	buttons?: SuggestButtons;
 	progress?: Progress;
 	strict: boolean;
 };
@@ -70,19 +69,19 @@ export type suggestOption = {
 
 ----------------
 
-### `suggestButtons`
+### `SuggestButtons`
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `votedInfo`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the who voted button   |
-|  `upvote`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the upvote button   |
-|  `downvote`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the downvote button   |
+| `votedInfo`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the who voted button   |
+|  `upvote`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the upvote button   |
+|  `downvote`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the downvote button   |
 
 ```ts
-interface suggestButtons {
-	votedInfo?: buttonTemplate;
-	upvote?: buttonTemplate;
-	downvote?: buttonTemplate;
+export interface SuggestButtons {
+	votedInfo?: CustomizableButton;
+	upvote?: CustomizableButton;
+	downvote?: CustomizableButton;
 }
 ```
 

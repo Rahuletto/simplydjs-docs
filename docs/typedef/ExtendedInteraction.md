@@ -9,7 +9,8 @@ tags:
 # ExtendedInteraction
 extends [`CommandInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/CommandInteraction)
 
-A class extension of the CommandInteraction object of the discord.js framework which aims to reduce errors and apply the best developer practices.
+This class extends the `CommandInteraction` object from the Discord.js framework.
+These properties are used to reduce errors and apply best practices when working with Discord.js commands.
 
 ### Extended Properties
 

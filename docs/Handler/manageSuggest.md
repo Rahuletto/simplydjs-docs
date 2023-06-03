@@ -29,10 +29,10 @@ simplydjs.manageSuggest(interaction, {
 simplydjs.manageSuggest(
 	button: ButtonInteraction,
 	options: manageSuggestOptions
-)
+): Promise<void>
 ```
 
-- interaction: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
+- button: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
 - options: [`manageSuggestOptions`](#managesuggestoptions)
 
 ## Options 
@@ -44,18 +44,18 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageSuggest |
-| `embed` | <Link to="#embeds">Embeds</Link> | ❌   | _default embeds_ | Pass a Embeds Object to customize embeds |
+| `embed` | <Link to="#suggestionembeds">SuggestionEmbeds</Link> | ❌   | _default embeds_ | Pass a SuggestionEmbeds Object to customize embeds |
 
 ```ts
 export type manageSuggestOptions = {
-	embed?: Embeds;
+	embed?: SuggestionEmbeds;
 	strict?: boolean;
 };
 ```
 
 --------------------
 
-### `Embeds`
+### `SuggestionEmbeds`
 
 
 | Parameter | Type | Description |
@@ -64,7 +64,7 @@ export type manageSuggestOptions = {
 |  `deny`       | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the denied suggestion embed   |
 
 ```ts
-interface Embeds {
+export interface SuggestionEmbeds {
 	accept?: CustomizableEmbed;
 	deny?: CustomizableEmbed;
 }

@@ -42,7 +42,7 @@ simplydjs.betterBtnRole(interaction, {
 simplydjs.betterBtnRole(
 	interaction: ExtendedInteraction,
 	options: betterbtnOptions
-): Promise<string>
+): Promise<void>
 ```
 
 - interaction [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
@@ -58,8 +58,8 @@ import Link from '@docusaurus/Link';
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false     | Enables strict mode in betterBtnRole |
 | `type` | `"Add"`/`"Remove"` | ✅ | -  | The type of the implementation of the function  |
-| `channel` | <Link to="https://old.discordjs.dev/#/docs/discord.js/stable/class/TextChannel">TextChannel</Link> | ❌  | _none_  | The channel where the message exists |
-| `buttons` | <Link to="#buttons">Buttons</Link> | ✅ | -  | The button as object to add in the message  |
+| `channel` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel">TextChannel</Link> | ❌  | _none_  | The channel where the message exists |
+| `buttons` | <Link to="#betterbtnrolebuttons">BetterBtnRoleButtons</Link> | ✅ | -  | The button as object to add in the message  |
 | `messageId` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌       | _none_  | The ID of the message you're trying to add a button to.  |
 | `contents` | <Link to="#message-contents">MessageContents</Link> | ❌ | _default_  | Custom text object to send instead of default |
 
@@ -68,7 +68,7 @@ export type betterbtnOptions = {
 	strict?: boolean;
 	type?: 'Add' | 'Remove';
 	channel?: TextChannel;
-	button?: Buttons;
+	button?: BetterBtnRoleButtons;
 	messageId?: string;
 	contents?: MessageContents;
 };
@@ -76,28 +76,27 @@ export type betterbtnOptions = {
 
 ------------------
 
-### `Buttons`
+### `BetterBtnRoleButtons`
 
 | Parameter | Type | Required | Default | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `label` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌ | _Role Name_  | The label of the button you're trying to add/remove |
-| `role` | <Link to="https://old.discordjs.dev/#/docs/discord.js/stable/class/Role">Role</Link> | ✅ | - | The role to be given when a button is clicked |
+| `role` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/Role">Role</Link> | ✅ | - | The role to be given when a button is clicked |
 | `style` | <Link to="https://discord-api-types.dev/api/discord-api-types-v10/enum/ButtonStyle">ButtonStyle</Link> | ❌ | `ButtonStyle.Primary`  | The style of the button that is getting added.  |
 | `emoji` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_  | The emoji of the button you're trying to add |
 
 ```ts
-interface Buttons {
-	label?: string;
+export type BetterBtnRoleButtons = {
 	role?: Role;
-	style?: ExtendedButtonStyle;
-	emoji?: string;
-}
+} & CustomizableButton;
 ```
 
 ------------------
 
 ### `MessageContents`
 This is to simplify customization and replacing the `custom` option before.
+
+> This option will not be applied when `strict` mode is on
 
 :::caution NOT RECOMMENDED
 
@@ -118,7 +117,7 @@ This option makes things complicated. So we do not recommend this option for beg
 | `noButton` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌ | 'There is no button role in that message.. Try using correct message ID that has button roles'  | The message content to send when there are no button to remove `(Only for "Remove" type)` |
 
 ```ts
-interface MessageContents {
+export interface MessageContents {
 	invalidMessage?: string;
 	otherUserMessage?: string;
 	update?: string;

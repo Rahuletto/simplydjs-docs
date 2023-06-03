@@ -31,7 +31,7 @@ simplydjs.tictactoe(
 ): Promise<User>
 ```
 
-- msgOrInt [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
 - options: [`tictactoeOptions`](#tictactoeoptions)
 
 
@@ -46,18 +46,20 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in tictactoe |
-| `embed` | <Link to="#embeds">Embeds</Link> | ❌   | _Default Embeds_     | Pass an Embeds Object to customize all the embeds  |
+| `embed` | <Link to="#tictactoeembeds">TictactoeEmbeds</Link> | ❌   | _Default Embeds_     | Pass an Embeds Object to customize all the embeds  |
 | `type` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">'Button'/'Embed'</Link> | ❌  | 'Button'  | Choose the way you want to show the results of the match |
+| `max` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</Link>       | ❌ | 5 | Limit the number of games running at a time per guild. For no limit set it to `999` |
 | `user`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/User">User</Link>     | ❌        | _none_ | The opponent you're playing with. |
-| `buttons` | <Link to="#tictactoebuttons">tictactoeButtons</Link> | ❌   | _Default Buttons_ | Pass an tictactoeButtons Object to customize the buttons  |
+| `buttons` | <Link to="#tictactoebuttons">TictactoeButtons</Link> | ❌   | _Default Buttons_ | Pass an tictactoeButtons Object to customize the buttons  |
 
 ```ts
 export type tictactoeOptions = {
-	embed?: Embeds;
+	embed?: TictactoeEmbeds;
 	user?: User;
 	type?: 'Button' | 'Embed';
+	max: number;
 
-	buttons?: tictactoeButtons;
+	buttons?: TictactoeButtons;
 
 	strict?: boolean;
 };
@@ -65,7 +67,7 @@ export type tictactoeOptions = {
 
 ---------------
 
-### `Embeds`
+### `TictactoeEmbeds`
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
@@ -78,7 +80,7 @@ export type tictactoeOptions = {
 
 
 ```ts
-export interface Embeds {
+export interface TictactoeEmbeds {
 	request?: CustomizableEmbed;
 	win?: CustomizableEmbed;
 	draw?: CustomizableEmbed;
@@ -94,16 +96,16 @@ export interface Embeds {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `X`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the "X" player button   |
-|  `O`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the "O" player button   |
-|  `blank`       | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize un-moved place button   |
+| `X`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the "X" player button   |
+|  `O`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the "O" player button   |
+|  `blank`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize un-moved place button   |
 
 
 ```ts
-interface tictactoeButtons {
-	X?: buttonTemplate;
-	O?: buttonTemplate;
-	blank?: buttonTemplate;
+export interface TictactoeButtons {
+	X?: CustomizableButton;
+	O?: CustomizableButton;
+	blank?: CustomizableButton;
 }
 ```
 

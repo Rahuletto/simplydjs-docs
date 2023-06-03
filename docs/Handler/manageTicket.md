@@ -25,12 +25,12 @@ simplydjs.manageTicket(interaction, {
 ## Types
 ```ts
 simplydjs.manageTicket(
-	interaction: ButtonInteraction,
+	button: ButtonInteraction,
 	options: manageTicketOptions
 ): Promise<DeleteResolve>
 ```
 
-- interaction: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
+- button: [`ButtonInteraction`](https://old.discordjs.dev/#/docs/discord.js/main/class/ButtonInteraction)
 - options: [`manageTicketOptions`](#manageticketoptions)
 
 
@@ -48,7 +48,7 @@ import Link from '@docusaurus/Link';
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in manageTicket |
 | `ticketname` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _{tag}_   | The name of the ticket and channel that gets created  |
-| `buttons` | <Link to="#ticketbuttons">ticketButtons</Link> | ❌   | _default buttons_ | Pass a ticketButtons Object to customize embeds |
+| `buttons` | <Link to="#ticketbuttons">TicketButtons</Link> | ❌   | _default buttons_ | Pass a ticketButtons Object to customize embeds |
 | `pingRoles`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/Role">Role[]</Link> | ❌  | _none_ | Ping an admin role to let them know there is a ticket |
 | `category` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/CategoryChannel?scrollTo=id">string</Link> | ❌  | _none_   | The category to add tickets on. This organises your server |
 | `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
@@ -57,7 +57,7 @@ import Link from '@docusaurus/Link';
 ```ts
 export type manageTicketOptions = {
 	ticketname?: string;
-	buttons?: ticketButtons;
+	buttons?: TicketButtons;
 	pingRoles?: Role[];
 	category?: string;
 	embed?: CustomizableEmbed;
@@ -69,24 +69,24 @@ export type manageTicketOptions = {
 
 ----------------------
 
-### `ticketButtons`
+### `TicketButtons`
 
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `close`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the close button   |
-| `reopen`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the reopen button   |
-| `delete`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the delete button   |
-| `transcript`        | <Link to="/docs/typedef/buttonTemplate">buttonTemplate</Link> |  A buttonTemplate Object to customize the transcript button   |
+| `close`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the close button   |
+| `reopen`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the reopen button   |
+| `delete`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the delete button   |
+| `transcript`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the transcript button   |
 
 
 
 ```ts
-interface ticketButtons {
-	close: buttonTemplate;
-	reopen: buttonTemplate;
-	delete: buttonTemplate;
-	transcript: buttonTemplate;
+export interface TicketButtons {
+	close: CustomizableButton;
+	reopen: CustomizableButton;
+	delete: CustomizableButton;
+	transcript: CustomizableButton;
 }
 ```
 

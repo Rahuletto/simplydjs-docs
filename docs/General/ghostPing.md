@@ -18,34 +18,75 @@ simplydjs.ghostPing(message, {
 ```
 
 :::info INFO
-This should be implemented in the `messageDelete` event and requires a `Message Intent` !
+This should be implemented in the `messageDelete` event and requires `Message Intent`!
 
 ```js
 client.on('messageDelete', (message) => {
-  simplydjs.ghostPing() // ghostPing function
+  simplydjs.ghostPing(message) // ghostPing function
 })
+```
+
 :::
 
 ## Output
 
 ![image](https://user-images.githubusercontent.com/71836991/173194741-39361215-a763-4044-b652-61ce6013becb.png)
 
+
 ## Types
 ```ts
 simplydjs.ghostPing(
-  message: Discord.Message,
-  options: ghostOptions
-)
+	message: Message,
+	options: ghostOptions
+): Promise<User>
 ```
 
-- message: [`Discord.Message`](https://discord.js.org/#/docs/discord.js/stable/class/Message)
-- options: [`ghostOptions`](#options-ghostoptions)
+- message: [`Message`](https://old.discordjs.dev/#/docs/discord.js/main/class/Message)
+- options: [`ghostOptions`](#ghostoptions)
 
-## Options `ghostOptions`
+- Resolves: [`User`](https://old.discordjs.dev/#/docs/discord.js/main/class/User) (The one who got ghost pinged)
+
+## Options
+
+### `ghostOptions`
 
 import Link from '@docusaurus/Link';
 
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |
-| `custom`     | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>   | ❌        | _false_             | Resolve an Promise instead of sending a message (Useful for auto-moderation) |
+| `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in ghostPing |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌  | _default embed_  | Pass a CustomizableEmbed Object to customize the ghost ping embed  |
+
+```ts
+export type ghostOptions = {
+	strict: boolean;
+	embed?: CustomizableEmbed;
+};
+```
+
+
+-----------------
+
+## Example
+
+- ### Default settings
+
+```js title="messageDelete.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.ghostPing(message)
+```
+
+- ### Customized with options
+
+```js title="messageDelete.js"
+const simplydjs = require('simply-djs')
+
+simplydjs.ghostPing(message, { 
+  strict: true,
+  embed: {
+	  title: "Ghost Ping alert !",
+	  color: simplydjs.toRgb("#406dbc")
+  }
+})
+```

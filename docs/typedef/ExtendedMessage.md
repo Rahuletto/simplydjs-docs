@@ -9,7 +9,8 @@ tags:
 # ExtendedMessage
 extends [`Message`](https://old.discordjs.dev/#/docs/discord.js/main/class/Message)
 
-A class extension of the Message object of the discord.js framework which aims to reduce errors and apply the best developer practices.
+This class extends the `Message` object from the Discord.js framework.
+These properties are used to reduce errors and apply best practices when working with Discord.js
 
 ### Extended Properties
 
