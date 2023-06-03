@@ -1,6 +1,6 @@
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
-  branches = ['main']
+  branches = ['v4']
   disabled = false
   template = "hierarchical"
