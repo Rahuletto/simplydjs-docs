@@ -3,4 +3,3 @@ package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
   branches = ['v4']
   disabled = false
-  pathPrefix = "/docs"
