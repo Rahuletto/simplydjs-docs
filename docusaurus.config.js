@@ -7,12 +7,12 @@ module.exports = {
   title: "Simply-DJS",
   tagline:
     "The simplest way to build complex Discord bots.",
-  url: "https://v4--simplyd.netlify.app",
+  url: "https://simplyd.js.org",
   baseUrl: "/",
-  favicon: "https://i.postimg.cc/5ynhr6DK/love-1.png", // https://i.imgur.com/XFUIwPh.png
+  favicon: "https://i.imgur.com/XFUIwPh.png",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  organizationName: "Rahuletto#0243",
+  organizationName: "Rahuletto",
   projectName: "simply-djs",
   themeConfig: {
     tableOfContents: {
@@ -32,19 +32,13 @@ module.exports = {
     algolia: {
       apiKey: "64107c9458b57c76a57585e3d54d9d36",
       appId: "0V6L7HOWNI",
+      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
       ignoreCanonicalTo: false,
-      indexName: "simplydjs_v4",
       inputSelector: "h1",
-      contextualSearch: true,
-      placeholder: "Search Simply-DJS",
-      maxResultsPerGroup: 7,
       searchParameters: {
         hitsPerPage: 5,
       },
-      startUrls: ['https://v4--simplyd.netlify.app/'],
-      sitemaps: ['https://v4--simplyd.netlify.app/sitemap.xml'],
-
-      debug: true,
+      debug: false,
     },
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
@@ -80,8 +74,12 @@ module.exports = {
       },
       {
         name: "theme-color",
-        content: "#0C0C0C",
+        content: "#406DBC",
       },
+      {
+        property: "og:image",
+        content: "https://i.postimg.cc/qqDJq3L8/sdjsv4.png"
+      }
     ],
     navbar: {
       title: "",
@@ -194,8 +192,8 @@ module.exports = {
       {
         docs: {
           breadcrumbs: false,
-          editUrl: ({versionDocsDirPath, docPath}) =>
-          `https://github.com/Rahuletto/simplydjs-docs/edit/v4/docs/${docPath}`,
+          editUrl: ({ versionDocsDirPath, docPath }) =>
+            `https://github.com/Rahuletto/simplydjs-docs/edit/v4/docs/${docPath}`,
           editLocalizedFiles: false,
           editCurrentVersion: false,
           versions: {
@@ -214,7 +212,6 @@ module.exports = {
     [
       "@docusaurus/plugin-pwa",
       {
-        debug: true,
 
         offlineModeActivationStrategies: [
           "appInstalled",

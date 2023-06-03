@@ -15,7 +15,7 @@ function HomepageHeader() {
 
         <h1 className={styles.subtitle}>The <span className={styles.simplest}>simplest</span> way to build complex Discord bots.</h1>
 
-        <p className={styles.about}>SimplyDJS is a "third party" module which uses Discord.JS to implement some of the complex systems in <span className={styles.simplest}>one-line</span></p>
+        <p className={styles.about}>SimplyDJS is a "third party" module which uses Discord.JS to implement some of the complex systems in <span className={styles.simplest}>few-lines</span></p>
         <button onClick={() => { navigator.clipboard.writeText("npm i simply-djs@latest") }}>
           <Tooltip title="Copy to clipboard" arrow>
             <code className={styles.import}>npm i simply-djs@latest</code>
