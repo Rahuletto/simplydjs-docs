@@ -134,7 +134,7 @@ module.exports = {
           items: [
             {
               label: "• Documentation",
-              to: "/docs/intro",
+              to: "/docs/intro.mdx",
             },
             {
               label: "• Support Server",
