@@ -30,8 +30,8 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "9da3683213790d1d51892d90c865adab",
-      appId: "9CQMIEN04F",
+      apiKey: "64107c9458b57c76a57585e3d54d9d36",
+      appId: "0V6L7HOWNI",
       indexName: "simplyd",
       inputSelector: "h1",
       contextualSearch: true,
