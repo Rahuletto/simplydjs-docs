@@ -7,7 +7,7 @@ module.exports = {
   title: "Simply-DJS",
   tagline:
     "The simplest way to build complex Discord bots.",
-  url: "https://simplyd.js.org",
+  url: "https://simplyd.pages.dev",
   baseUrl: "/",
   favicon: "https://i.postimg.cc/5ynhr6DK/love-1.png", // https://i.imgur.com/XFUIwPh.png
   onBrokenLinks: "throw",
@@ -33,7 +33,7 @@ module.exports = {
       apiKey: "64107c9458b57c76a57585e3d54d9d36",
       appId: "0V6L7HOWNI",
       ignoreCanonicalTo: true,
-      indexName: "simplyd",
+      indexName: "simplydjs_v4",
       inputSelector: "h1",
       contextualSearch: true,
       placeholder: "Search Simply-DJS",
@@ -41,8 +41,7 @@ module.exports = {
       searchParameters: {
         hitsPerPage: 5,
       },
-      startUrls: ['https://simplyd.js.org/'],
-      sitemaps: ['https://simplyd.js.org/sitemap.xml'],
+      sitemaps: ['https://simplyd.pages.dev/sitemap.xml'],
 
       debug: true,
     },
