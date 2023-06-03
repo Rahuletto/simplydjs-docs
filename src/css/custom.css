@@ -938,6 +938,26 @@ html[data-theme='light'] .DocSearch-Modal {
   padding-right: 0px;
 }
 
+.tabs__item {
+  transition: 400ms cubic-bezier(0.08, 0.52, 0.52, 1);
+  align-items: center;
+  margin-bottom: 0px;
+  border: 0px solid;
+  height: 42px;
+  margin-right: 8px;
+  font-weight: 800;
+}
+.tabs__item--active {
+  background-color: var(--ifm-color-primary-dark);
+  border: 0px;
+  border-radius: 6px !important;
+  color: var(--ifm-body-background);
+}
+
+.tabs__item--active:hover {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 996px) {
   main::before {
     opacity: 0
