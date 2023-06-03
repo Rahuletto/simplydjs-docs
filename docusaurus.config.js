@@ -118,7 +118,7 @@ module.exports = {
             },
             {
               label: "v1",
-              href: "https://github.com/Rahuletto/simply-djs/blob/08a7b5cf6a5419432c92e0bc64c7e47b393ba779/README.md"
+              href: "https://github.com/Rahuletto/simply-djs/blob/08a7b5cf6a5419432c92e0bc64c7e47b393ba779/README"
             }
 
 

@@ -56,14 +56,14 @@
 
   Can't understand ? Me neither ;>
   
-  #### Lets say, We have a file named `toRgb.md` inside `Other` folder.
+  #### Lets say, We have a file named `toRgb` inside `Other` folder.
   
   So when its publically available, you can use `https://simplyd.js.org/docs/Other/toRgb` url.
   Where
   - #### **Other** is the `folder` and
   - #### **toRgb** is the `file`
   
-  So you can create a `{name}.md` inside its category to make it work
+  So you can create a `{name}` inside its category to make it work
   
 </details>
 
