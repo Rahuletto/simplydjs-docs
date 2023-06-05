@@ -17,7 +17,7 @@
   --ifm-link-color: var(--ifm-color-primary-darker);
 
   --docsearch-modal-height: 70vh !important;
-  
+
 }
 
 ::-moz-selection {
@@ -247,7 +247,7 @@ td a,
 
 a[target='_blank'] svg {
   display: none;
-} 
+}
 
 .theme-edit-this-page svg {
   display: inline;
@@ -405,7 +405,7 @@ html[data-theme='light'] .navbar__item,
 }
 
 main {
-  
+
   margin-top: 5.5rem;
 }
 
@@ -892,7 +892,7 @@ html[data-theme='light'] .DocSearch-Modal {
 .DocSearch-Button-Key {
   box-shadow: none !important;
   font-family: 'JetBrains Mono', monospace !important;
-  
+
   background: transparent !important;
   border: 1px solid var(--ifm-color-primary) !important;
   height: 20px !important;
@@ -952,6 +952,7 @@ html[data-theme='light'] .DocSearch-Modal {
   margin-right: 8px;
   font-weight: 800;
 }
+
 .tabs__item--active {
   background-color: var(--ifm-color-primary-dark);
   border: 0px;
@@ -968,11 +969,11 @@ html[data-theme='light'] .DocSearch-Modal {
   main::before {
     opacity: 0
   }
-  
+
   main::after {
     opacity: 0
   }
-  
+
   .DocSearch-Button {
     background: var(--ifm-color-primary) !important;
   }
@@ -1044,6 +1045,11 @@ html[data-theme='light'] .DocSearch-Modal {
 
   .DocSearch-Container {
     position: fixed !important;
+  }
+
+  .DocSearch-Modal {
+    height: auto !important;
+    max-width: 100%;
   }
 }
 
