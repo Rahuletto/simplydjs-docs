@@ -33,7 +33,7 @@ module.exports = {
     algolia: {
       apiKey: "91f2393262c617a2955e3550c006bc4d",
       appId: "0V6L7HOWNI",
-      indexName: "simplyd",
+      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
       ignoreCanonicalTo: true,
       inputSelector: "h1",
       searchParameters: {
@@ -198,7 +198,7 @@ module.exports = {
           editLocalizedFiles: false,
           editCurrentVersion: false,
           versions: {
-            current: { label: "v4 (beta)", banner: 'unreleased' }
+            current: { label: "v4 (beta)" }
           },
           sidebarPath: require.resolve("./sidebars.js"),
         },

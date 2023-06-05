@@ -28,7 +28,7 @@ This is **totally** different from [`betterBtnRole`](/docs/systems/betterBtnRole
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194351-4f5c36bc-15ed-48ae-acec-4f045aa6fb35.png)
+![button role panel](https://i.postimg.cc/Wz2Hq6Gd/image.png)
 
 ## Types
 ```ts

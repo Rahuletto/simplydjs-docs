@@ -95,7 +95,7 @@ export type EndResolve = {
 
 - ### Default settings
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageGiveaway(interaction)
@@ -103,7 +103,7 @@ simplydjs.manageGiveaway(interaction)
 
 - ### Customized with options
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageGiveaway(interaction, {

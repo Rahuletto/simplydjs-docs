@@ -22,7 +22,7 @@ simplydjs.buttonPages(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194656-d6a39729-50f3-4238-8522-714743a9232a.png)
+![embed pages with button](https://i.postimg.cc/mkS957FW/image.png)
 
 
 ## Types

@@ -52,6 +52,7 @@ import Link from '@docusaurus/Link';
 | `url`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_ | The url to do https request |
 | `host`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_ | The host url of the website to do https request (do not use if you are using `url` option) |
 | `endpoint`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌  | _none_ | The endpoints of the website to do https request (do not use if you are using `url` option) |
+| `debug` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false  | console logs every data retreived. Easier to debug if any errors |
 
 ```ts
 export type httpsOptions = {
@@ -71,6 +72,8 @@ export type httpsOptions = {
   url?: string;
   host?: string;
   endpoint?: string;
+
+  debug?: boolean;
 };
 ```
 

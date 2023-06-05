@@ -112,7 +112,7 @@ export type DeleteResolve = {
 
 - ### Default settings
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageTicket(interaction)
@@ -120,7 +120,7 @@ simplydjs.manageTicket(interaction)
 
 - ### Customized with options
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageTicket(interaction, {

@@ -24,7 +24,7 @@ simplydjs.meme(client, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173195081-b27b0f7f-244a-48a1-871a-f279c52670d5.png)
+![auto meme sender](https://i.postimg.cc/W3691tHp/image.png)
 
 ## Types
 ```ts

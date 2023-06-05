@@ -21,7 +21,8 @@ simplydjs.manageBtnRole(interaction, {
 
 ## Output
 
-![button role](https://user-images.githubusercontent.com/71836991/173194351-4f5c36bc-15ed-48ae-acec-4f045aa6fb35.png)
+![button role panel](https://i.postimg.cc/Wz2Hq6Gd/image.png)
+![assigning role](https://i.postimg.cc/ZqWvPCPj/image.png)
 
 ## Types
 ```ts
@@ -76,7 +77,7 @@ export interface BtnRoleReplies {
 
 - ### Default settings
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageBtnRole(interaction)
@@ -84,7 +85,7 @@ simplydjs.manageBtnRole(interaction)
 
 - ### Customized with options
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageBtnRole(interaction, {

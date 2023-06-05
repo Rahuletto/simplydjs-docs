@@ -37,7 +37,7 @@ simplydjs.starboard(reaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173193331-11bbc2ba-0ec5-4953-a410-431d8cea267c.png)
+![starboard](https://i.postimg.cc/mrGmsb6L/image.png)
 
 
 ## Types

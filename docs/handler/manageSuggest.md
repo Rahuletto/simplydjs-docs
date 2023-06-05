@@ -77,7 +77,7 @@ export interface SuggestionEmbeds {
 
 - ### Default settings
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageSuggest(interaction)
@@ -85,7 +85,7 @@ simplydjs.manageSuggest(interaction)
 
 - ### Customized with options
 
-```js title="ready.js"
+```js title="interactionCreate.js"
 const simplydjs = require('simply-djs')
 
 simplydjs.manageSuggest(interaction, {
