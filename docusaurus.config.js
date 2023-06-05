@@ -31,9 +31,9 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "64107c9458b57c76a57585e3d54d9d36",
+      apiKey: "91f2393262c617a2955e3550c006bc4d",
       appId: "0V6L7HOWNI",
-      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
+      indexName: "simplyd",
       ignoreCanonicalTo: true,
       inputSelector: "h1",
       searchParameters: {

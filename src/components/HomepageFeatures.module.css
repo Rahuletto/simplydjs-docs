@@ -113,13 +113,15 @@ span.legal {
 
 .preview {
   position: relative;
-  bottom: 80px;
+  bottom: 63px;
   transform: scale(0.8);
   left: 60px;
   border-radius: 18px;
   margin-bottom: -100px;
 }
-
+.code {
+  margin-left: 20px;
+}
 .code img {
   position: relative;
   border-radius: 18px;

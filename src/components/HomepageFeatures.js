@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './HomepageFeatures.module.css';
 import { BsFillStarFill, BsPeopleFill  } from 'react-icons/bs'
 import { SiNpm } from 'react-icons/si'
+import CodeBlock from '@theme/CodeBlock';
+
 
 import { Tooltip } from '@material-ui/core';
 
@@ -55,14 +57,9 @@ export default function HomepageFeatures() {
               </div>
               <div className={styles.code}>
                 
-                <iframe
-                  scrolling="no"
-                  title="one-line code"
-                  loading="lazy"
-                  style={{ minWidth: "-webkit-fill-available", maxWidth: "425px", height: "155px", overflow: "hidden", border: 0 }}
-                  src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=552&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=5px&ln=false&fl=1&fm=JetBrains+Mono&fs=11.5px&lh=133%25&si=false&es=2x&wm=false&code=const%2520simplydjs%2520%253D%2520require%28%27simply-djs%27%29%250A%250Asimplydjs.giveaway%28interaction%29%250A"
-                  sandbox="allow-scripts allow-same-origin">
-                </iframe>
+              <CodeBlock language="js" style={{ minWidth: "-webkit-fill-available", maxWidth: "450px", height: "155px", overflow: "hidden", border: 0 }}>
+              {`const simplydjs = require('simply-djs');\nsimplydjs.giveaway(interaction)`}</CodeBlock>
+
                 <img className={styles.preview} alt="giveaway one-line" src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
               </div>
             </div>
@@ -100,15 +97,11 @@ export default function HomepageFeatures() {
                 <p>You saw us showcasing our one-line codes. But what about making it your own ? Worry no more, Make it yours with few tweaks.</p>
               </div>
               <div className={styles.code}>
-                <iframe
-                  scrolling="no"
-                  loading="lazy"
-                  src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=one-dark&wt=none&l=auto&width=552&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=11px&ph=5px&ln=false&fl=1&fm=JetBrains+Mono&fs=11.5px&lh=133%25&si=false&es=2x&wm=false&code=const%2520simplydjs%2520%253D%2520require%28%27simply-djs%27%29%250A%250Asimplydjs.giveaway%28interaction%252C%2520%257B%250A%2520%2520embed%253A%2520%257B%250A%2520%2520%2520%2520title%253A%2520%2522Giveaways%2522%252C%250A%2520%2520%2520%2509description%253A%2520%2522Are%2520ya%2520winnin%2520son%2520%253F%2522%252C%250A%2520%2520%2520%2520color%253A%2520simplydjs.toRgb%28%27%2523075FFF%27%29%250A%2520%2520%257D%250A%257D%29%250A"
-                  title="customization code"
-                  style={{ minWidth: "-webkit-fill-available", maxWidth: "560px", minHeight: "345px", overflow: "hidden", border: 0 }}
-                  sandbox="allow-scripts allow-same-origin">
-                </iframe>
-                <img alt="customization" style={{ top: "-130px" }} className={styles.preview} src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
+
+              <CodeBlock language="js" style={{ minWidth: "-webkit-fill-available", maxWidth: "450px", height: "155px", overflow: "hidden", border: 0 }}>
+              {`const simplydjs = require('simply-djs');\n\nsimplydjs.giveaway(interaction, {\n embed: {\n    title: "Giveaways",\n   description: "Are ya winnin son ?",\n   color: simplydjs.toRgb('#075FFF')\n }\n});`}</CodeBlock>
+                
+                <img alt="customization" className={styles.preview} src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
 
               </div>
             </div>
