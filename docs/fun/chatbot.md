@@ -15,7 +15,7 @@ A chatbot system that is both technically advanced and intelligent, and is your 
 ## Implementation
 
 ```js
-simplydjs.chatbot(client, message, { 
+simplydjs.chatbot(message, { 
   channelId: ['01234567890123'] // channelId (required)
 
   // options (optional)
