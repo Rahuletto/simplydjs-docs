@@ -138,8 +138,12 @@ html[data-theme="dark"] .docPage_node_modules-\@docusaurus-theme-classic-lib-the
   background: linear-gradient(180deg, var(--ifm-dark-background), #0c0c0c);
 }
 
-.footer {
-  background-color: var(--ifm-footer-background-color) !important;
+html[data-theme="light"] .footer {
+  background-color: #f1f1f1 !important;
+}
+
+html[data-theme="dark"] .footer {
+  background-color: #0c0c0c !important;
 }
 
 h1,
