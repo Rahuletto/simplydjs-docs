@@ -35,7 +35,7 @@ client.on('messageCreate', (message) => {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194200-b4ced434-880a-4cc8-a8ef-c94c1d6b008f.png)
+![chatbot](https://i.postimg.cc/7LRkLTLR/image.png)
 
 ## Types
 ```ts
