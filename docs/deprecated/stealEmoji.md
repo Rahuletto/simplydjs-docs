@@ -27,7 +27,7 @@ simplydjs.stealEmoji(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194858-eb5ddc17-4301-42b5-b6f7-4a1f3b8c3b80.png)
+![steal emoji](https://i.postimg.cc/50DjXS1Y/image.png)
 
 ## Types
 
