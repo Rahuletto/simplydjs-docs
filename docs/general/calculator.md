@@ -18,7 +18,7 @@ simplydjs.calculator(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/166237804-7c93a186-a957-49e6-8591-5e83a4892ff7.png)
+![calculator](https://i.postimg.cc/J0WFnn4W/image.png)
 
 
 ## Types
