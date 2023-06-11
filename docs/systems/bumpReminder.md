@@ -119,7 +119,7 @@ simplydjs.bumpRemainder(client, {
 ```js title="messageCreate.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.bumpRemainder(client, {
+simplydjs.bumpRemainder(client, message, {
   channelId: ["01234567890123"]
 })
 ```
