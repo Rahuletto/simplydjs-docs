@@ -20,7 +20,7 @@ simplydjs.embedCreator(interaction, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194554-6e1429b6-b92c-4afe-9d25-0f54a23169d8.png)
+![embedCreator](https://i.postimg.cc/HWbXgwZV/image.png)
 
 ## Types
 ```ts
