@@ -10,6 +10,8 @@
   --ifm-font-family-monospace: 'JetBrains Mono', monospace;
   --ifm-navbar-link-color: #ebebeb;
   --ifm-content-clr: rgb(128, 136, 150);
+  --ifm-dark-footer: #0c0c0c;
+  --ifm-light-footer: #f1f1f1;
   --ifm-dark-background: #0d1011;
   --ifm-light-background: #f7fbff;
   --font-color: #dde1e3;
@@ -82,7 +84,7 @@ html[data-theme='dark'] {
   scroll-behavior: smooth;
   --ifm-body-background: var(--ifm-dark-background);
   --ifm-navbar-background-color: var(--ifm-dark-background);
-  --ifm-footer-background-color: var(--ifm-dark-background);
+  --ifm-footer-background-color: var(--ifm-dark-footer);
 }
 
 html[data-theme='light'] {
@@ -103,14 +105,14 @@ html[data-theme='light'] {
   scroll-behavior: smooth;
   --ifm-body-background: var(--ifm-light-background);
   --ifm-navbar-background-color: var(--ifm-light-background);
-  --ifm-footer-background-color: var(--ifm-light-background);
+  --ifm-footer-background-color: var(--ifm-light-footer);
 }
 
 #__docusaurus {
   animation: 1.2s fadein;
   -webkit-animation: 1.2s fadein;
   transition: 0.2s cubic-bezier(1, 0.01, 0, 0.86);
-  background: var(--ifm-body-background);
+    background: linear-gradient(180deg, var(--ifm-body-background) 56%, var(--ifm-footer-background-color) 90%);
 }
 
 .theme-edit-this-page {
@@ -136,12 +138,8 @@ html[data-theme="dark"] .docPage_node_modules-\@docusaurus-theme-classic-lib-the
   background: linear-gradient(180deg, var(--ifm-dark-background), #0c0c0c);
 }
 
-html[data-theme="light"] .footer {
-  background-color: #f1f1f1 !important;
-}
-
-html[data-theme="dark"] .footer {
-  background-color: #0c0c0c !important;
+.footer {
+  background-color: var(--ifm-footer-background-color) !important;
 }
 
 h1,
