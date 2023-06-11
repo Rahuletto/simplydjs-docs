@@ -30,7 +30,7 @@ client.on('messageDelete', (message) => {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194741-39361215-a763-4044-b652-61ce6013becb.png)
+![ghost ping](https://i.postimg.cc/k59XWSNh/image.png)
 
 
 ## Types
