@@ -27,7 +27,7 @@ simplydjs.nqn(message, {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/173194812-ee172699-ac64-4d7a-aad3-b3faafa1e8e0.png)
+![nqn](https://i.postimg.cc/CLcCK9Xz/image.png)
 
 ## Types
 ```ts
