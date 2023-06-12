@@ -33,13 +33,13 @@ module.exports = {
     algolia: {
       apiKey: "91f2393262c617a2955e3550c006bc4d",
       appId: "0V6L7HOWNI",
-      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
+      indexName: "simplyd",
       ignoreCanonicalTo: true,
       inputSelector: "h1",
       searchParameters: {
-        hitsPerPage: 5,
+        hitsPerPage: 6,
       },
-      debug: false,
+      debug: true,
     },
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
