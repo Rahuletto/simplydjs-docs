@@ -34,8 +34,8 @@ simplydjs.betterBtnRole(interaction, {
 
 ## Output
 
-![slash command](https://user-images.githubusercontent.com/71836991/173194443-04239bfa-0d22-44cb-9011-5a789dc23153.png)
-![button role](https://user-images.githubusercontent.com/71836991/173194351-4f5c36bc-15ed-48ae-acec-4f045aa6fb35.png)
+![slash command](https://i.postimg.cc/y895SWY0/image.png)
+![button role](https://i.postimg.cc/Wz2Hq6Gd/image.png)
 
 ## Types
 ```ts
