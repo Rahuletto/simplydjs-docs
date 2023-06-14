@@ -51,7 +51,7 @@ import Link from '@docusaurus/Link';
 | `buttons` | <Link to="#ticketbuttons">TicketButtons</Link> | ❌   | _default buttons_ | Pass a ticketButtons Object to customize embeds |
 | `pingRoles`   | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/Role">Role[]</Link> | ❌  | _none_ | Ping an admin role to let them know there is a ticket |
 | `category` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/CategoryChannel?scrollTo=id">string</Link> | ❌  | _none_   | The category to add tickets on. This organises your server |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> | ❌   | _default embed_ | Pass a CustomizableEmbed Object to customize embeds |
 | `logChannelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string</Link>  | ❌  | - | Channel Id to send the ticket chat logs as `.txt` file |
 
 ```ts
@@ -74,10 +74,10 @@ export type manageTicketOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `close`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the close button   |
-| `reopen`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the reopen button   |
-| `delete`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the delete button   |
-| `transcript`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the transcript button   |
+| `close`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the close button   |
+| `reopen`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the reopen button   |
+| `delete`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the delete button   |
+| `transcript`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the transcript button   |
 
 
 

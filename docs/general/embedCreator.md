@@ -30,7 +30,7 @@ simplydjs.embedCreator(
 ): Promise<APIEmbed>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage/) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction/)
 - options: [`embedCreatorOptions`](#embedcreatoroptions)
 
 - Resolves: [`APIEmbed`](https://discord-api-types.dev/api/discord-api-types-v10/interface/APIEmbed) (the embed that the user just built)
@@ -44,7 +44,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in embedCreator |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the builder embed  |
 
 ```ts
 export type embedCreatorOptions = {

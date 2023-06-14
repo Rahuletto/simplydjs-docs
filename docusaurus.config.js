@@ -109,7 +109,7 @@ module.exports = {
           dropdownActiveClassDisabled: true,
           dropdownItemsAfter: [
             {
-              label: "v3 (latest)",
+              label: "v3 (legacy)",
               href: "https://v3--simplyd.netlify.app/",
             },
             {
@@ -198,7 +198,7 @@ module.exports = {
           editLocalizedFiles: false,
           editCurrentVersion: false,
           versions: {
-            current: { label: "v4 (beta)" }
+            current: { label: "v4 (latest)" }
           },
           sidebarPath: require.resolve("./sidebars.js"),
         },

@@ -30,7 +30,7 @@ simplydjs.rps(
 ): Promise<User>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage/) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction/)
 - options: [`rpsOptions`](#rpsoptions)
 
 - Resolves: [`User`](https://old.discordjs.dev/#/docs/discord.js/main/class/User) (The winner of the game)
@@ -66,12 +66,12 @@ export type rpsOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `request`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
-| `win`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
-| `draw`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
-| `game`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
-| `timeout`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
-| `decline`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
+| `request`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
+| `win`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
+| `draw`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
+| `game`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
+| `timeout`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
+| `decline`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
 
 
 ```ts
@@ -91,9 +91,9 @@ export interface RpsEmbeds {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `rock`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the rock button   |
-|  `paper`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the paper button   |
-|  `scissor`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize scissor button   |
+| `rock`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the rock button   |
+|  `paper`       | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the paper button   |
+|  `scissor`       | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize scissor button   |
 
 
 ```ts

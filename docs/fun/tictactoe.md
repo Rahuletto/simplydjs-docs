@@ -9,7 +9,7 @@ tags:
 
 One line implementation of a super enjoyable **tictactoe game**. 
 
-> Now with AI (one-player) mode ! Just don't mention a opponent and you will play with our ai system. Uses [`https`](/docs/misc/https) to call [`simply-api`](https://simplyapi.js.org)
+> Now with AI (one-player) mode ! Just don't mention a opponent and you will play with our ai system. Uses [`https`](/docs/misc/https/) to call [`simply-api`](https://simplyapi.js.org)
 
 ## Implementation
 
@@ -31,7 +31,7 @@ simplydjs.tictactoe(
 ): Promise<User>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage/) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction/)
 - options: [`tictactoeOptions`](#tictactoeoptions)
 
 
@@ -71,12 +71,12 @@ export type tictactoeOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `request`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
-| `win`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
-| `draw`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
-| `game`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
-| `timeout`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
-| `decline`        | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
+| `request`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
+| `win`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
+| `draw`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
+| `game`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
+| `timeout`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
+| `decline`        | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
 
 
 ```ts
@@ -96,9 +96,9 @@ export interface TictactoeEmbeds {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `X`        | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the "X" player button   |
-|  `O`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize the "O" player button   |
-|  `blank`       | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> |  A CustomizableButton Object to customize un-moved place button   |
+| `X`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the "X" player button   |
+|  `O`       | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize the "O" player button   |
+|  `blank`       | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  A CustomizableButton Object to customize un-moved place button   |
 
 
 ```ts

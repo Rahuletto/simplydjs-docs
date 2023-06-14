@@ -188,7 +188,6 @@ img {
 pre,
 code {
   font-family: 'JetBrains Mono' !important;
-  max-width: 47vw;
 }
 
 
@@ -932,6 +931,7 @@ html[data-theme='light'] .DocSearch-Modal {
 .codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module,
 .codeBlock_bY9V {
   min-width: -webkit-fill-available !important;
+  min-width: -moz-available;
   border-radius: 12px !important;
 }
 

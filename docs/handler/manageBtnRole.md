@@ -9,7 +9,7 @@ tags:
 
 A Button Role Handler for **simply-djs button role system.**
 
-> This function requires [`connect()`](/docs/general/connect) which connects to the mongo database !
+> This function requires [`connect()`](/docs/general/connect/) which connects to the mongo database !
 
 ## Implementation
 

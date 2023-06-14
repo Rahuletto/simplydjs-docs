@@ -7,7 +7,7 @@ tags:
 
 # ticketSetup
 
-A Flexible yet Powerful Ticket System | Requires: [`manageTicket()`](/docs/handler/manageTicket)
+A Flexible yet Powerful Ticket System | Requires: [`manageTicket()`](/docs/handler/manageTicket/)
 
 ## Implementation
 
@@ -33,7 +33,7 @@ simplydjs.ticketSetup(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage/) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction/)
 - options: [`ticketSetupOptions`](#ticketsetupoptions)
 
 
@@ -47,8 +47,8 @@ import Link from '@docusaurus/Link';
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in ticketSetup |
 | `channelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string</Link>  | ❌  | - | Channel Id to send the ticket panel in your server    |
-| `button` | <Link to="/docs/typedef/CustomizableButton">CustomizableButton</Link> | ❌        | _default button_  | Pass a CustomizableButton Object to customize the button  |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the ticket panel embed  |
+| `button` | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> | ❌        | _default button_  | Pass a CustomizableButton Object to customize the button  |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the ticket panel embed  |
 
 ```ts
 export type ticketSetupOptions = {
