@@ -44,7 +44,8 @@ client.on('messageCreate', async (message) => {
 
 ## Output
 
-![image](https://user-images.githubusercontent.com/71836991/137742616-05fc1330-aeef-4f40-9031-1d81e93ff705.png)
+![bump remind](https://i.postimg.cc/vH1F8r0d/image.png)
+![bump thank](https://i.postimg.cc/RFyFqSxS/image.png)
 
 ## Types
 ```ts
@@ -111,7 +112,7 @@ export interface BumpReminderEmbeds {
 ```js title="ready.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.bumpRemainder(client, {
+simplydjs.bumpReminder(client, {
   channelId: ["01234567890123"]
 })
 ```
@@ -119,7 +120,7 @@ simplydjs.bumpRemainder(client, {
 ```js title="messageCreate.js"
 const simplydjs = require('simply-djs')
 
-simplydjs.bumpRemainder(client, message, {
+simplydjs.bumpReminder(client, message, {
   channelId: ["01234567890123"]
 })
 ```
@@ -133,7 +134,7 @@ const remindEmbed = new EmbedBuilder()
   .setTitle("Bump this server")
   .setColor(simplydjs.toRgb("#406dbc"))
 
-simplydjs.bumpRemainder(client, {
+simplydjs.bumpReminder(client, {
   channelId: ["01234567890123"], // channelId (required)
   strict: true,
   content: "Bump this server",
@@ -151,7 +152,7 @@ const thankEmbed = new EmbedBuilder()
   .setTitle("Thank you")
   .setColor(simplydjs.toRgb("#406dbc"))
 
-simplydjs.bumpRemainder(client, message, {
+simplydjs.bumpReminder(client, message, {
   channelId: ["01234567890123"], // channelId (required)
   strict: true,
   content: "Bump this server",
