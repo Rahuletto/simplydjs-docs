@@ -188,6 +188,7 @@ img {
 pre,
 code {
   font-family: 'JetBrains Mono' !important;
+  max-width: 80vw;
 }
 
 
