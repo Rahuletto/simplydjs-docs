@@ -1,8 +1,10 @@
 ---
+title: manageBtnRole
 sidebar_position: 1
 tags:
   - Handler
   - Button Role
+  - Renamed
 ---
 
 # manageBtnRole

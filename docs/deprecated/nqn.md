@@ -1,4 +1,5 @@
 ---
+title: nqn
 sidebar_position: 2
 tags:
   - Deprecated

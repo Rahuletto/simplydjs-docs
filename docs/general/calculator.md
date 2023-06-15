@@ -1,4 +1,5 @@
 ---
+title: calculator
 sidebar_position: 3
 tags:
   - General
@@ -29,7 +30,7 @@ simplydjs.calculator(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage.md) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction.md)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/typedef/extendedinteraction.md)
 - options: [`calculatorOptions`](#calculatoroptions)
 
 
@@ -42,7 +43,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in calculator |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `embed` | <Link to="/docs/typedef/customizableembed.md">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
 | `buttons` | <Link to="#calculatorbuttons">CalculatorButtons</Link> | ❌        | _default buttons_  | Pass a CalculatorButtons Object to customize the button  |
 
 ```ts
@@ -59,9 +60,9 @@ export type calculatorOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `numbers`        | <Link to="/docs/typedef/ExtendedButtonStyle">ExtendedButtonStyle</Link> |  The style of the button which has numbers in it   |
-|  `symbols`       | <Link to="/docs/typedef/ExtendedButtonStyle">ExtendedButtonStyle</Link> |  The style of the button which has symbols in it   |
-|  `delete`       | <Link to="/docs/typedef/ExtendedButtonStyle">ExtendedButtonStyle</Link> |  The style of the button which deletes the calculator   |
+| `numbers`        | <Link to="/docs/typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which has numbers in it   |
+|  `symbols`       | <Link to="/docs/typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which has symbols in it   |
+|  `delete`       | <Link to="/docs/typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which deletes the calculator   |
 
 ```ts
 export interface CalculatorButtons {

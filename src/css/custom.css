@@ -677,14 +677,14 @@ html[data-theme="light"] .alert--warning {
   border-left: 2px dashed #ed4245 !important;
 }
 
-.docs-wrapper[class$="deprecated/stealEmoji"] .navbar,
+.docs-wrapper[class$="deprecated/stealemoji"] .navbar,
 .docs-wrapper[class$="deprecated/nqn"] .navbar,
 .docs-wrapper[class$="deprecated/renames"] .navbar {
   background: #ed424554 !important;
   border: 2px solid #a12d2f !important;
 }
 
-.docs-wrapper[class$="deprecated/stealEmoji"],
+.docs-wrapper[class$="deprecated/stealemoji"],
 .docs-wrapper[class$="deprecated/nqn"],
 .docs-wrapper[class$="deprecated/renames"] {
   --docsearch-primary-color: #a12d2f;

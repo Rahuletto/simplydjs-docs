@@ -1,4 +1,5 @@
 ---
+title: chatbot
 sidebar_position: 1
 tags:
   - Fun
@@ -44,7 +45,7 @@ simplydjs.chatbot(
 	options: chatbotOptions
 ): Promise<void>
 ```
-- message [`ExtendedMessage`](/docs/typedef/ExtendedMessage.md)
+- message [`ExtendedMessage`](/docs/typedef/extendedmessage.md)
 - options: [`chatbotOptions`](#chatbotoptions)
 
 ## Options 

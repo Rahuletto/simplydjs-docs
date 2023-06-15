@@ -35,7 +35,7 @@
   ## It is just a normal `Markdown` file.
   It's very identical to a normal `.txt` (text) file with some spicyness
   
-  Just don't ! Edit ! the CSS !
+ > Just don't ! Edit ! the CSS !
   
   # Editing
   Lets say you have to edit some specific file
@@ -56,12 +56,12 @@
 
   Can't understand ? Me neither ;>
   
-  #### Lets say, We have a file named `toRgb` inside `Other` folder.
+  #### Lets say, We have a file named `toRgb` inside `misc` folder.
   
-  So when its publically available, you can use `https://simplyd.js.org/docs/Other/toRgb` url.
+  So when its publically available, you can use `https://simplyd.js.org/docs/misc/torgb.md` url.
   Where
-  - #### **Other** is the `folder` and
-  - #### **toRgb** is the `file`
+  - #### **misc** is the `folder` and
+  - #### **torgb.md** is the `file` (with extension)
   
   So you can create a `{name}` inside its category to make it work
   

@@ -1,4 +1,5 @@
 ---
+title: connect
 sidebar_position: 4
 tags:
   - General

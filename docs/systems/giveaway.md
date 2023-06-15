@@ -1,13 +1,15 @@
 ---
+title: giveaway
 sidebar_position: 4
 tags:
   - Systems
   - Giveaway
+  - Renamed
 ---
 
 # giveaway
 
-A **Powerful** yet simple giveaway system | Requires: [`manageGiveaway()`](/docs/handler/manageGiveaway.md)
+A **Powerful** yet simple giveaway system | Requires: [`manageGiveaway()`](/docs/handler/managegiveaway.md)
 
 > This function requires [`connect()`](/docs/general/connect.md) which connects to the mongo database !
 
@@ -32,7 +34,7 @@ simplydjs.giveaway(
 ): Promise<GiveawayResolve | EndResolve>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage.md) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction.md)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/typedef/extendedinteraction.md)
 - options: [`giveawayOptions`](#giveawayoptions)
 
 
@@ -86,9 +88,9 @@ export type giveawayOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `enter`        | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
-|  `end`       | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
-|  `reroll`       | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+| `enter`        | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+|  `end`       | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+|  `reroll`       | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
 
 ```ts
 export interface GiveawayButtons {
@@ -120,9 +122,9 @@ export interface Requirements {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `giveaway`        | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
-|  `load`       | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
-|  `result`       | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
+| `giveaway`        | <Link to="/docs/typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
+|  `load`       | <Link to="/docs/typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
+|  `result`       | <Link to="/docs/typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
 
 ```ts
 export interface GiveawayEmbeds {
@@ -165,7 +167,7 @@ export interface GiveawayEmbeds {
 
 ## Example
 
-> To make this system work, you should also implement [`manageGiveaway()`](/docs/handler/manageGiveaway.md) manageGiveaway function handles all the buttons for giveaway.
+> To make this system work, you should also implement [`manageGiveaway()`](/docs/handler/managegiveaway.md) manageGiveaway function handles all the buttons for giveaway.
 
 
 - ### Default settings
