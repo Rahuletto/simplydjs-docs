@@ -1,5 +1,6 @@
 ---
 title: connect
+description: Connect to a mongo database to access some of the simply-djs functions !
 sidebar_position: 4
 tags:
   - General

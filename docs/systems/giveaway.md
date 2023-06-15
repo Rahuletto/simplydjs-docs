@@ -1,5 +1,6 @@
 ---
 title: giveaway
+description: A Powerful yet simple giveaway system | Requires manageGiveaway()
 sidebar_position: 4
 tags:
   - Systems

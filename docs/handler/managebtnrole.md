@@ -1,5 +1,6 @@
 ---
 title: manageBtnRole
+description: A Button Role Handler for simply-djs button role system.
 sidebar_position: 1
 tags:
   - Handler

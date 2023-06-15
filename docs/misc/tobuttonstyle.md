@@ -1,5 +1,6 @@
 ---
 title: toButtonStyle
+description: Converts your old button style string to ButtonStyle
 sidebar_position: 5
 tags:
   - Misc

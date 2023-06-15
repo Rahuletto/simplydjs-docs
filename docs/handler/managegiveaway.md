@@ -1,5 +1,6 @@
 ---
 title: manageGiveaway
+description: A Giveaway Handler for simplydjs giveaway system.
 sidebar_position: 2
 tags:
   - Handler

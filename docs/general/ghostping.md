@@ -1,5 +1,6 @@
 ---
 title: ghostPing
+description: A great system to see who ghost pinged
 sidebar_position: 6
 tags:
   - General

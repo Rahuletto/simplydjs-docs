@@ -1,5 +1,6 @@
 ---
 title: nqn
+description: NQN bot feature. But you have the power to do it.
 sidebar_position: 2
 tags:
   - Deprecated

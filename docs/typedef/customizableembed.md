@@ -1,5 +1,6 @@
 ---
 title: CustomizableEmbed
+description: Override default embeds with your own customized embed
 position: 2
 tags:
   - typedef

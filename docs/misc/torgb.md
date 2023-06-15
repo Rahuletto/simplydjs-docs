@@ -1,5 +1,6 @@
 ---
 title: toRgb
+description: Transforms Hex code into RGB Array.
 sidebar_position: 6
 tags:
   - Misc

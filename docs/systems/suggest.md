@@ -1,5 +1,6 @@
 ---
 title: suggest
+description: An Beautiful suggestion system with buttons ;D | Requires manageSuggest()
 sidebar_position: 6
 tags:
   - Systems

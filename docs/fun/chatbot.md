@@ -1,5 +1,6 @@
 ---
 title: chatbot
+description: A chatbot system that is both technically advanced and intelligent, and is your buddy.
 sidebar_position: 1
 tags:
   - Fun

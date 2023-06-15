@@ -1,5 +1,6 @@
 ---
 title: bumpReminder
+description: A Very cool bump reminder system that reminds when a bump is necessary
 sidebar_position: 2
 tags:
   - Systems

@@ -1,5 +1,6 @@
 ---
 title: CustomizableButton
+description: Just a blueprint of the button customization used in all of the functions that has buttons!
 position: 1
 tags:
   - typedef

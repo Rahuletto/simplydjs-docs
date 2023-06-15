@@ -1,5 +1,6 @@
 ---
 title: manageSuggest
+description: A Suggestion handler which handles all sugestions from the package
 sidebar_position: 3
 tags:
   - Handler

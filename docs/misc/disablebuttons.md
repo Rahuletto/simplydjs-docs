@@ -1,5 +1,6 @@
 ---
 title: disableButtons
+description: Disable all buttons in a message
 sidebar_position: 1
 tags:
   - Misc

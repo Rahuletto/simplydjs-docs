@@ -1,5 +1,6 @@
 ---
 title: manageTicket
+description: A Ticket Handler for simplydjs ticket system.
 sidebar_position: 4
 tags:
   - Handler

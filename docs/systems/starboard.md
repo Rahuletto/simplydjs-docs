@@ -1,5 +1,6 @@
 ---
 title: starboard
+description: Easiest starboard system ever existed !
 sidebar_position: 5
 tags:
   - Systems

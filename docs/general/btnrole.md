@@ -1,5 +1,6 @@
 ---
 title: btnRole
+description: A Button Role System that lets you create button roles with your own message. Required manageBtnRole()
 sidebar_position: 1
 tags:
   - General

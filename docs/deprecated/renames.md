@@ -1,5 +1,6 @@
 ---
 title: Renamed functions
+description: We deprecated few functions to make their names meaningfull. This is the list of what  functions are deprecated
 sidebar_position: 1
 tags:
   - Deprecated

@@ -1,5 +1,6 @@
 ---
 title: meme
+description: The memes are sent automatically, so others will able to laugh at the jokes without having to do anything !
 sidebar_position: 4
 tags:
   - Systems

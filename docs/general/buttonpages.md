@@ -1,5 +1,6 @@
 ---
 title: buttonPages
+description: An powerful yet customizable Embed Paginator
 sidebar_position: 2
 tags:
   - General
@@ -8,7 +9,7 @@ tags:
 
 # buttonPages
 
-An *powerful yet customizable* **Embed Paginator**
+An powerful yet customizable **Embed Paginator**
 
 ## Implementation
 
