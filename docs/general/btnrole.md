@@ -6,7 +6,7 @@ tags:
 
 # btnRole
 
-A **Button Role System** that lets you create button roles with your own message. | Requires: [`manageBtnRole()`](/docs/handler/manageBtnRole/)
+A **Button Role System** that lets you create button roles with your own message. | Requires: [`manageBtnRole()`](/docs/handler/manageBtnRole.md)
 
 ## Implementation
 
@@ -20,7 +20,7 @@ simplydjs.btnRole(interaction, {
 ```
 
 :::info NOTE
-This is **totally** different from [`betterBtnRole`](/docs/systems/betterBtnRole/) !
+This is **totally** different from [`betterBtnRole`](/docs/systems/betterBtnRole.md) !
 
 `betterBtnRole` is a button role builder system. where,
 `btnRole` is a function that sends your message (with embeds) with the buttons necessary for the button role.
@@ -38,7 +38,7 @@ simplydjs.btnRole(
 ): Promise<boolean>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage/) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction/)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage.md) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction.md)
 - options: [`btnRoleOptions`](#btnroleoptions)
 
 - Resolves: [`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (whether sent or not)
@@ -52,7 +52,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in btnRole |
-| `embed` | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link>       | ✅  | -     | The embed of your message that is sent with the necessary buttons |
+| `embed` | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link>       | ✅  | -     | The embed of your message that is sent with the necessary buttons |
 | `content` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌        | _none_ | The content of your message that is sent with the necessary buttons |
 | `data` | <Link to="#btnrolebuttons">BtnRoleButtons[]</Link>       | ✅        | _none_     | The data necessary to create the buttons. (Array of <Link to="#dataobj">dataObj</Link>) |
 
@@ -88,7 +88,7 @@ export type BtnRoleButtons = {
 
 ## Example
 
-> To make this system work, you should also implement [`manageBtnRole()`](/docs/handler/manageBtnRole/) manageBtnRole function handles all the buttons for btnRole and betterBtnRole.
+> To make this system work, you should also implement [`manageBtnRole()`](/docs/handler/manageBtnRole.md) manageBtnRole function handles all the buttons for btnRole and betterBtnRole.
 
 
 - ### Default settings

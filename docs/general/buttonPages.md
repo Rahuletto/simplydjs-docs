@@ -33,7 +33,7 @@ simplydjs.buttonPages(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage/) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction/)
+- msgOrInt: [`ExtendedMessage`](/docs/typedef/ExtendedMessage.md) | [`ExtendedInteraction`](/docs/typedef/ExtendedInteraction.md)
 - options: [`pagesOptions`](#pagesoptions)
 
 ## Options
@@ -78,11 +78,11 @@ export type pagesOptions = {
 
 | Parameter  | Type | Description  |
 | ---------- | ---- | ------------ |
-| `first`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `next`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `back`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `last`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `delete`        | <Link to="/docs/typedef/CustomizableButton/">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button  |
+| `first`        | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `next`        | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `back`        | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `last`        | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `delete`        | <Link to="/docs/typedef/CustomizableButton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button  |
 
 ```ts
 export interface Pagebuttons {

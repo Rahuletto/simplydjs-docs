@@ -7,14 +7,14 @@ module.exports = {
   title: "Simply-DJS",
   tagline:
     "The simplest way to build complex Discord bots.",
-  url: "https://simplyd.js.org",
-  baseUrl: "/",
+  url: "https://v4--simplyd.netlify.app",
   favicon: "https://i.imgur.com/XFUIwPh.png",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   organizationName: "Rahuletto",
   projectName: "simply-djs",
-  trailingSlash: true,
+  noIndex: false,
+  trailingSlash: false,
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
@@ -34,7 +34,7 @@ module.exports = {
       apiKey: "91f2393262c617a2955e3550c006bc4d",
       appId: "0V6L7HOWNI",
       indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
-      ignoreCanonicalTo: false,
+      ignoreCanonicalTo: true,
       inputSelector: "h1",
       searchParameters: {
         hitsPerPage: 6,

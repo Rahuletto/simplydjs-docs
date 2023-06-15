@@ -9,7 +9,7 @@ tags:
 
 A **Suggestion** handler which handles all sugestions from the package
 
-> This function requires [`connect()`](/docs/general/connect/) which connects to the mongo database !
+> This function requires [`connect()`](/docs/general/connect.md) which connects to the mongo database !
 
 ## Implementation
 
@@ -60,8 +60,8 @@ export type manageSuggestOptions = {
 
 | Parameter | Type | Description |
 | --------- | ----- | ---------- |
-|  `accept`       | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the accepted suggestion embed   |
-|  `deny`       | <Link to="/docs/typedef/CustomizableEmbed/">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the denied suggestion embed   |
+|  `accept`       | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the accepted suggestion embed   |
+|  `deny`       | <Link to="/docs/typedef/CustomizableEmbed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the denied suggestion embed   |
 
 ```ts
 export interface SuggestionEmbeds {

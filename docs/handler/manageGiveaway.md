@@ -58,7 +58,7 @@ export type manageGiveawayOptions = {
 :::info Info
 ## Customization for manageGiveaway
 
-You can customize the buttons and embeds by passing the options in [`giveaway`](/docs/systems/giveaway/) function. We export these options to manageGiveaway to match the embeds the same.
+You can customize the buttons and embeds by passing the options in [`giveaway`](/docs/systems/giveaway.md) function. We export these options to manageGiveaway to match the embeds the same.
 :::
 
 ---------------

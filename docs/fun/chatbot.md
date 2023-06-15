@@ -44,7 +44,7 @@ simplydjs.chatbot(
 	options: chatbotOptions
 ): Promise<void>
 ```
-- message [`ExtendedMessage`](/docs/typedef/ExtendedMessage/)
+- message [`ExtendedMessage`](/docs/typedef/ExtendedMessage.md)
 - options: [`chatbotOptions`](#chatbotoptions)
 
 ## Options 

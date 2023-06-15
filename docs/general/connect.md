@@ -6,7 +6,7 @@ tags:
 
 # connect
 
-Connect to a mongo database to access some of the simply-djs functions ! *Requires* [`MongoDB`](https://mongodb.com/)
+Connect to a mongo database to access some of the simply-djs functions ! *Requires* [`MongoDB`](https://mongodb.com.md)
 
 ## Implementation
 
