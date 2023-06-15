@@ -8,6 +8,7 @@ module.exports = {
   tagline:
     "The simplest way to build complex Discord bots.",
   url: "https://v4--simplyd.netlify.app",
+  baseUrl: '/',
   favicon: "https://i.imgur.com/XFUIwPh.png",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
