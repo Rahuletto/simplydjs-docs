@@ -35,12 +35,7 @@ module.exports = {
       apiKey: "0ad325d96101f86ad68ff5d9654604f1",
       appId: "0V6L7HOWNI",
       indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
-      ignoreCanonicalTo: true,
-      inputSelector: "h1",
       contextualSearch: true,
-      searchParameters: {
-        hitsPerPage: 6,
-      },
       debug: true,
     },
     stylesheets: [
