@@ -1,5 +1,5 @@
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
-  branches = ['v4']
+  branches = ['main']
   disabled = false
