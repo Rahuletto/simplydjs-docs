@@ -36,7 +36,6 @@ module.exports = {
       appId: "0V6L7HOWNI",
       indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
       contextualSearch: true,
-      debug: true,
     },
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
