@@ -1,5 +1,6 @@
 ---
 title: rps
+description: A classic RPS game, except this time it's on Discord to play with your pals, how cool is that ?
 sidebar_position: 2
 tags:
   - Fun

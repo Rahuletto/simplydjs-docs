@@ -1,4 +1,6 @@
 ---
+title: version
+description: Provides the package version you are currently using.
 sidebar_position: 7
 tags:
   - Misc

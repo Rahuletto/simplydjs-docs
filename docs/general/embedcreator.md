@@ -1,5 +1,6 @@
 ---
 title: embedCreator
+description: Lets you create embeds with an interactive builder
 sidebar_position: 5
 tags:
   - General

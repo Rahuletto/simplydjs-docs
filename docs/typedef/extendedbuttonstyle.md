@@ -1,5 +1,6 @@
 ---
 title: ExtendedButtonStyle
+description: Extends the ButtonStyle to support legacy styles
 position: 3
 tags:
   - typedef

@@ -1,5 +1,6 @@
 ---
 title: betterBtnRole
+description: A Button Role builder that lets admins create button roles. Requires manageBtnRole()
 sidebar_position: 1
 tags:
   - Systems

@@ -1,5 +1,6 @@
 ---
 title: ExtendedMessage
+description: This class extends the Message object from the Discord.js framework. These properties are used to reduce errors and apply best practices when working with Discord.js
 position: 5
 tags:
   - typedef

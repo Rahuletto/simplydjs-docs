@@ -1,5 +1,6 @@
 ---
 title: tictactoe
+description: One line implementation of a super enjoyable tictactoe game. 
 sidebar_position: 3
 tags:
   - Fun

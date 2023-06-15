@@ -1,5 +1,6 @@
 ---
 title: emitError
+description: Produce error messages just like Simply DJS does !
 sidebar_position: 2
 tags:
   - Misc

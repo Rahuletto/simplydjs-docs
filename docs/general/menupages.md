@@ -1,5 +1,6 @@
 ---
 title: menuPages
+description: An Embed paginator using Select Menus
 sidebar_position: 7
 tags:
   - General

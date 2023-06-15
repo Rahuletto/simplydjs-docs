@@ -1,5 +1,6 @@
 ---
 title: stealEmoji
+description: How cool is stealing an emoji from another server ? Feel the power with this function
 sidebar_position: 3
 tags:
   - Deprecated

@@ -1,5 +1,6 @@
 ---
 title: https
+description: Inbuilt https function to replace your good ol' node-fetch and axios.
 sidebar_position: 3
 tags:
   - Misc

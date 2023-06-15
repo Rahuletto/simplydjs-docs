@@ -1,5 +1,6 @@
 ---
 title: calculator
+description: An Unique calculator which can be used inside Discord
 sidebar_position: 3
 tags:
   - General

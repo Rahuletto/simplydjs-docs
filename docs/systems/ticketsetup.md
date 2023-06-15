@@ -1,5 +1,6 @@
 ---
 title: ticketSetup
+description: A Flexible yet Powerful Ticket System | Requires manageTicket()
 sidebar_position: 7
 tags:
   - Systems

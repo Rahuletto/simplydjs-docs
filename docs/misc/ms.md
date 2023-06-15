@@ -1,5 +1,6 @@
 ---
 title: ms
+description: Converts Human readable time to milliseconds
 sidebar_position: 4
 tags:
   - Misc
