@@ -37,6 +37,9 @@ module.exports = {
       placeholder: "Search SimplyDJS",
       inputSelector: "h1",
       contextualSearch: true,
+      searchParameters: {
+        hitsPerPage: 8,
+      },
       debug: false,
     },
     stylesheets: [
