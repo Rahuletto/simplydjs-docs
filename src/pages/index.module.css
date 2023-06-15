@@ -3,34 +3,192 @@
  * and scoped locally.
  */
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  z-index: 3;
+}
+
+.dots {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 90vh;
+  pointer-events: none;
+
+  background-image: radial-gradient(var(--ifm-color-primary-dark) 2px, transparent 0);
+  opacity: 0.4;
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+  mask-image: linear-gradient(180deg, #000 1%, transparent);
+}
+
 .heroBanner {
-  gap: 2.5rem;
-  color: '#4752C4';
-  font-family: 'Lexend Deca';
+  gap: 2rem;
+  min-height: 100vh;
+  
+  animation: 0.8s fadein forwards;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-family: 'DM Sans';
   font-weight: 400;
-  padding: 4rem 0;
+  
+  padding: 3rem 0;
+  padding-top: 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+html[data-theme='dark'] .heroBanner {
+  background: radial-gradient(50% 50% at 50% 50%, #161616 0%, #161616 0.01%, var(--ifm-body-background) 100%);
+}
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    font-family: 'Lexend Deca';
-  font-weight: 400;
-    padding: 2rem;
-    
+html[data-theme='light'] .heroBanner {
+  background: radial-gradient(50% 50% at 50% 50%, #f5f5f5 0%, #f5f5f5 0.01%, var(--ifm-body-background) 100%);
+}
+
+.subtitle {
+  z-index: 2;
+  font-size: 4rem;
+  font-weight: 800;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  transition: 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+  max-width: 930px;
+  line-height: 6rem;
+}
+
+.import {
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 12px 17px;
+  border: 2px solid var(--ifm-color-primary);
+  font-weight: 600;
+  background: linear-gradient(90deg, #406DBC 2.82%, #658DD4 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.2s ease;
+}
+
+button {
+  background: transparent;
+  border: 0px none;
+}
+
+.about {
+  max-width: 700px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.import:hover {
+  cursor: copy;
+  text-decoration: none;
+  transform: translateY(-5px);
+  border: 2px solid var(--ifm-color-primary-dark);
+}
+
+.import:active {
+  transform: translateY(5px);
+  background: linear-gradient(90deg, rgb(49, 201, 49) 2.82%, rgb(111, 209, 111) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid rgb(49, 201, 49);
+}
+
+.simplest {
+  z-index: 3;
+  padding: 4px 8px;
+  border: 4px solid var(--ifm-color-primary);
+  border-radius: 10px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(0deg, #406DBC, #6890D6);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-wrap: nowrap;
+}
+
+.simplest:hover {
+  background: var(--ifm-color-primary);
+  background-clip: unset;
+  -webkit-text-fill-color: var(--ifm-body-background);
+
+
+}
+
+.halo1 {
+  z-index: 2;
+  opacity: 0.8;
+  animation: 2.2s fadein-ball;
+  position: absolute;
+  top: 24%;
+  left: 0px;
+  transition: 0.4s cubic-bezier(0.39, 0.58, 0.57, 1);
+  box-shadow: 0px 0px 180px 55px var(--ifm-color-primary);
+}
+
+.halo2 {
+  z-index: 2;
+  animation: 1.6s fadein-ball;
+  position: absolute;
+  top: 65%;
+  right: -8px;
+  transition: 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
+  box-shadow: 0px 0px 140px 60px var(--ifm-color-primary-dark);
+  opacity: 0.9;
+}
+
+.madefor {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-body-background);
+  padding: 8px 16px;
+
+  width: auto;
+  border-radius: 14px;
+}
+
+
+@keyframes fadein-ball {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.9;
   }
 }
 
-.buttons {
-  margin-top: 54px;
-  
-  font-family: 'Lexend Deca';
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
+@media screen and (max-width: 755px) {
+  .heroBanner {
+    padding: 2rem;
+    padding-top: 5rem;
+  }
+
+  .import {
+    font-size: 16px;
+    padding: 8px 12px;
+    max-width: none !important;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    line-height: 3rem;
+  }
+}

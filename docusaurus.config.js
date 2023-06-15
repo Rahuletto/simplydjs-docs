@@ -1,24 +1,25 @@
-const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 
-const VersionsArchived = require('./versionsArchived.json');
+const oneDark = require('./src/prism/oneDark')
+const oneLight = require('./src/prism/oneLight')
 
-const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
-  0,
-  5,
-);
 
 module.exports = {
   title: "Simply-DJS",
   tagline:
-    "Powerful yet a Simple, East and Beginner friendly discord.js Package for everyone",
-  url: "https://simplyd.js.org",
-  baseUrl: "/",
-  favicon: "https://i.imgur.com/u8VlLom.png",
-  onBrokenLinks: "throw",
+    "The simplest way to build complex Discord bots.",
+  url: "https://v4--simplyd.netlify.app",
+  baseUrl: '/',
+  favicon: "https://i.imgur.com/XFUIwPh.png",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  organizationName: "Rahuletto#0243",
+  organizationName: "Rahuletto",
   projectName: "simply-djs",
+  trailingSlash: false,
   themeConfig: {
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
+    },
     docs: {
       sidebar: {
         hideable: true,
@@ -29,31 +30,19 @@ module.exports = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    announcementBar: {
-      id: "announce",
-      content: "Have an wonderful experience with the v3 update",
-      backgroundColor: "#18191a",
-      textColor: "#FFFFFF",
-    },
     algolia: {
-      apiKey: "9da3683213790d1d51892d90c865adab",
-      appId: "9CQMIEN04F",
-      indexName: "simplyd",
-      inputSelector: "h1",
-      searchParameters: {
-        hitsPerPage: 5,
-      },
-
+      apiKey: "4c617eee4ae82fd9dc410f2f9d683277",
+      appId: "5KFJKTD7O1",
+      indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
+      contextualSearch: true,
       debug: false,
     },
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
       "https://kit.fontawesome.com/a6e95e39af.js",
       "https://buttons.github.io/buttons.js",
-      "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap",
       "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
       "/js/code-block-buttons.js",
-      "https://fonts.googleapis.com/css2?family=Lexend-Deca:wght@400&display=swap",
     ],
     throwIfNamespace: false,
     scripts: [
@@ -69,21 +58,25 @@ module.exports = {
       },
       {
         property: "og:title",
-        content: "Simply DJS",
+        content: "Simply-DJS",
       },
       {
         property: "og:description",
         content:
-          "Simply-DJS is an Powerful yet a Simple, East and Beginner friendly discord.js Package that interacts with discord.js that makes your code much easier.",
+          "The simplest way to build complex Discord bots. Made for DiscordJS v14",
       },
       {
         property: "og:site_name",
-        content: "Simply DJS",
+        content: "Simply-DJS",
       },
       {
         name: "theme-color",
-        content: "#0d52d1",
+        content: "#406DBC",
       },
+      {
+        property: "og:image",
+        content: "https://i.postimg.cc/qqDJq3L8/sdjsv4.png"
+      }
     ],
     navbar: {
       title: "",
@@ -112,9 +105,18 @@ module.exports = {
           dropdownActiveClassDisabled: true,
           dropdownItemsAfter: [
             {
-              label: "v2.5.3",
+              label: "v3 (legacy)",
+              href: "https://v3--simplyd.netlify.app/",
+            },
+            {
+              label: "v2",
               href: "https://v2--simplyd.netlify.app/",
+            },
+            {
+              label: "v1",
+              href: "https://github.com/Rahuletto/simply-djs/blob/08a7b5cf6a5419432c92e0bc64c7e47b393ba779/README"
             }
+
 
           ],
         },
@@ -151,6 +153,7 @@ module.exports = {
               label: "• JavaScript",
               href: "https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-welcome",
             },
+
           ],
         },
         {
@@ -168,124 +171,16 @@ module.exports = {
               label: "• Discord",
               href: "https://discord.com/invite/3JzDV9T5Fn",
             },
+
           ],
         },
       ],
-      copyright: `<br><br>Copyright © ${new Date().getFullYear()}  Simply Develop. npm i simply-djs<br><br>Not affiliated with Discord (or) Discord.js`,
+      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deployed in Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
+              <br><br><span class="monospace">Copyright © ${new Date().getFullYear()} Rahuletto.</span><br><br><div class="warning">Not affiliated with Discord (or) Discord.js</div>`,
     },
     prism: {
-
-      theme: lightCodeTheme,
-      darkTheme: {
-        plain: {
-          color: "#e5c07b",
-          backgroundColor: "#1E1E1E",
-        },
-        styles: [
-          {
-            types: ["prolog"],
-            style: {
-              color: "rgb(0, 0, 128)",
-            },
-          },
-          {
-            types: ["comment"],
-            style: {
-              color: "#5c6370",
-            },
-          },
-          {
-            types: ["changed", "keyword", "interpolation-punctuation"],
-            style: {
-              color: "#c678dd",
-            },
-          },
-          {
-            types: ["number", "inserted"],
-            style: {
-              color: "#d19a66",
-            },
-          },
-          {
-            types: ["function", "property-access"],
-            style: {
-              color: "#56b6c2",
-            },
-          },
-          {
-            types: ['property', "builtin"],
-            style: {
-              color: '#e06c75'
-            }
-          },
-          {
-            types: ["constant"],
-            style: {
-              color: "rgb(100, 102, 149)",
-            },
-          },
-          {
-            types: ["attr-name", "variable"],
-            style: {
-              color: "#e06c75",
-            },
-          },
-          {
-            types: ["deleted", "string", "attr-value", "template-punctuation"],
-            style: {
-              color: "#98c379",
-            },
-          },
-          {
-            types: ["selector"],
-            style: {
-              color: "#c678dd",
-            },
-          },
-          {
-            // Fix tag color
-            types: ["tag"],
-            style: {
-              color: "rgb(78, 201, 176)",
-            },
-          },
-          {
-            // Fix tag color for HTML
-            types: ["tag"],
-            languages: ["markup"],
-            style: {
-              color: "rgb(86, 156, 214)",
-            },
-          },
-          {
-            types: ["punctuation", "operator"],
-            style: {
-              color: "#abb2bf",
-            },
-          },
-          {
-            // Fix punctuation color for HTML
-            types: ["punctuation"],
-            languages: ["markup"],
-            style: {
-              color: "#abb2bf",
-            },
-          },
-
-          {
-            types: ["class-name"],
-            style: {
-              color: "#808080",
-            },
-          },
-          {
-            types: ["char"],
-            style: {
-              color: "rgb(209, 105, 105)",
-            },
-          },
-        ],
-      }
+      theme: oneLight,
+      darkTheme: oneDark,
     },
   },
   presets: [
@@ -293,8 +188,13 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          breadcrumbs: false,
+          editUrl: ({ versionDocsDirPath, docPath }) =>
+            `https://github.com/Rahuletto/simplydjs-docs/edit/v4/docs/${docPath}`,
+          editLocalizedFiles: false,
+          editCurrentVersion: false,
           versions: {
-            current: { label: "latest" },
+            current: { label: "v4 (latest)" }
           },
           sidebarPath: require.resolve("./sidebars.js"),
         },
@@ -309,18 +209,19 @@ module.exports = {
     [
       "@docusaurus/plugin-pwa",
       {
-        debug: true,
 
         offlineModeActivationStrategies: [
           "appInstalled",
           "standalone",
           "queryString",
+          'mobile',
+          'saveData'
         ],
         pwaHead: [
           {
             tagName: "link",
             rel: "icon",
-            href: "https://i.imgur.com/u8VlLom.png",
+            href: "https://i.imgur.com/XFUIwPh.png",
           },
           {
             tagName: "link",
@@ -330,7 +231,7 @@ module.exports = {
           {
             tagName: "meta",
             name: "theme-color",
-            content: "#0d52d1",
+            content: "#406DBC",
           },
         ],
       },
