@@ -1,7 +1,6 @@
 ---
 title: ExtendedInteraction
-description: This class extends the CommandInteraction object from the Discord.js framework.
-These properties are used to reduce errors and apply best practices when working with Discord.js commands.
+description: This class extends the CommandInteraction object from the Discord.js framework. These properties are used to reduce errors and apply best practices when working with Discord.js commands.
 position: 4
 tags:
   - typedef
