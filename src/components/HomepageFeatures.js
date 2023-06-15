@@ -57,10 +57,10 @@ export default function HomepageFeatures() {
               </div>
               <div className={styles.code}>
                 
-              <CodeBlock language="js" style={{ minWidth: "-webkit-fill-available", maxWidth: "450px", height: "155px", overflow: "hidden", border: 0 }}>
+              <CodeBlock language="js" style={{ minWidth: "-webkit-fill-available", height: "155px", overflow: "hidden", border: 0 }}>
               {`const simplydjs = require('simply-djs');\nsimplydjs.giveaway(interaction)`}</CodeBlock>
 
-                <img className={styles.preview} alt="giveaway one-line" src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
+                <img className={styles.preview} alt="giveaway one-line" src="https://i.postimg.cc/7Z1Qwr0s/image.png"></img>
               </div>
             </div>
 
@@ -98,10 +98,10 @@ export default function HomepageFeatures() {
               </div>
               <div className={styles.code}>
 
-              <CodeBlock language="js" style={{ minWidth: "-webkit-fill-available", maxWidth: "450px", height: "155px", overflow: "hidden", border: 0 }}>
+              <CodeBlock language="js" style={{ minWidth: "-webkit-fill-available", height: "155px", overflow: "hidden", border: 0 }}>
               {`const simplydjs = require('simply-djs');\n\nsimplydjs.giveaway(interaction, {\n embed: {\n    title: "Giveaways",\n   description: "Are ya winnin son ?",\n   color: simplydjs.toRgb('#075FFF')\n }\n});`}</CodeBlock>
                 
-                <img alt="customization" className={styles.preview} src="https://user-images.githubusercontent.com/71836991/173193328-d524dc59-c24f-487e-aeab-8148435d76d6.png"></img>
+                <img alt="customization" className={styles.preview} src="https://i.postimg.cc/7Z1Qwr0s/image.png"></img>
 
               </div>
             </div>
