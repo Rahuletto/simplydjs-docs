@@ -185,9 +185,8 @@ img {
   border-radius: 0px;
 }
 
-pre,
-code {
-  font-family: 'JetBrains Mono' !important;
+code, pre {
+  font-family: "JetBrains Mono" !important;
   max-width: 80vw;
 }
 
