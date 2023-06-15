@@ -43,7 +43,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in calculator |
-| `embed` | <Link to="/docs/typedef/customizableembed.md">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
+| `embed` | <Link to="typedef/customizableembed.md">CustomizableEmbed</Link>         | ❌        | _default embed_  | Pass a CustomizableEmbed Object to customize the embed  |
 | `buttons` | <Link to="#calculatorbuttons">CalculatorButtons</Link> | ❌        | _default buttons_  | Pass a CalculatorButtons Object to customize the button  |
 
 ```ts

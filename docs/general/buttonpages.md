@@ -80,11 +80,11 @@ export type pagesOptions = {
 
 | Parameter  | Type | Description  |
 | ---------- | ---- | ------------ |
-| `first`        | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `next`        | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `back`        | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `last`        | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `delete`        | <Link to="/docs/typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button  |
+| `first`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `next`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `back`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `last`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `delete`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button  |
 
 ```ts
 export interface Pagebuttons {

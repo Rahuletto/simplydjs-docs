@@ -48,7 +48,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in meme |
-| `embed` | <Link to="/docs/typedef/customizableembed.md">CustomizableEmbed</Link>         | ❌        | _default embed_  | CustomizableEmbed Object to customize the embed  |
+| `embed` | <Link to="typedef/customizableembed.md">CustomizableEmbed</Link>         | ❌        | _default embed_  | CustomizableEmbed Object to customize the embed  |
 | `channelId`       | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel?scrollTo=id">string[]</Link>       | ✅ | _none_     | Array Channel ID to send memes    |
 | `sub` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string[]</Link> | ❌        | _default array_  | Array of custom subreddits to send as memes  |
 | `interval`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</Link>     | ❌        | `600000ms` (10m) | Interval between memes sent by the bot. |
