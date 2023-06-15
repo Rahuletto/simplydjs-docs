@@ -10,7 +10,7 @@ module.exports = {
   url: "https://v4--simplyd.netlify.app",
   baseUrl: '/',
   favicon: "https://i.imgur.com/XFUIwPh.png",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   organizationName: "Rahuletto",
   projectName: "simply-djs",

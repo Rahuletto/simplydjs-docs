@@ -72,12 +72,12 @@ export type tictactoeOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `request`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
-| `win`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
-| `draw`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
-| `game`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
-| `timeout`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
-| `decline`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
+| `request`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
+| `win`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
+| `draw`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
+| `game`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
+| `timeout`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
+| `decline`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
 
 
 ```ts
@@ -97,9 +97,9 @@ export interface TictactoeEmbeds {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `X`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the "X" player button   |
-|  `O`       | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the "O" player button   |
-|  `blank`       | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize un-moved place button   |
+| `X`        | <Link to="../typedef/customizablebutton">CustomizableButton</Link> |  A CustomizableButton Object to customize the "X" player button   |
+|  `O`       | <Link to="../typedef/customizablebutton">CustomizableButton</Link> |  A CustomizableButton Object to customize the "O" player button   |
+|  `blank`       | <Link to="../typedef/customizablebutton">CustomizableButton</Link> |  A CustomizableButton Object to customize un-moved place button   |
 
 
 ```ts

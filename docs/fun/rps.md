@@ -67,12 +67,12 @@ export type rpsOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `request`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
-| `win`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
-| `draw`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
-| `game`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
-| `timeout`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
-| `decline`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
+| `request`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game request embed   |
+| `win`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the result (winner) embed   |
+| `draw`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the draw embed   |
+| `game`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the in-game embed   |
+| `timeout`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the game timeout embed   |
+| `decline`        | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the declined embed   |
 
 
 ```ts
@@ -92,9 +92,9 @@ export interface RpsEmbeds {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `rock`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the rock button   |
-|  `paper`       | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the paper button   |
-|  `scissor`       | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize scissor button   |
+| `rock`        | <Link to="../typedef/customizablebutton">CustomizableButton</Link> |  A CustomizableButton Object to customize the rock button   |
+|  `paper`       | <Link to="../typedef/customizablebutton">CustomizableButton</Link> |  A CustomizableButton Object to customize the paper button   |
+|  `scissor`       | <Link to="../typedef/customizablebutton">CustomizableButton</Link> |  A CustomizableButton Object to customize scissor button   |
 
 
 ```ts

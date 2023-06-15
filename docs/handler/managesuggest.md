@@ -62,8 +62,8 @@ export type manageSuggestOptions = {
 
 | Parameter | Type | Description |
 | --------- | ----- | ---------- |
-|  `accept`       | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the accepted suggestion embed   |
-|  `deny`       | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the denied suggestion embed   |
+|  `accept`       | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the accepted suggestion embed   |
+|  `deny`       | <Link to="../typedef/customizableembed">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the denied suggestion embed   |
 
 ```ts
 export interface SuggestionEmbeds {
