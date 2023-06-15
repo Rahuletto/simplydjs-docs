@@ -10,7 +10,7 @@ tags:
 
 One line implementation of a super enjoyable **tictactoe game**. 
 
-> Now with AI (one-player) mode ! Just don't mention a opponent and you will play with our ai system. Uses [`https`](/docs/misc/https.md) to call [`simply-api`](https://simplyapi.js.org)
+> Now with AI (one-player) mode ! Just don't mention a opponent and you will play with our ai system. Uses [`https`](../misc/https.md) to call [`simply-api`](https://simplyapi.js.org)
 
 ## Implementation
 
@@ -32,7 +32,7 @@ simplydjs.tictactoe(
 ): Promise<User>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`tictactoeOptions`](#tictactoeoptions)
 
 

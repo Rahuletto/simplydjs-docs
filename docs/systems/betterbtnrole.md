@@ -8,10 +8,10 @@ tags:
 
 # betterBtnRole
 
-A **Button Role builder** that lets **admins create** button roles. | Requires: [`manageBtnRole()`](/docs/handler/managebtnrole.md)
+A **Button Role builder** that lets **admins create** button roles. | Requires: [`manageBtnRole()`](../handler/managebtnrole.md)
 
 
-> This is an advanced version of [`btnRole()`](/docs/general/btnrole.md)
+> This is an advanced version of [`btnRole()`](../general/btnrole.md)
 
 
 ## Implementation
@@ -46,7 +46,7 @@ simplydjs.betterBtnRole(
 ): Promise<void>
 ```
 
-- interaction [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- interaction [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`betterBtnOptions`](#betterbtnoptions)
 
 ## Options
@@ -132,7 +132,7 @@ export interface MessageContents {
 
 ## Example
 
-> To make this system work, you should also implement [`manageBtnRole()`](/docs/handler/managebtnrole.md) manageBtnRole function handles all the buttons for btnRole and betterBtnRole.
+> To make this system work, you should also implement [`manageBtnRole()`](../handler/managebtnrole.md) manageBtnRole function handles all the buttons for btnRole and betterBtnRole.
 
 
 - ### Default settings

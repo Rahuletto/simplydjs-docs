@@ -31,7 +31,7 @@ simplydjs.rps(
 ): Promise<User>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`rpsOptions`](#rpsoptions)
 
 - Resolves: [`User`](https://old.discordjs.dev/#/docs/discord.js/main/class/User) (The winner of the game)

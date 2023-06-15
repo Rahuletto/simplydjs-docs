@@ -32,7 +32,7 @@ simplydjs.embedCreator(
 ): Promise<APIEmbed>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`embedCreatorOptions`](#embedcreatoroptions)
 
 - Resolves: [`APIEmbed`](https://discord-api-types.dev/api/discord-api-types-v10/interface/APIEmbed) (the embed that the user just built)

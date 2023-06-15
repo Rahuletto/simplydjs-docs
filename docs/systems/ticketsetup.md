@@ -9,7 +9,7 @@ tags:
 
 # ticketSetup
 
-A Flexible yet Powerful Ticket System | Requires: [`manageTicket()`](/docs/handler/manageticket.md)
+A Flexible yet Powerful Ticket System | Requires: [`manageTicket()`](../handler/manageticket.md)
 
 ## Implementation
 
@@ -35,7 +35,7 @@ simplydjs.ticketSetup(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`ticketSetupOptions`](#ticketsetupoptions)
 
 

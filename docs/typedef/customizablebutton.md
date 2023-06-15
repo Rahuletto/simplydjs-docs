@@ -45,7 +45,7 @@ import Link from '@docusaurus/Link';
 
 | Parameter | Type | Description  |
 | --------- | ---- | ------------ |
-| `style`   | <Link to="/docs/../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> | Set the style of the button  |
+| `style`   | <Link to="../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> | Set the style of the button  |
 | `label`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | The text that is shown in the button  |
 | `emoji`   | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | Custom emoji (or) System emoji that is shown in the button |
 

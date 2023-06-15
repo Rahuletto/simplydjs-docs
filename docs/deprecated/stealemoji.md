@@ -39,7 +39,7 @@ simplydjs.stealEmoji(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`stealOptions`](#stealoptions)
 
 ## Options

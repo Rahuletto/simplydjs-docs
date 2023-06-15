@@ -9,9 +9,9 @@ tags:
 
 # suggest
 
-An **Beautiful** suggestion system with buttons ;D | Requires: [`manageSuggest()`](/docs/handler/managesuggest.md)
+An **Beautiful** suggestion system with buttons ;D | Requires: [`manageSuggest()`](../handler/managesuggest.md)
 
-> This function requires [`connect()`](/docs/general/connect.md) which connects to the mongo database !
+> This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
 
 
 ## Implementation
@@ -37,7 +37,7 @@ simplydjs.suggestSystem(
 ): Promise<SuggestResolve>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`suggestOption`](#suggestoption)
 
 

@@ -9,9 +9,9 @@ tags:
 
 # giveaway
 
-A **Powerful** yet simple giveaway system | Requires: [`manageGiveaway()`](/docs/handler/managegiveaway.md)
+A **Powerful** yet simple giveaway system | Requires: [`manageGiveaway()`](../handler/managegiveaway.md)
 
-> This function requires [`connect()`](/docs/general/connect.md) which connects to the mongo database !
+> This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
 
 ## Implementation
 
@@ -34,7 +34,7 @@ simplydjs.giveaway(
 ): Promise<GiveawayResolve | EndResolve>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`giveawayOptions`](#giveawayoptions)
 
 
@@ -167,7 +167,7 @@ export interface GiveawayEmbeds {
 
 ## Example
 
-> To make this system work, you should also implement [`manageGiveaway()`](/docs/handler/managegiveaway.md) manageGiveaway function handles all the buttons for giveaway.
+> To make this system work, you should also implement [`manageGiveaway()`](../handler/managegiveaway.md) manageGiveaway function handles all the buttons for giveaway.
 
 
 - ### Default settings

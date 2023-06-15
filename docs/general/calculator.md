@@ -30,7 +30,7 @@ simplydjs.calculator(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`calculatorOptions`](#calculatoroptions)
 
 
@@ -60,9 +60,9 @@ export type calculatorOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `numbers`        | <Link to="/docs/../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which has numbers in it   |
-|  `symbols`       | <Link to="/docs/../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which has symbols in it   |
-|  `delete`       | <Link to="/docs/../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which deletes the calculator   |
+| `numbers`        | <Link to="../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which has numbers in it   |
+|  `symbols`       | <Link to="../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which has symbols in it   |
+|  `delete`       | <Link to="../typedef/extendedbuttonstyle.md">ExtendedButtonStyle</Link> |  The style of the button which deletes the calculator   |
 
 ```ts
 export interface CalculatorButtons {

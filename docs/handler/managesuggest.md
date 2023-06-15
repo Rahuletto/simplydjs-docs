@@ -11,7 +11,7 @@ tags:
 
 A **Suggestion** handler which handles all sugestions from the package
 
-> This function requires [`connect()`](/docs/general/connect.md) which connects to the mongo database !
+> This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
 
 ## Implementation
 

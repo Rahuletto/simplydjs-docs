@@ -7,7 +7,7 @@ tags:
 
 # btnRole
 
-A **Button Role System** that lets you create button roles with your own message. | Requires: [`manageBtnRole()`](/docs/handler/managebtnrole.md)
+A **Button Role System** that lets you create button roles with your own message. | Requires: [`manageBtnRole()`](../handler/managebtnrole.md)
 
 ## Implementation
 
@@ -21,7 +21,7 @@ simplydjs.btnRole(interaction, {
 ```
 
 :::info NOTE
-This is **totally** different from [`betterBtnRole`](/docs/systems/betterbtnrole.md) !
+This is **totally** different from [`betterBtnRole`](../systems/betterbtnrole.md) !
 
 `betterBtnRole` is a button role builder system. where,
 `btnRole` is a function that sends your message (with embeds) with the buttons necessary for the button role.
@@ -39,7 +39,7 @@ simplydjs.btnRole(
 ): Promise<boolean>
 ```
 
-- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`btnRoleOptions`](#btnroleoptions)
 
 - Resolves: [`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (whether sent or not)
@@ -89,7 +89,7 @@ export type BtnRoleButtons = {
 
 ## Example
 
-> To make this system work, you should also implement [`manageBtnRole()`](/docs/handler/managebtnrole.md) manageBtnRole function handles all the buttons for btnRole and betterBtnRole.
+> To make this system work, you should also implement [`manageBtnRole()`](../handler/managebtnrole.md) manageBtnRole function handles all the buttons for btnRole and betterBtnRole.
 
 
 - ### Default settings

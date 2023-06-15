@@ -13,7 +13,7 @@ tags:
  [Only Disboard].
 
 
-> This function requires [`connect()`](/docs/general/connect.md) which connects to the mongo database !
+> This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
 
 ## Implementation
 
