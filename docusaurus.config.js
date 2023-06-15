@@ -32,10 +32,11 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "0ad325d96101f86ad68ff5d9654604f1",
+      apiKey: "edfeaf4638f29c960f4a2dd14d61e71c",
       appId: "0V6L7HOWNI",
       indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
       contextualSearch: true,
+      debug: false,
     },
     stylesheets: [
       "https://fonts.googleapis.com/icon?family=Material+Icons",
