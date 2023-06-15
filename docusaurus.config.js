@@ -16,6 +16,7 @@ module.exports = {
   projectName: "simply-djs",
   noIndex: false,
   trailingSlash: false,
+  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
@@ -32,11 +33,12 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "91f2393262c617a2955e3550c006bc4d",
+      apiKey: "699fe4936cdd72c51e497750fd51eadb",
       appId: "0V6L7HOWNI",
       indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
       ignoreCanonicalTo: true,
       inputSelector: "h1",
+      contextualSearch: true,
       searchParameters: {
         hitsPerPage: 6,
       },

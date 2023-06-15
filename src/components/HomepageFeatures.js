@@ -14,11 +14,12 @@ function AboutMe() {
 
       <h4 className={styles.abtme} style={{ fontWeight: '500', fontSize: '30px' }}>Developed by <span className={styles.dev}>Rahuletto#0243</span></h4>
 
-
+      
       <div className={styles.boxes}>
         <div>
           <a className="shield"  target='_blank'  href="https://www.npmjs.com/package/simply-djs"><img alt="npm version" src="https://img.shields.io/npm/v/simply-djs.svg?style=for-the-badge" /></a>
           <a className="shield"  target='_blank'  href="https://www.npmjs.com/package/simply-djs"><img alt="npm downloads" src="https://img.shields.io/npm/dt/simply-djs?style=for-the-badge" /></a>
+          <a className="shield"  target='_blank'  href="https://www.codefactor.io/repository/github/rahuletto/simply-djs/overview/v4.x.x"><img alt="npm downloads" src="https://www.codefactor.io/repository/github/rahuletto/simply-djs/badge/v4.x.x?style=for-the-badge" /></a>
         </div>
         <div>
           <a className="shield"  href="https://simplyd.js.org"><img alt="documentation" src="https://img.shields.io/badge/Simply--DJS-Documentation-406DBC?style=for-the-badge" /></a>
