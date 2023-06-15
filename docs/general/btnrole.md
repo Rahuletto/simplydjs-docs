@@ -39,7 +39,7 @@ simplydjs.btnRole(
 ): Promise<boolean>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
 - options: [`btnRoleOptions`](#btnroleoptions)
 
 - Resolves: [`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (whether sent or not)
@@ -53,7 +53,7 @@ import Link from '@docusaurus/Link';
 | Parameter | Type | Required | Default    | Description |
 | --------- | ----- | -------- | -------- | ---------- |
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false | Enables strict mode in btnRole |
-| `embed` | <Link to="typedef/customizableembed.md">CustomizableEmbed</Link>       | ✅  | -     | The embed of your message that is sent with the necessary buttons |
+| `embed` | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link>       | ✅  | -     | The embed of your message that is sent with the necessary buttons |
 | `content` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link>       | ❌        | _none_ | The content of your message that is sent with the necessary buttons |
 | `data` | <Link to="#btnrolebuttons">BtnRoleButtons[]</Link>       | ✅        | _none_     | The data necessary to create the buttons. (Array of <Link to="#dataobj">dataObj</Link>) |
 

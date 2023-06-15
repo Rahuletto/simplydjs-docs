@@ -33,7 +33,7 @@ simplydjs.menuPages(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
 - options: [`menuPagesOptions`](#menupagesoptions)
 
 ## Options

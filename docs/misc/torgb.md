@@ -23,7 +23,7 @@ simplydjs.toRgb(hex: string): ColorResolvable
 - hex: [`#string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ## Returns
-- [`ColorResolvable`](https://old.discordjs.dev/#/docs/discord.js/main/typedef/ColorResolvable)
+- [`ColorResolvable`](https://old.discordjs.dev/#/docs/discord.js/main/../typedef/ColorResolvable)
 
 -----------------------
 

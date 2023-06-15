@@ -34,7 +34,7 @@ simplydjs.giveaway(
 ): Promise<GiveawayResolve | EndResolve>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
 - options: [`giveawayOptions`](#giveawayoptions)
 
 
@@ -88,9 +88,9 @@ export type giveawayOptions = {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `enter`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
-|  `end`       | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
-|  `reroll`       | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+| `enter`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+|  `end`       | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
+|  `reroll`       | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  A CustomizableButton Object to customize the button   |
 
 ```ts
 export interface GiveawayButtons {
@@ -122,9 +122,9 @@ export interface Requirements {
 
 | Parameter    | Type   | Description  |
 | ------------ | ------ | ------------ |
-| `giveaway`        | <Link to="typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
-|  `load`       | <Link to="typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
-|  `result`       | <Link to="typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
+| `giveaway`        | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
+|  `load`       | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
+|  `result`       | <Link to="../typedef/customizableembed.md">CustomizableEmbed</Link> |  A CustomizableEmbed Object to customize the embed   |
 
 ```ts
 export interface GiveawayEmbeds {

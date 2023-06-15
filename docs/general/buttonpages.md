@@ -35,7 +35,7 @@ simplydjs.buttonPages(
 ): Promise<void>
 ```
 
-- msgOrInt: [`ExtendedMessage`](/docs/typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/typedef/extendedinteraction.md)
+- msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](/docs/../typedef/extendedinteraction.md)
 - options: [`pagesOptions`](#pagesoptions)
 
 ## Options
@@ -80,11 +80,11 @@ export type pagesOptions = {
 
 | Parameter  | Type | Description  |
 | ---------- | ---- | ------------ |
-| `first`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `next`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `back`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `last`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
-| `delete`        | <Link to="typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button  |
+| `first`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `next`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `back`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `last`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button   |
+| `delete`        | <Link to="../typedef/customizablebutton.md">CustomizableButton</Link> |  Pass an CustomizableButton Object to customize the button  |
 
 ```ts
 export interface Pagebuttons {
