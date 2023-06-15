@@ -14,7 +14,6 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   organizationName: "Rahuletto",
   projectName: "simply-djs",
-  noIndex: false,
   trailingSlash: false,
   themeConfig: {
     tableOfContents: {
@@ -32,8 +31,8 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     algolia: {
-      apiKey: "edfeaf4638f29c960f4a2dd14d61e71c",
-      appId: "0V6L7HOWNI",
+      apiKey: "4c617eee4ae82fd9dc410f2f9d683277",
+      appId: "5KFJKTD7O1",
       indexName: "netlify_1bec4261-2817-4fc6-9fbc-ffbce0d1ab57_v4_all",
       contextualSearch: true,
       debug: false,
