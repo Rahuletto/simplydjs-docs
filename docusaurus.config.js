@@ -16,7 +16,6 @@ module.exports = {
   projectName: "simply-djs",
   noIndex: false,
   trailingSlash: false,
-  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig: {
     tableOfContents: {
       minHeadingLevel: 2,
