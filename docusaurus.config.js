@@ -180,7 +180,8 @@ module.exports = {
           ],
         },
       ],
-      copyright: `<a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deployed in Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
+      copyright: `<iframe src="https://github.com/sponsors/Rahuletto/card" title="Sponsor Rahuletto" height="128" width="342" style="border: 0" />
+          <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deployed in Netlify"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" /></a>
               <br><br><span class="monospace">Copyright © ${new Date().getFullYear()} Rahuletto.</span><br><br><div class="warning">Not affiliated with Discord (or) Discord.js</div>`,
     },
     prism: {
