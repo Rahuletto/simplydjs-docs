@@ -7,7 +7,7 @@ module.exports = {
   title: "Simply-DJS",
   tagline:
     "The simplest way to build complex Discord bots.",
-  url: "https://v4--simplyd.netlify.app",
+  url: "https://simplyd.js.org",
   baseUrl: '/',
   favicon: "https://i.imgur.com/XFUIwPh.png",
   onBrokenLinks: "warn",
