@@ -144,8 +144,7 @@ export default function HomepageFeatures() {
       </section>
       <p className={styles.legal}>** As of <pre>1st May 2023</pre></p>
 
-      <iframe src="https://github.com/sponsors/Rahuletto/card" title="Sponsor Rahuletto" height="225" width="600" style={{border: "0"}} />
-                
+            
       <section className={styles.tryNow}>
         <h1>Try now !</h1>
         <p>The simplest way to build complex Discord bots.</p>
