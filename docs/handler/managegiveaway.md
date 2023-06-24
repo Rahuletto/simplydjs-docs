@@ -12,6 +12,14 @@ tags:
 
 A Giveaway Handler for **simplydjs giveaway system.**
 
+> This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
+
+:::caution
+
+You should use [`giveaway()`](../systems/giveaway.md) before this function. Because handlers are like back-end (core), They just handle things. But giveaway is like front-end. without this, handlers are useless.
+
+:::
+
 ## Implementation
 
 ```js

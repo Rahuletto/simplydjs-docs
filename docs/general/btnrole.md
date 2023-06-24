@@ -45,6 +45,12 @@ simplydjs.btnRole(
 
 - Resolves: [`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (whether sent or not)
 
+:::info
+
+This is just 50% of the code for `Button Role System` !. You also need [`manageBtnRole()`](../handler/managebtnrole.md) to handle all button clicks. This makes it 100% !
+
+:::
+
 ## Options
 
 ### `btnRoleOptions`

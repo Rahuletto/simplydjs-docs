@@ -14,6 +14,12 @@ A **Suggestion** handler which handles all sugestions from the package
 
 > This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
 
+:::caution
+
+You should use [`suggest()`](../systems/suggest.md) before this function. Because handlers are like back-end (core), They just handle things. But suggest is like front-end. without this, handlers are useless.
+
+:::
+
 ## Implementation
 
 ```js

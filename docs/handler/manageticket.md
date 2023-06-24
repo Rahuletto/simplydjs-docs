@@ -12,6 +12,12 @@ tags:
 
 A Ticket Handler for **simplydjs ticket system.**
 
+:::caution
+
+You should use [`ticketSetup()`](../systems/ticketSetup.md) before this function. Because handlers are like back-end (core), They just handle things. But ticketSetup is like front-end. without this, handlers are useless.
+
+:::
+
 ## Implementation
 
 ```js

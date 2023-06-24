@@ -44,6 +44,12 @@ simplydjs.suggestSystem(
 
 - Resolves: [`SuggestResolve`](#suggestresolve)
 
+:::info
+
+This is just 50% of the code for `Suggest System` !. You also need [`manageSuggest()`](../handler/managesuggest.md) to handle all button clicks. This makes it 100% !
+
+:::
+
 ## Options
 
 ### `suggestOption`

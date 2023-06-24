@@ -50,6 +50,12 @@ simplydjs.betterBtnRole(
 - interaction [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`betterBtnOptions`](#betterbtnoptions)
 
+:::info
+
+This is just 50% of the code for `Button Role System` !. You also need [`manageBtnRole()`](../handler/managebtnrole.md) to handle all button clicks. This makes it 100% !
+
+:::
+
 ## Options
 
 ### `betterBtnOptions`

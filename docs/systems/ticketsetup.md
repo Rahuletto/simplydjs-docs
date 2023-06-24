@@ -39,6 +39,11 @@ simplydjs.ticketSetup(
 - msgOrInt: [`ExtendedMessage`](../typedef/extendedmessage.md) | [`ExtendedInteraction`](../typedef/extendedinteraction.md)
 - options: [`ticketSetupOptions`](#ticketsetupoptions)
 
+:::info
+
+This is just 50% of the code for `Ticket System` !. You also need [`manageTicket()`](../handler/manageticket.md) to handle all button clicks. This makes it 100% !
+
+:::
 
 ## Options
 

@@ -12,7 +12,11 @@ tags:
 
 A Button Role Handler for **simply-djs button role system.**
 
-> This function requires [`connect()`](../general/connect.md) which connects to the mongo database !
+:::caution
+
+You should use [`betterBtnRole()`](../systems/betterbtnrole.md) or [`btnRole()`](../general/btnrole.md) before this function. Because handlers are like back-end (core), They just handle things. But betterBtnRole/btnRole is like front-end. without this, handlers are useless.
+
+:::
 
 ## Implementation
 

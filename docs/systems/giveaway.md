@@ -42,6 +42,13 @@ simplydjs.giveaway(
 
 - Resolves: [`GiveawayResolve`](#giveawayresolve) | [`EndResolve`](#endresolve)
 
+
+:::info
+
+This is just 50% of the code for `Giveaway System` !. You also need [`manageGiveaway()`](../handler/managegiveaway.md) to handle all button clicks. This makes it 100% !
+
+:::
+
 ## Options 
 
 ### `giveawayOptions`
