@@ -57,7 +57,7 @@ import Link from '@docusaurus/Link';
 ```ts
 export type memeOptions = {
 	embed?: CustomizableEmbed;
-	channelId?: string;
+	channelId?: string[] | string;
 	interval?: number;
 	sub?: string[] | string;
 
