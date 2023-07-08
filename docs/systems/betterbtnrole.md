@@ -67,7 +67,7 @@ import Link from '@docusaurus/Link';
 | `strict` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</Link>       | ❌ | false     | Enables strict mode in betterBtnRole |
 | `type` | `"Add"`/`"Remove"` | ✅ | -  | The type of the implementation of the function  |
 | `channel` | <Link to="https://old.discordjs.dev/#/docs/discord.js/main/class/TextChannel">TextChannel</Link> | ❌  | _none_  | The channel where the message exists |
-| `buttons` | <Link to="#betterbtnrolebuttons">BetterBtnRoleButtons</Link> | ✅ | -  | The button as object to add in the message  |
+| `button` | <Link to="#betterbtnrolebuttons">BetterBtnRoleButtons</Link> | ✅ | -  | The button as object to add in the message  |
 | `messageId` | <Link to="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</Link> | ❌       | _none_  | The ID of the message you're trying to add a button to.  |
 | `contents` | <Link to="#message-contents">MessageContents</Link> | ❌ | _default_  | Custom text object to send instead of default |
 
@@ -169,13 +169,14 @@ const { ButtonStyle } = require("discord.js")
 
 // When adding a button role to a message
 simplydjs.betterBtnRole(interaction, {
-	type: 'Add' // type (required) ['Add' (or) 'Remove']
+    type: 'Add', // type (required) ['Add' (or) 'Remove']
     strict: true,
     channel: interaction.channel,
-    buttons: {  
+    button: {  
         label: "Button Role",
         style: ButtonStyle.Secondary,
-        emoji: "😊"
+        emoji: "😊",
+	role: role
     },
     messageId: "01234567890123",
 })
